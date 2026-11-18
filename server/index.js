@@ -40,9 +40,31 @@ app.use('/api/settings', settingsRouter);
 // Servir frontend compilado si existe en producción
 const clientDist = path.join(config.rootDir, 'client', 'dist');
 if (fs.existsSync(clientDist)) {
+  // Fallback inteligente para bundles JS cacheados por navegadores o Service Workers
+  app.get('/assets/index-*.js', (req, res, next) => {
+    const assetsDir = path.join(clientDist, 'assets');
+    if (fs.existsSync(assetsDir)) {
+      const requestedPath = path.join(clientDist, req.path);
+      if (!fs.existsSync(requestedPath)) {
+        try {
+          const files = fs.readdirSync(assetsDir);
+          const currentJs = files.find(f => f.startsWith('index-') && f.endsWith('.js'));
+          if (currentJs) {
+            res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
+            return res.sendFile(path.join(assetsDir, currentJs));
+          }
+        } catch {
+          // Continuar al static
+        }
+      }
+    }
+    next();
+  });
+
   app.use(express.static(clientDist));
   app.use((req, res, next) => {
     if (req.path.startsWith('/api')) return next();
+    if (req.path.startsWith('/assets/')) return res.status(404).send('Asset not found');
     res.sendFile(path.join(clientDist, 'index.html'));
   });
 } else {

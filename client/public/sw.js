@@ -1,25 +1,13 @@
-const CACHE_NAME = 'omnistream-ott-v1';
-const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.webmanifest'
-];
+const CACHE_NAME = 'omnistream-ott-v2';
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(STATIC_ASSETS))
-  );
   self.skipWaiting();
 });
 
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) => {
-      return Promise.all(
-        keys.map((k) => {
-          if (k !== CACHE_NAME) return caches.delete(k);
-        })
-      );
+      return Promise.all(keys.map((k) => caches.delete(k)));
     })
   );
   self.clients.claim();
@@ -28,14 +16,20 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
 
-  // No interceptar peticiones de proxy ni streaming
-  if (url.pathname.startsWith('/api/proxy') || url.pathname.startsWith('/api/')) {
+  // No interceptar peticiones de proxy, API ni assets
+  if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/assets/')) {
+    return;
+  }
+
+  // Network-first para navegación (HTML) para recibir siempre la versión más reciente
+  if (e.request.mode === 'navigate') {
+    e.respondWith(
+      fetch(e.request).catch(() => caches.match(e.request))
+    );
     return;
   }
 
   e.respondWith(
-    caches.match(e.request).then((res) => {
-      return res || fetch(e.request);
-    })
+    caches.match(e.request).then((res) => res || fetch(e.request))
   );
 });
