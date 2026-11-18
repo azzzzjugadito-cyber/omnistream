@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { logger } from './logger.js';
+import { formatCountryName } from './sources/IptvOrgAdapter.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,14 +26,14 @@ export function normalizeChannelName(rawName = '') {
 
   // 2. Quitar etiquetas completas entre corchetes o paréntesis
   name = name.replace(/\[[^\]]*\]/g, ' ');
-  name = name.replace(/\((?:fhd|uhd|hd|sd|4k|8k|hevc|backup|raw|vip|1080p|720p|576p|480p|360p|240p|50fps|60fps|\d+p|\d+fps)\)/gi, ' ');
+  name = name.replace(/\((?:fhd|uhd|hd|sd|4k|8k|hevc|backup(?:\s*\d+)?|mirror(?:\s*\d+)?|respaldo(?:\s*\d+)?|reserva(?:\s*\d+)?|bk(?:\s*\d+)?|raw|vip|1080p|720p|576p|480p|360p|240p|50fps|60fps|\d+p|\d+fps)\)/gi, ' ');
 
   // 3. Quitar prefijos de país comunes
   name = name.replace(/^[a-z]{2,3}\s*[:|\-\/]\s*/g, ' ');
   name = name.replace(/^(?:es|esp|uk|gb|usa|us|de|fr|it|pt|nl|tr|gr|ru|pl|ar|mx|sa)\s*\|\s*/g, ' ');
 
   // 4. Quitar sufijos/tokens de calidad, códec o servidor
-  name = name.replace(/\b(fhd|uhd|hd|sd|4k|8k|1080p|720p|576p|480p|360p|240p|50fps|60fps|\d+fps|\d+p|hevc|h264|h265|raw|backup|vip|multi|feed|directo|live|stream|ott)\b/gi, ' ');
+  name = name.replace(/\b(fhd|uhd|hd|sd|4k|8k|1080p|720p|576p|480p|360p|240p|50fps|60fps|\d+fps|\d+p|hevc|h264|h265|raw|backup|mirror|respaldo|reserva|bk|vip|multi|feed|directo|live|stream|ott)(?:\s*\d+)?\b/gi, ' ');
 
   // 5. Normalizar Plus y operadores
   name = name.replace(/plus\s*\+/gi, 'plus');
@@ -111,6 +112,14 @@ class FootballClassificationEngine {
     const channelCountryLower = (channel.country || '').toLowerCase();
     const channelTitleLower = (channel.title || '').toLowerCase();
 
+    const resolveClassifiedCountry = (mCountry, chCountry) => {
+      const c1 = formatCountryName(mCountry);
+      if (c1 && c1.toLowerCase() !== 'internacional') return c1;
+      const c2 = formatCountryName(chCountry);
+      if (c2 && c2.toLowerCase() !== 'internacional') return c2;
+      return 'Internacional';
+    };
+
     // 1. Cruce por tvg-id
     if (tvgId && this.tvgMap.has(tvgId)) {
       const match = this.tvgMap.get(tvgId);
@@ -119,7 +128,7 @@ class FootballClassificationEngine {
         sport: 'football',
         footballTier: match.tier,
         competitions: match.competitions || [],
-        country: match.country || channel.country,
+        country: resolveClassifiedCountry(match.country, channel.country),
         normalizedKey
       };
     }
@@ -132,7 +141,7 @@ class FootballClassificationEngine {
         sport: 'football',
         footballTier: match.tier,
         competitions: match.competitions || [],
-        country: match.country || channel.country,
+        country: resolveClassifiedCountry(match.country, channel.country),
         normalizedKey
       };
     }
@@ -180,7 +189,7 @@ class FootballClassificationEngine {
               sport: 'football',
               footballTier: match.tier,
               competitions: match.competitions || [],
-              country: match.country || channel.country,
+              country: resolveClassifiedCountry(match.country, channel.country),
               normalizedKey
             };
           }
@@ -193,7 +202,7 @@ class FootballClassificationEngine {
           sport: 'football',
           footballTier: best.tier,
           competitions: best.competitions || [],
-          country: best.country || channel.country,
+          country: resolveClassifiedCountry(best.country, channel.country),
           normalizedKey
         };
       }

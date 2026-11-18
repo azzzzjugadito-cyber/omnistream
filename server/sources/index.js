@@ -17,6 +17,7 @@ class SourceManager {
   constructor() {
     this.adapters = new Map();
     this.sourcesConfig = [];
+    this.channelIndex = new Map();
   }
 
   async loadFromYaml() {
@@ -204,6 +205,22 @@ class SourceManager {
       }
     }
 
+    // Actualizar índice global de canales consolidados y de respaldo
+    this.channelIndex.clear();
+    for (const [key, primary] of deduplicatedMap.entries()) {
+      this.channelIndex.set(primary.id, primary);
+      if (primary.normalizedKey) {
+        this.channelIndex.set(primary.normalizedKey, primary);
+      }
+    }
+    for (const ch of classifiedChannels) {
+      const key = ch.normalizedKey || ch.title.toLowerCase().trim();
+      if (deduplicatedMap.has(key)) {
+        const primary = deduplicatedMap.get(key);
+        this.channelIndex.set(ch.id, primary);
+      }
+    }
+
     let finalChannels = Array.from(deduplicatedMap.values());
 
     // Filtrar por Fútbol si se solicita
@@ -289,6 +306,47 @@ class SourceManager {
     });
 
     return enhancedEvents;
+  }
+
+  /**
+   * Resuelve el stream de un canal devolviendo la URL principal y todos los mirrors deduplicados en backupUrls.
+   */
+  async resolveStream(sourceId, itemId) {
+    if (this.channelIndex.size === 0) {
+      await this.getLiveChannels();
+    }
+
+    let ch = this.channelIndex.get(itemId);
+    if (!ch && sourceId) {
+      ch = this.channelIndex.get(`${sourceId}::${itemId}`);
+    }
+
+    const adapter = sourceId ? this.getAdapter(sourceId) : null;
+    const defaultHeaders = adapter ? adapter.headers : {};
+
+    if (ch) {
+      const headers = ch.headers || defaultHeaders;
+      const ref = headers['Referer'] || '';
+      const ua = headers['User-Agent'] || '';
+      const proxiedUrl = `/api/proxy/stream?url=${encodeURIComponent(ch.streamUrl)}&ref=${encodeURIComponent(ref)}&ua=${encodeURIComponent(ua)}`;
+
+      return {
+        itemId: ch.id,
+        title: ch.title,
+        streamUrl: ch.streamUrl,
+        proxiedUrl,
+        backupUrls: Array.isArray(ch.backupUrls) ? ch.backupUrls : [],
+        headers,
+        type: ch.type || (ch.streamUrl && ch.streamUrl.includes('.m3u8') ? 'hls' : 'mp4'),
+        metadata: ch.metadata || {}
+      };
+    }
+
+    if (adapter) {
+      return adapter.resolveStream(itemId);
+    }
+
+    throw new Error(`Canal con ID ${itemId} no encontrado`);
   }
 
   /**

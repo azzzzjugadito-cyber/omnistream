@@ -58,6 +58,8 @@ function parseExtInfLine(line, defaultCategory) {
     logo: '',
     category: defaultCategory,
     tvgId: '',
+    country: '',
+    language: '',
     headers: {}
   };
 
@@ -88,6 +90,12 @@ function parseExtInfLine(line, defaultCategory) {
       case 'tvg-logo':
         item.logo = val;
         break;
+      case 'tvg-country':
+        item.country = val;
+        break;
+      case 'tvg-language':
+        item.language = val;
+        break;
       case 'group-title':
         if (val) item.category = val;
         break;
@@ -97,6 +105,15 @@ function parseExtInfLine(line, defaultCategory) {
       case 'http-user-agent':
         item.headers['User-Agent'] = val;
         break;
+    }
+  }
+
+  // Si no hay country explícito, intentar inferir del sufijo del tvgId (ej: BarcaTV.es -> ES, SkySports.uk -> UK)
+  if (!item.country && item.tvgId && item.tvgId.includes('.')) {
+    const parts = item.tvgId.split('.');
+    const suffix = parts[parts.length - 1].toUpperCase();
+    if (suffix.length === 2 || suffix === 'USA' || suffix === 'MENA' || suffix === 'LATAM') {
+      item.country = suffix;
     }
   }
 

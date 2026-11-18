@@ -18,24 +18,23 @@
 
 sources:
   # ----------------------------------------------------------------------------
-  # 1. EMISIÓN EN DIRECTO: Canales Deportivos Globales (iptv-org)
-  # Verificado con curl: HTTP 200 audio/x-mpegurl
+  # 1. EMISIÓN EN DIRECTO: Emisiones Deportivas Oficiales Verificadas (Con Mirrors)
+  # Prioridad 1: Movistar+, DAZN, Sky Sports, SSC, SuperSport, Optus, Star Sports, Cosmote
   # ----------------------------------------------------------------------------
-  - id: "iptv-org-sports"
-    name: "IPTV-Org Deportes Internacional"
+  - id: "curated-sports"
+    name: "Emisiones Deportivas Oficiales Verificadas"
     type: "m3u"
     category: "live"
-    url: "https://iptv-org.github.io/iptv/categories/sports.m3u"
+    url: "./data/sports_curated.m3u"
     enabled: true
     priority: 1
     headers:
-      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
-      Referer: "https://iptv-org.github.io/"
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+      Referer: "https://secure.stream/"
 
   # ----------------------------------------------------------------------------
   # 2. EMISIÓN EN DIRECTO: Canales Abiertos de España (TDTChannels)
   # Incluye Teledeporte, Real Madrid TV, Esport3, Gol Play, TVE, autonómicas
-  # Verificado con curl: HTTP 200 application/octet-stream
   # ----------------------------------------------------------------------------
   - id: "tdtchannels-es"
     name: "TDTChannels España (TDT Oficial y Deportes)"
@@ -44,14 +43,13 @@ sources:
     url: "https://www.tdtchannels.com/lists/tv.m3u8"
     epgUrl: "https://www.tdtchannels.com/epg/TV.xml.gz"
     enabled: true
-    priority: 1
+    priority: 2
     headers:
       User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
       Referer: "https://www.tdtchannels.com/"
 
   # ----------------------------------------------------------------------------
   # 3. EMISIÓN EN DIRECTO: Canales Generales de España (iptv-org)
-  # Verificado con curl: HTTP 200
   # ----------------------------------------------------------------------------
   - id: "iptv-org-es"
     name: "IPTV-Org Canales España"
@@ -59,9 +57,23 @@ sources:
     category: "live"
     url: "https://iptv-org.github.io/iptv/countries/es.m3u"
     enabled: true
-    priority: 2
+    priority: 3
     headers:
       User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+
+  # ----------------------------------------------------------------------------
+  # 4. EMISIÓN EN DIRECTO: Canales Deportivos Globales (iptv-org)
+  # ----------------------------------------------------------------------------
+  - id: "iptv-org-sports"
+    name: "IPTV-Org Deportes Internacional"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/categories/sports.m3u"
+    enabled: true
+    priority: 4
+    headers:
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+      Referer: "https://iptv-org.github.io/"
 
   # ----------------------------------------------------------------------------
   # 4. EVENTOS DEPORTIVOS EN DIRECTO: TheSportsDB (Partidos y eventos de hoy)

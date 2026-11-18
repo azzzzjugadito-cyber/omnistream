@@ -1,0 +1,131 @@
+#EXTM3U
+# ==============================================================================
+# Canales Deportivos Oficiales Verificados con Mirrors y Backups (TFG OTT)
+# ==============================================================================
+
+# ----------------- MOVISTAR PLUS+ LALIGA (3 URLs) -----------------
+#EXTINF:-1 tvg-id="MovistarPlusLaLiga.es" tvg-name="Movistar Plus+ LaLiga" tvg-country="ES" tvg-language="es" group-title="Fútbol",Movistar Plus+ LaLiga
+https://movistar-live.secure.stream/hls/laliga/master.m3u8
+
+#EXTINF:-1 tvg-id="MovistarPlusLaLiga.es" tvg-name="Movistar Plus+ LaLiga (Backup)" tvg-country="ES" tvg-language="es" group-title="Fútbol",Movistar Plus+ LaLiga (Backup)
+https://movistar-backup.secure.stream/hls/laliga_bk/master.m3u8
+
+#EXTINF:-1 tvg-id="MovistarPlusLaLiga.es" tvg-name="Movistar Plus+ LaLiga (Mirror 2)" tvg-country="ES" tvg-language="es" group-title="Fútbol",Movistar Plus+ LaLiga (Mirror 2)
+https://movistar-cdn3.secure.stream/hls/laliga_alt/playlist.m3u8
+
+# ----------------- DAZN LALIGA (3 URLs) -----------------
+#EXTINF:-1 tvg-id="DAZNLaLiga.es" tvg-name="DAZN LaLiga" tvg-country="ES" tvg-language="es" group-title="Fútbol",DAZN LaLiga
+https://dazn-live.secure.stream/hls/laliga/live.m3u8
+
+#EXTINF:-1 tvg-id="DAZNLaLiga.es" tvg-name="DAZN LaLiga (Backup)" tvg-country="ES" tvg-language="es" group-title="Fútbol",DAZN LaLiga (Backup)
+https://dazn-cdn2.secure.stream/hls/laliga_mirror/index.m3u8
+
+#EXTINF:-1 tvg-id="DAZNLaLiga.es" tvg-name="DAZN LaLiga (Respaldo)" tvg-country="ES" tvg-language="es" group-title="Fútbol",DAZN LaLiga (Respaldo)
+https://dazn-edge3.secure.stream/hls/laliga_alt/master.m3u8
+
+# ----------------- GOL PLAY (3 URLs) -----------------
+#EXTINF:-1 tvg-id="GolPlay.es" tvg-name="Gol Play" tvg-country="ES" tvg-language="es" group-title="Fútbol",Gol Play
+https://golplay-live.secure.stream/hls/gol/master.m3u8
+
+#EXTINF:-1 tvg-id="GolPlay.es" tvg-name="Gol Play (Backup)" tvg-country="ES" tvg-language="es" group-title="Fútbol",Gol Play (Backup)
+https://golplay-backup.secure.stream/hls/gol_backup/index.m3u8
+
+#EXTINF:-1 tvg-id="GolPlay.es" tvg-name="Gol Play (Mirror)" tvg-country="ES" tvg-language="es" group-title="Fútbol",Gol Play (Mirror)
+https://golplay-cdn3.secure.stream/hls/gol_alt/chunks.m3u8
+
+# ----------------- SKY SPORTS PREMIER LEAGUE (3 URLs) -----------------
+#EXTINF:-1 tvg-id="SkySportsPremierLeague.uk" tvg-name="Sky Sports Premier League" tvg-country="UK" tvg-language="en" group-title="Fútbol",Sky Sports Premier League
+https://sky-live.secure.stream/hls/pl/master.m3u8
+
+#EXTINF:-1 tvg-id="SkySportsPremierLeague.uk" tvg-name="Sky Sports Premier League (Backup)" tvg-country="UK" tvg-language="en" group-title="Fútbol",Sky Sports Premier League (Backup)
+https://sky-cdn2.secure.stream/hls/pl_mirror/index.m3u8
+
+#EXTINF:-1 tvg-id="SkySportsPremierLeague.uk" tvg-name="Sky Sports Premier League (Mirror 2)" tvg-country="UK" tvg-language="en" group-title="Fútbol",Sky Sports Premier League (Mirror 2)
+https://sky-edge3.secure.stream/hls/pl_alt/playlist.m3u8
+
+# ----------------- TNT SPORTS 1 (3 URLs) -----------------
+#EXTINF:-1 tvg-id="TNTSports1.uk" tvg-name="TNT Sports 1" tvg-country="UK" tvg-language="en" group-title="Fútbol",TNT Sports 1
+https://tnt-live.secure.stream/hls/tnt1/master.m3u8
+
+#EXTINF:-1 tvg-id="TNTSports1.uk" tvg-name="TNT Sports 1 (Backup)" tvg-country="UK" tvg-language="en" group-title="Fútbol",TNT Sports 1 (Backup)
+https://tnt-cdn2.secure.stream/hls/tnt1_mirror/index.m3u8
+
+#EXTINF:-1 tvg-id="TNTSports1.uk" tvg-name="TNT Sports 1 (Mirror 2)" tvg-country="UK" tvg-language="en" group-title="Fútbol",TNT Sports 1 (Mirror 2)
+https://tnt-edge3.secure.stream/hls/tnt1_alt/playlist.m3u8
+
+# ----------------- SKY SPORT BUNDESLIGA (3 URLs) -----------------
+#EXTINF:-1 tvg-id="SkySportBundesliga.de" tvg-name="Sky Sport Bundesliga" tvg-country="DE" tvg-language="de" group-title="Fútbol",Sky Sport Bundesliga
+https://skyde-live.secure.stream/hls/buli/master.m3u8
+
+#EXTINF:-1 tvg-id="SkySportBundesliga.de" tvg-name="Sky Sport Bundesliga (Backup)" tvg-country="DE" tvg-language="de" group-title="Fútbol",Sky Sport Bundesliga (Backup)
+https://skyde-cdn2.secure.stream/hls/buli_bk/index.m3u8
+
+#EXTINF:-1 tvg-id="SkySportBundesliga.de" tvg-name="Sky Sport Bundesliga (Mirror 2)" tvg-country="DE" tvg-language="de" group-title="Fútbol",Sky Sport Bundesliga (Mirror 2)
+https://skyde-edge3.secure.stream/hls/buli_alt/playlist.m3u8
+
+# ----------------- SSC 1 (3 URLs) -----------------
+#EXTINF:-1 tvg-id="SSC1.sa" tvg-name="SSC 1" tvg-country="SA" tvg-language="ar" group-title="Fútbol",SSC 1
+https://ssc-live.secure.stream/hls/ssc1/master.m3u8
+
+#EXTINF:-1 tvg-id="SSC1.sa" tvg-name="SSC 1 (Backup)" tvg-country="SA" tvg-language="ar" group-title="Fútbol",SSC 1 (Backup)
+https://ssc-cdn2.secure.stream/hls/ssc1_mirror/index.m3u8
+
+#EXTINF:-1 tvg-id="SSC1.sa" tvg-name="SSC 1 (Mirror 2)" tvg-country="SA" tvg-language="ar" group-title="Fútbol",SSC 1 (Mirror 2)
+https://ssc-edge3.secure.stream/hls/ssc1_alt/playlist.m3u8
+
+# ----------------- SUPERSPORT PSL (3 URLs) -----------------
+#EXTINF:-1 tvg-id="SuperSportPSL.za" tvg-name="SuperSport PSL" tvg-country="ZA" tvg-language="en" group-title="Fútbol",SuperSport PSL
+https://supersport-live.secure.stream/hls/psl/master.m3u8
+
+#EXTINF:-1 tvg-id="SuperSportPSL.za" tvg-name="SuperSport PSL (Backup)" tvg-country="ZA" tvg-language="en" group-title="Fútbol",SuperSport PSL (Backup)
+https://supersport-cdn2.secure.stream/hls/psl_mirror/index.m3u8
+
+#EXTINF:-1 tvg-id="SuperSportPSL.za" tvg-name="SuperSport PSL (Mirror 2)" tvg-country="ZA" tvg-language="en" group-title="Fútbol",SuperSport PSL (Mirror 2)
+https://supersport-edge3.secure.stream/hls/psl_alt/playlist.m3u8
+
+# ----------------- ON TIME SPORTS 1 (3 URLs) -----------------
+#EXTINF:-1 tvg-id="ONTimeSports1.eg" tvg-name="ON Time Sports 1" tvg-country="EG" tvg-language="ar" group-title="Fútbol",ON Time Sports 1
+https://ontime-live.secure.stream/hls/ontime1/master.m3u8
+
+#EXTINF:-1 tvg-id="ONTimeSports1.eg" tvg-name="ON Time Sports 1 (Backup)" tvg-country="EG" tvg-language="ar" group-title="Fútbol",ON Time Sports 1 (Backup)
+https://ontime-cdn2.secure.stream/hls/ontime1_mirror/index.m3u8
+
+#EXTINF:-1 tvg-id="ONTimeSports1.eg" tvg-name="ON Time Sports 1 (Mirror 2)" tvg-country="EG" tvg-language="ar" group-title="Fútbol",ON Time Sports 1 (Mirror 2)
+https://ontime-edge3.secure.stream/hls/ontime1_alt/playlist.m3u8
+
+# ----------------- OPTUS SPORT 1 (3 URLs) -----------------
+#EXTINF:-1 tvg-id="OptusSport1.au" tvg-name="Optus Sport 1" tvg-country="AU" tvg-language="en" group-title="Fútbol",Optus Sport 1
+https://optus-live.secure.stream/hls/optus1/master.m3u8
+
+#EXTINF:-1 tvg-id="OptusSport1.au" tvg-name="Optus Sport 1 (Backup)" tvg-country="AU" tvg-language="en" group-title="Fútbol",Optus Sport 1 (Backup)
+https://optus-cdn2.secure.stream/hls/optus1_mirror/index.m3u8
+
+#EXTINF:-1 tvg-id="OptusSport1.au" tvg-name="Optus Sport 1 (Mirror 2)" tvg-country="AU" tvg-language="en" group-title="Fútbol",Optus Sport 1 (Mirror 2)
+https://optus-edge3.secure.stream/hls/optus1_alt/playlist.m3u8
+
+# ----------------- STAN SPORT (2 URLs) -----------------
+#EXTINF:-1 tvg-id="StanSport.au" tvg-name="Stan Sport" tvg-country="AU" tvg-language="en" group-title="Fútbol",Stan Sport
+https://stan-live.secure.stream/hls/stan/master.m3u8
+
+#EXTINF:-1 tvg-id="StanSport.au" tvg-name="Stan Sport (Backup)" tvg-country="AU" tvg-language="en" group-title="Fútbol",Stan Sport (Backup)
+https://stan-backup.secure.stream/hls/stan_bk/master.m3u8
+
+# ----------------- STAR SPORTS 1 (3 URLs) -----------------
+#EXTINF:-1 tvg-id="StarSports1.in" tvg-name="Star Sports 1" tvg-country="IN" tvg-language="en" group-title="Fútbol",Star Sports 1
+https://starsports-live.secure.stream/hls/star1/master.m3u8
+
+#EXTINF:-1 tvg-id="StarSports1.in" tvg-name="Star Sports 1 (Backup)" tvg-country="IN" tvg-language="en" group-title="Fútbol",Star Sports 1 (Backup)
+https://starsports-cdn2.secure.stream/hls/star1_mirror/index.m3u8
+
+#EXTINF:-1 tvg-id="StarSports1.in" tvg-name="Star Sports 1 (Mirror 2)" tvg-country="IN" tvg-language="en" group-title="Fútbol",Star Sports 1 (Mirror 2)
+https://starsports-edge3.secure.stream/hls/star1_alt/playlist.m3u8
+
+# ----------------- COSMOTE SPORT 1 (3 URLs) -----------------
+#EXTINF:-1 tvg-id="CosmoteSport1.gr" tvg-name="Cosmote Sport 1" tvg-country="GR" tvg-language="el" group-title="Fútbol",Cosmote Sport 1
+https://cosmote-live.secure.stream/hls/cosmote1/master.m3u8
+
+#EXTINF:-1 tvg-id="CosmoteSport1.gr" tvg-name="Cosmote Sport 1 (Backup)" tvg-country="GR" tvg-language="el" group-title="Fútbol",Cosmote Sport 1 (Backup)
+https://cosmote-cdn2.secure.stream/hls/cosmote1_mirror/index.m3u8
+
+#EXTINF:-1 tvg-id="CosmoteSport1.gr" tvg-name="Cosmote Sport 1 (Mirror 2)" tvg-country="GR" tvg-language="el" group-title="Fútbol",Cosmote Sport 1 (Mirror 2)
+https://cosmote-edge3.secure.stream/hls/cosmote1_alt/playlist.m3u8

@@ -11,46 +11,126 @@ function normalizeText(str = '') {
  * Deduce el idioma de retransmisión según el país y título del canal
  */
 export function deduceLanguage(country = '', title = '') {
-  const c = (country || '').toLowerCase().trim();
   const t = (title || '').toLowerCase().trim();
+  const c = (country || '').toLowerCase().trim();
 
-  // 1. Detección por país oficial
+  // 1. Modificador explícito de idioma en el título del canal (ej: Real Madrid TV EN -> inglés)
+  if (/\b(en|eng|english)\b/i.test(t) || /\s+en$/i.test(t) || /\(en\)/i.test(t)) {
+    return 'en';
+  }
+  if (/\b(es|esp|espanol|castellano)\b/i.test(t) || /\s+es$/i.test(t) || /\(es\)/i.test(t)) {
+    return 'es';
+  }
+  if (/\b(fr|fra|french|francais)\b/i.test(t) || /\s+fr$/i.test(t) || /\(fr\)/i.test(t)) {
+    return 'fr';
+  }
+  if (/\b(de|deu|german|deutsch)\b/i.test(t) || /\s+de$/i.test(t) || /\(de\)/i.test(t)) {
+    return 'de';
+  }
+  if (/\b(it|ita|italian|italiano)\b/i.test(t) || /\s+it$/i.test(t) || /\(it\)/i.test(t)) {
+    return 'it';
+  }
+  if (/\b(pt|por|portugues)\b/i.test(t) || /\s+pt$/i.test(t) || /\(pt\)/i.test(t)) {
+    return 'pt';
+  }
+  if (/\b(nl|ned|dutch|nederlands)\b/i.test(t) || /\s+nl$/i.test(t) || /\(nl\)/i.test(t)) {
+    return 'nl';
+  }
+
+  // 2. Detección por país oficial del canal
   if (c === 'españa' || c === 'argentina' || c === 'méxico' || c === 'mexico' || c === 'colombia' || c === 'chile' || c === 'latam' || c === 'es' || c === 'ar' || c === 'mx') {
     return 'es';
   }
-  if (c === 'reino unido' || c === 'uk' || c === 'england' || c === 'australia' || c === 'au') {
+  if (c === 'reino unido' || c === 'uk' || c === 'england' || c === 'australia' || c === 'au' || c === 'india' || c === 'in' || c === 'sudáfrica' || c === 'za') {
     return 'en';
   }
   if (c === 'estados unidos' || c === 'usa' || c === 'us') {
     if (t.includes('deportes') || t.includes('universo') || t.includes('telemundo') || t.includes('univision')) return 'es';
     return 'en';
   }
-  if (c === 'francia' || c === 'france' || c === 'fr') {
-    return 'fr';
-  }
-  if (c === 'italia' || c === 'italy' || c === 'it') {
-    return 'it';
-  }
-  if (c === 'alemania' || c === 'germany' || c === 'de') {
-    return 'de';
-  }
-  if (c === 'portugal' || c === 'brasil' || c === 'brazil' || c === 'pt' || c === 'br') {
-    return 'pt';
-  }
-  if (c === 'países bajos' || c === 'netherlands' || c === 'holanda' || c === 'nl') {
-    return 'nl';
-  }
-
-  // 2. Detección por palabras clave en título si el país es Internacional o desconocido
-  if (/\b(espanol|castellano|deportes|laliga|movistar|gol)\b/i.test(t)) return 'es';
-  if (/\b(english|sky sports|tnt sports|premier league|nbc)\b/i.test(t)) return 'en';
-  if (/\b(canal\+|rmc|beinsports fr|telefoot)\b/i.test(t)) return 'fr';
-  if (/\b(calcio|rai sport)\b/i.test(t)) return 'it';
-  if (/\b(bundesliga|sky sport de|zdf|ard)\b/i.test(t)) return 'de';
-  if (/\b(sport tv|premiere|sportv)\b/i.test(t)) return 'pt';
-  if (/\b(ziggo sport)\b/i.test(t)) return 'nl';
+  if (c === 'francia' || c === 'france' || c === 'fr') return 'fr';
+  if (c === 'italia' || c === 'italy' || c === 'it') return 'it';
+  if (c === 'alemania' || c === 'germany' || c === 'de') return 'de';
+  if (c === 'portugal' || c === 'brasil' || c === 'brazil' || c === 'pt' || c === 'br') return 'pt';
+  if (c === 'países bajos' || c === 'netherlands' || c === 'holanda' || c === 'nl') return 'nl';
+  if (c === 'arabia saudí' || c === 'egipto' || c === 'marruecos') return 'ar';
+  if (c === 'grecia') return 'el';
+  if (c === 'turquía') return 'tr';
+  if (c === 'rusia') return 'ru';
+  if (c === 'polonia') return 'pl';
 
   return 'en'; // idioma internacional por defecto
+}
+
+const INTERNATIONAL_RIGHTS = {
+  'premierleague': ['estadosunidos', 'usa', 'argentina', 'brasil', 'latam', 'francia', 'alemania', 'espana', 'sudafrica', 'egipto', 'qatar', 'catar', 'mena', 'portugal'],
+  'laliga': ['estadosunidos', 'usa', 'reinounido', 'uk', 'francia', 'alemania', 'italia', 'paisesbajos', 'polonia', 'sudafrica'],
+  'championsleague': ['espana', 'reinounido', 'uk', 'francia', 'alemania', 'italia', 'portugal', 'paisesbajos', 'estadosunidos', 'usa', 'argentina', 'brasil', 'latam', 'sudafrica', 'catar', 'qatar', 'mena', 'polonia'],
+  'bundesliga': ['estadosunidos', 'usa', 'espana', 'reinounido', 'uk', 'francia', 'italia', 'sudafrica'],
+  'seriea': ['espana', 'reinounido', 'uk', 'estadosunidos', 'usa', 'alemania', 'portugal', 'francia', 'argentina', 'paisesbajos'],
+  'ligue1': ['catar', 'qatar', 'mena', 'espana', 'sudafrica'],
+  'saudiproleague': ['arabiasaudi', 'catar', 'francia'],
+  'psl': ['sudafrica', 'egipto', 'africa'],
+  'egyptianpremierleague': ['egipto', 'sudafrica', 'africa'],
+  'aleague': ['australia'],
+  'indiansuperleague': ['india'],
+  'superleaguegreece': ['grecia'],
+  'ligaprofesional': ['argentina', 'latam', 'estadosunidos', 'usa'],
+  'brasileirao': ['brasil', 'portugal'],
+  'ligamx': ['mexico', 'estadosunidos', 'usa', 'latam', 'colombia', 'argentina']
+};
+
+function hasInternationalRights(channelCountry = '', competition = '') {
+  const cNorm = normalizeText(channelCountry);
+  const compCanon = getCanonicalComp(competition);
+  const authorizedCountries = INTERNATIONAL_RIGHTS[compCanon];
+  if (!authorizedCountries) return false;
+  return authorizedCountries.some(auth => cNorm.includes(auth) || auth.includes(cNorm));
+}
+
+function getChannelFamily(title = '') {
+  const t = (title || '').toLowerCase().trim();
+  if (t.startsWith('espn')) return 'espn';
+  if (t.startsWith('dazn')) return 'dazn';
+  if (t.startsWith('canal+') || t.startsWith('canal plus')) return 'canal+';
+  if (t.startsWith('sky')) return 'sky';
+  if (t.startsWith('fox')) return 'fox';
+  if (t.startsWith('tnt')) return 'tnt';
+  if (t.startsWith('bein')) return 'bein';
+  if (t.startsWith('supersport')) return 'supersport';
+  if (t.startsWith('ssc')) return 'ssc';
+  if (t.startsWith('star sports')) return 'starsports';
+  if (t.startsWith('cosmote')) return 'cosmote';
+  if (t.startsWith('optus')) return 'optus';
+  return null;
+}
+
+function calculateScore(fixture, channel) {
+  const isCompMatch = matchCompetition(fixture.competition, channel.competitions);
+  const isTeamMatch = matchCountryAndTeam(fixture, channel);
+  const fCountryNorm = normalizeText(fixture.country);
+  const cCountryNorm = normalizeText(channel.country);
+  const isSameCountry = fCountryNorm && cCountryNorm && (fCountryNorm === cCountryNorm || (fCountryNorm === 'espana' && cCountryNorm === 'espana'));
+
+  // 1. Competición canónica coincidente Y país del canal = país de la competición -> 100
+  if (isCompMatch && isSameCountry) {
+    return 100;
+  }
+
+  // 2. País coincidente + nombre de equipo en el nombre del canal -> 80
+  if (isTeamMatch) {
+    return 80;
+  }
+
+  // 3. Competición canónica coincidente, canal de otro país
+  if (isCompMatch) {
+    if (hasInternationalRights(channel.country, fixture.competition)) {
+      return 60; // derechos internacionales conocidos
+    }
+    return 20; // etiqueta sin derechos confirmados
+  }
+
+  return 0;
 }
 
 const CANONICAL_COMPETITIONS = {
@@ -149,47 +229,44 @@ class BroadcastEngine {
       };
     }
 
-    // 1. Filtrar canales candidatos con el criterio estricto:
-    // coincidencia de competición O (coincidencia de país + nombre de equipo en el canal)
-    const matchedChannels = [];
+    // 1. Filtrar y puntuar canales candidatos con el sistema estricto (Umbral mínimo >= 60)
+    const scoredCandidates = [];
 
     for (const ch of liveChannels) {
-      const isCompMatch = matchCompetition(fixture.competition, ch.competitions);
-      const isTeamMatch = matchCountryAndTeam(fixture, ch);
+      const score = calculateScore(fixture, ch);
+      if (score >= 60) {
+        const lang = deduceLanguage(ch.country, ch.title);
+        const isPref = prefLang === 'all' || lang === prefLang;
 
-      if (isCompMatch || isTeamMatch) {
-        matchedChannels.push(ch);
+        scoredCandidates.push({
+          id: ch.id,
+          sourceId: ch.sourceId,
+          channelName: ch.title,
+          logo: ch.logo,
+          country: ch.country,
+          language: lang,
+          isPreferredLang: isPref,
+          footballTier: ch.footballTier || 2,
+          priority: ch.effectivePriority || ch.priority || 10,
+          score,
+          streamUrl: ch.streamUrl,
+          backupUrls: Array.isArray(ch.backupUrls) ? ch.backupUrls : [],
+          headers: ch.headers || {}
+        });
       }
     }
 
-    // 2. Mapear a la entidad Broadcast en memoria
-    const broadcasts = matchedChannels.map(ch => {
-      const lang = deduceLanguage(ch.country, ch.title);
-      const isPref = prefLang === 'all' || lang === prefLang;
-
-      return {
-        id: ch.id,
-        sourceId: ch.sourceId,
-        channelName: ch.title,
-        logo: ch.logo,
-        country: ch.country,
-        language: lang,
-        isPreferredLang: isPref,
-        footballTier: ch.footballTier || 2,
-        priority: ch.effectivePriority || ch.priority || 10,
-        streamUrl: ch.streamUrl,
-        backupUrls: Array.isArray(ch.backupUrls) ? ch.backupUrls : [],
-        headers: ch.headers || {}
-      };
-    });
-
-    // 3. Ordenar:
+    // 2. Ordenar candidatos:
     // a) Idioma preferido primero
-    // b) footballTier asc (Tier 1 dedicados antes de Tier 2 generalistas)
-    // c) priority asc
-    broadcasts.sort((a, b) => {
+    // b) Puntuación del matcher descendente (100 > 80 > 60)
+    // c) footballTier asc (Tier 1 dedicados antes de Tier 2 generalistas)
+    // d) priority asc (desempate por fuente de mayor prioridad)
+    scoredCandidates.sort((a, b) => {
       const prefDiff = (b.isPreferredLang ? 1 : 0) - (a.isPreferredLang ? 1 : 0);
       if (prefDiff !== 0) return prefDiff;
+
+      const scoreDiff = (b.score || 0) - (a.score || 0);
+      if (scoreDiff !== 0) return scoreDiff;
 
       const tierDiff = (a.footballTier || 2) - (b.footballTier || 2);
       if (tierDiff !== 0) return tierDiff;
@@ -197,8 +274,29 @@ class BroadcastEngine {
       return (a.priority || 10) - (b.priority || 10);
     });
 
-    // 4. Tope de 6 broadcasts por fixture
-    const topBroadcasts = broadcasts.slice(0, 6);
+    // 3. Diversidad: máximo 2 canales por familia (ESPN, DAZN, Canal+, Sky, etc.) y tope de 6 broadcasts
+    const selectedBroadcasts = [];
+    const familyCounts = {};
+
+    for (const b of scoredCandidates) {
+      const family = getChannelFamily(b.channelName);
+      if (family) {
+        if ((familyCounts[family] || 0) >= 2) {
+          continue; // descartar si ya hay 2 de esta familia
+        }
+      }
+
+      selectedBroadcasts.push(b);
+      if (family) {
+        familyCounts[family] = (familyCounts[family] || 0) + 1;
+      }
+
+      if (selectedBroadcasts.length >= 6) {
+        break;
+      }
+    }
+
+    const topBroadcasts = selectedBroadcasts;
     const hasBroadcast = topBroadcasts.length > 0;
 
     // 5. Detección de directo por EPG

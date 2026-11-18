@@ -1571,7 +1571,6 @@
       "competitions": [
         "Premier League",
         "Champions League",
-        "LaLiga",
         "Ligue 1"
       ],
       "tier": 1
@@ -1589,7 +1588,6 @@
       "competitions": [
         "Premier League",
         "Champions League",
-        "LaLiga",
         "Ligue 1"
       ],
       "tier": 1
@@ -1605,7 +1603,6 @@
       "competitions": [
         "Premier League",
         "Champions League",
-        "LaLiga",
         "Ligue 1"
       ],
       "tier": 1
@@ -1619,7 +1616,6 @@
       "competitions": [
         "Premier League",
         "Champions League",
-        "LaLiga",
         "Ligue 1"
       ],
       "tier": 1
@@ -1633,7 +1629,6 @@
       "competitions": [
         "Premier League",
         "Champions League",
-        "LaLiga",
         "Ligue 1"
       ],
       "tier": 1
@@ -1794,8 +1789,6 @@
       "competitions": [
         "Copa Libertadores",
         "Champions League",
-        "LaLiga",
-        "Premier League",
         "Liga Profesional"
       ],
       "tier": 1
@@ -1811,8 +1804,6 @@
       "competitions": [
         "Copa Libertadores",
         "Champions League",
-        "LaLiga",
-        "Premier League",
         "Liga Profesional"
       ],
       "tier": 1
@@ -1826,8 +1817,6 @@
       "competitions": [
         "Copa Libertadores",
         "Champions League",
-        "LaLiga",
-        "Premier League",
         "Liga Profesional"
       ],
       "tier": 1
@@ -1841,8 +1830,6 @@
       "competitions": [
         "Copa Libertadores",
         "Champions League",
-        "LaLiga",
-        "Premier League",
         "Liga Profesional"
       ],
       "tier": 1
@@ -2063,7 +2050,6 @@
         "espn 2 usa",
         "espn 2 united states",
         "espn2",
-        "espnu",
         "espn deportes"
       ],
       "tvgIds": [
@@ -2078,6 +2064,17 @@
         "Bundesliga"
       ],
       "tier": 1
+    },
+    {
+      "names": [
+        "espnu"
+      ],
+      "tvgIds": [
+        "ESPNU.us"
+      ],
+      "country": "USA",
+      "competitions": [],
+      "tier": 2
     },
     {
       "names": [
@@ -2171,23 +2168,45 @@
     },
     {
       "names": [
-        "supersport football",
-        "supersport premier league",
-        "supersport laliga",
-        "supersport psl"
+        "supersport psl",
+        "supersport premier league"
       ],
       "tvgIds": [
-        "SuperSportFootball.za",
-        "SuperSportPremierLeague.za",
-        "SuperSportLaLiga.za"
+        "SuperSportPSL.za",
+        "SuperSportPremierLeague.za"
       ],
       "country": "ZA",
       "competitions": [
-        "Premier League",
-        "LaLiga",
-        "Champions League",
-        "AFCON",
-        "PSL"
+        "PSL",
+        "Egyptian Premier League",
+        "AFCON"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "on time sports 1",
+        "ontime sports"
+      ],
+      "tvgIds": [
+        "ONTimeSports1.eg"
+      ],
+      "country": "EG",
+      "competitions": [
+        "Egyptian Premier League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "stan sport"
+      ],
+      "tvgIds": [
+        "StanSport.au"
+      ],
+      "country": "AU",
+      "competitions": [
+        "A-League"
       ],
       "tier": 1
     },
@@ -2385,20 +2404,15 @@
       "names": [
         "star sports 1",
         "star sports select 1",
-        "sony sports ten 1",
-        "astro supersport 1"
+        "sony sports ten 1"
       ],
       "tvgIds": [
         "StarSports1.in",
-        "SonySportsTen1.in",
-        "AstroSuperSport1.my"
+        "SonySportsTen1.in"
       ],
-      "country": "ASIA",
+      "country": "IN",
       "competitions": [
-        "Indian Super League",
-        "Premier League",
-        "Champions League",
-        "Serie A"
+        "Indian Super League"
       ],
       "tier": 1
     },

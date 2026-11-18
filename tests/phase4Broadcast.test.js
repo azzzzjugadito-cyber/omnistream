@@ -122,15 +122,16 @@ test('Tope de 6 broadcasts por fixture y fixture sin emisión devuelve hasBroadc
     timestamp: new Date().toISOString()
   };
 
-  const manyChannels = Array.from({ length: 12 }, (_, i) => ({
-    id: `ch-${i}`,
-    title: `Sky Sport Serie A ${i}`,
-    country: 'Italia',
-    competitions: ['Serie A'],
-    streamUrl: `http://stream/${i}.m3u8`,
-    footballTier: 1,
-    priority: i + 1
-  }));
+  const manyChannels = [
+    { id: 'ch-1', title: 'Sky Sport Serie A 1', country: 'Italia', competitions: ['Serie A'], streamUrl: 'http://s1', footballTier: 1, priority: 1 },
+    { id: 'ch-2', title: 'Sky Sport Serie A 2', country: 'Italia', competitions: ['Serie A'], streamUrl: 'http://s2', footballTier: 1, priority: 2 },
+    { id: 'ch-3', title: 'DAZN 1 Serie A', country: 'Italia', competitions: ['Serie A'], streamUrl: 'http://s3', footballTier: 1, priority: 3 },
+    { id: 'ch-4', title: 'DAZN 2 Serie A', country: 'Italia', competitions: ['Serie A'], streamUrl: 'http://s4', footballTier: 1, priority: 4 },
+    { id: 'ch-5', title: 'Rai Sport Serie A', country: 'Italia', competitions: ['Serie A'], streamUrl: 'http://s5', footballTier: 1, priority: 5 },
+    { id: 'ch-6', title: 'Mediaset Serie A', country: 'Italia', competitions: ['Serie A'], streamUrl: 'http://s6', footballTier: 1, priority: 6 },
+    { id: 'ch-7', title: 'Eleven Sports Serie A', country: 'Italia', competitions: ['Serie A'], streamUrl: 'http://s7', footballTier: 1, priority: 7 },
+    { id: 'ch-8', title: 'Canal+ Serie A', country: 'Italia', competitions: ['Serie A'], streamUrl: 'http://s8', footballTier: 1, priority: 8 }
+  ];
 
   broadcastEngine.clearCache();
   const res = broadcastEngine.enrichFixture(match, manyChannels, 'es', () => []);

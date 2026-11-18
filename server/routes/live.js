@@ -86,12 +86,7 @@ router.get('/resolve', async (req, res) => {
       return res.status(400).json({ error: 'Falta sourceId o itemId' });
     }
 
-    const adapter = sourceManager.getAdapter(sourceId);
-    if (!adapter) {
-      return res.status(404).json({ error: `Adaptador ${sourceId} no encontrado` });
-    }
-
-    const resolved = await adapter.resolveStream(itemId);
+    const resolved = await sourceManager.resolveStream(sourceId, itemId);
     res.json(resolved);
   } catch (err) {
     logger.error(`Error resolviendo stream: ${err.message}`);
