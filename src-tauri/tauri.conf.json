@@ -1,0 +1,62 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run client",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:3000",
+    "distDir": "../client/dist"
+  },
+  "package": {
+    "productName": "OmniStream OTT",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.omnistream.ott",
+      "icon": [
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.png"
+      ],
+      "resources": [],
+      "shortDescription": "Agregador unificado de contenido OTT",
+      "longDescription": "Aplicación de agregación y reproducción de emisiones en directo y catálogo bajo demanda para TFG de Ingeniería.",
+      "category": "Entertainment",
+      "macOS": {
+        "frameworks": [],
+        "minimumSystemVersion": "",
+        "exceptionDomain": "",
+        "signingIdentity": null,
+        "entitlements": null
+      },
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "title": "OmniStream OTT",
+        "width": 1280,
+        "height": 820,
+        "minWidth": 960,
+        "minHeight": 640,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "omnistream-ott",
+  "version": "1.0.0",
+  "description": "Agregador unificado de contenido OTT (directo y catálogo) para TFG de Ingeniería",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run server\" \"npm run client\"",
+    "dev": "concurrently --kill-others-on-fail -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "test": "node --test tests/*.test.js",
+    "tauri": "tauri",
+    "desktop:build": "npm run build && tauri build"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "better-sqlite3": "^11.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

@@ -1,0 +1,6 @@
+[2026-11-18T07:33:22.861Z] [ERROR] Error en proxy a http://stream3.cinerama.uz/1010/tracks-v1a1/mono.m3u8: socket hang up
+[2026-11-18T07:39:02.966Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T07:40:13.323Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T07:41:33.874Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T07:42:14.430Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T08:05:26.600Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999

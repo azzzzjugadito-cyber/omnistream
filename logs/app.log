@@ -1,0 +1,288 @@
+[2026-11-17T22:42:44.601Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-17T22:42:44.905Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-17T22:42:44.913Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-17T22:42:44.962Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-17T22:42:44.964Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-17T22:42:44.965Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-17T22:42:44.974Z] [INFO] Cargando catálogo VOD inicial...
+[2026-11-17T22:42:44.975Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-17T22:42:44.975Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-17T22:42:44.976Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-17T22:42:44.976Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-17T22:42:44.976Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-17T22:42:44.981Z] [INFO] =====================================================
+[2026-11-17T22:42:44.981Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-17T22:42:44.982Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-17T22:42:44.982Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-17T22:42:44.982Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-17T22:42:44.982Z] [INFO] =====================================================
+[2026-11-17T22:42:45.205Z] [INFO] Agenda deportiva actualizada: 10 eventos programados.
+[2026-11-17T22:42:45.213Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-17T22:42:45.235Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-17T22:42:45.242Z] [INFO] Fuente iptv-org-sports cargada con éxito: 528 canales.
+[2026-11-17T22:42:45.468Z] [INFO] Catálogo VOD cargado: 100 títulos.
+[2026-11-17T22:42:54.979Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-17T22:42:55.050Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (70ms)
+[2026-11-17T22:42:55.380Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (328ms)
+[2026-11-17T22:42:55.775Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (394ms)
+[2026-11-17T22:42:56.221Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-17T22:42:56.222Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (445ms) - HTTP 429
+[2026-11-17T22:42:56.321Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (97ms)
+[2026-11-17T22:42:56.603Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (281ms)
+[2026-11-17T22:52:02.424Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-17T22:52:02.433Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-17T22:52:02.436Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-17T22:52:02.464Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-17T22:52:02.466Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-17T22:52:02.467Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-17T22:52:02.474Z] [INFO] Cargando catálogo VOD inicial...
+[2026-11-17T22:52:02.475Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-17T22:52:02.475Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-17T22:52:02.475Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-17T22:52:02.475Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-17T22:52:02.475Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-17T22:52:02.479Z] [INFO] =====================================================
+[2026-11-17T22:52:02.480Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-17T22:52:02.480Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-17T22:52:02.480Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-17T22:52:02.480Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-17T22:52:02.480Z] [INFO] =====================================================
+[2026-11-17T22:52:04.972Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-17T22:52:05.002Z] [INFO] Agenda deportiva actualizada: 10 eventos programados.
+[2026-11-17T22:52:05.058Z] [INFO] Fuente iptv-org-sports cargada con éxito: 528 canales.
+[2026-11-17T22:52:05.217Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-17T22:52:05.994Z] [INFO] Catálogo VOD cargado: 100 títulos.
+[2026-11-17T22:52:12.477Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-17T22:52:12.560Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (80ms)
+[2026-11-17T22:52:12.795Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (234ms)
+[2026-11-17T22:52:12.823Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (28ms)
+[2026-11-17T22:54:48.007Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-17T22:54:48.017Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-17T22:54:48.021Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-17T22:54:48.049Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-17T22:54:48.050Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-17T22:54:48.051Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-17T22:54:48.057Z] [INFO] Cargando catálogo VOD inicial...
+[2026-11-17T22:54:48.059Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-17T22:54:48.059Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-17T22:54:48.059Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-17T22:54:48.059Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-17T22:54:48.059Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-17T22:54:48.064Z] [INFO] =====================================================
+[2026-11-17T22:54:48.064Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-17T22:54:48.064Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-17T22:54:48.064Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-17T22:54:48.064Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-17T22:54:48.064Z] [INFO] =====================================================
+[2026-11-17T22:54:48.320Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-17T22:54:48.352Z] [INFO] Fuente iptv-org-sports cargada con éxito: 528 canales.
+[2026-11-17T22:54:48.359Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-17T22:54:48.484Z] [INFO] Catálogo VOD cargado: 100 títulos.
+[2026-11-17T22:54:48.486Z] [INFO] Agenda deportiva actualizada: 10 eventos programados.
+[2026-11-18T07:26:26.375Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T07:26:26.392Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T07:26:26.396Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T07:26:26.425Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T07:26:26.426Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T07:26:26.428Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T07:26:26.434Z] [INFO] Cargando catálogo VOD inicial...
+[2026-11-18T07:26:26.436Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T07:26:26.436Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T07:26:26.436Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T07:26:26.436Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T07:26:26.437Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-18T07:26:26.440Z] [INFO] =====================================================
+[2026-11-18T07:26:26.440Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-18T07:26:26.441Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-18T07:26:26.441Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-18T07:26:26.441Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-18T07:26:26.441Z] [INFO] =====================================================
+[2026-11-18T07:26:26.790Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T07:26:26.826Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T07:26:26.839Z] [INFO] Agenda deportiva actualizada: 10 eventos programados.
+[2026-11-18T07:26:26.869Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T07:26:27.046Z] [INFO] Catálogo VOD cargado: 100 títulos.
+[2026-11-18T07:26:36.439Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T07:26:36.595Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (153ms)
+[2026-11-18T07:26:36.967Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (370ms)
+[2026-11-18T07:26:37.000Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (31ms)
+[2026-11-18T07:26:37.306Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-18T07:26:37.307Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (305ms) - HTTP 429
+[2026-11-18T07:26:37.388Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (81ms)
+[2026-11-18T07:26:37.704Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (314ms)
+[2026-11-18T07:31:26.445Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T07:31:26.984Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (523ms)
+[2026-11-18T07:31:27.080Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (93ms)
+[2026-11-18T07:31:27.110Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (28ms)
+[2026-11-18T07:31:27.657Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T07:31:27.658Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (547ms) - HTTP 403
+[2026-11-18T07:31:27.758Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (99ms)
+[2026-11-18T07:31:28.017Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (257ms)
+[2026-11-18T07:33:22.859Z] [ERROR] Error en proxy a http://stream3.cinerama.uz/1010/tracks-v1a1/mono.m3u8: socket hang up
+[2026-11-18T07:34:48.844Z] [INFO] Consultando Torrentio para tt33764258: https://torrentio.strem.fun/stream/movie/tt33764258.json
+[2026-11-18T07:34:48.854Z] [INFO] Consultando Torrentio para tt33764258: https://torrentio.strem.fun/stream/movie/tt33764258.json
+[2026-11-18T07:36:26.420Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T07:36:26.547Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (115ms)
+[2026-11-18T07:36:26.688Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (139ms)
+[2026-11-18T07:36:26.734Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (44ms)
+[2026-11-18T07:36:27.777Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T07:36:27.779Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (1043ms) - HTTP 403
+[2026-11-18T07:36:27.876Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (96ms)
+[2026-11-18T07:36:28.187Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (309ms)
+[2026-11-18T07:38:32.139Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T07:38:32.505Z] [INFO] Agenda deportiva actualizada: 10 eventos programados.
+[2026-11-18T07:39:02.965Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T07:40:13.323Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T07:41:12.340Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T07:41:16.430Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T07:41:26.404Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T07:41:26.478Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (71ms)
+[2026-11-18T07:41:26.587Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (108ms)
+[2026-11-18T07:41:26.608Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (20ms)
+[2026-11-18T07:41:27.092Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T07:41:27.093Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (483ms) - HTTP 403
+[2026-11-18T07:41:27.170Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (75ms)
+[2026-11-18T07:41:27.552Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (382ms)
+[2026-11-18T07:41:33.874Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T07:42:14.428Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T07:42:16.864Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T07:42:17.145Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T07:42:17.150Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T07:42:17.324Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T07:42:17.325Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T07:42:17.375Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T07:42:43.198Z] [INFO] Cargando catálogo VOD inicial...
+[2026-11-18T07:42:43.457Z] [INFO] Catálogo VOD cargado: 100 títulos.
+[2026-11-18T07:42:57.313Z] [INFO] Consultando Torrentio para tt1196946: https://torrentio.strem.fun/stream/movie/tt1196946.json
+[2026-11-18T07:42:57.569Z] [INFO] Consultando Torrentio para tt1196946: https://torrentio.strem.fun/stream/movie/tt1196946.json
+[2026-11-18T07:43:03.553Z] [INFO] Consultando Torrentio para tt33764258: https://torrentio.strem.fun/stream/movie/tt33764258.json
+[2026-11-18T07:43:03.706Z] [INFO] Consultando Torrentio para tt33764258: https://torrentio.strem.fun/stream/movie/tt33764258.json
+[2026-11-18T07:43:09.728Z] [INFO] Consultando Torrentio para tt33764258: https://torrentio.strem.fun/stream/movie/tt33764258.json
+[2026-11-18T07:43:09.847Z] [INFO] Consultando Torrentio para tt33764258: https://torrentio.strem.fun/stream/movie/tt33764258.json
+[2026-11-18T07:46:26.392Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T07:46:26.645Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (248ms)
+[2026-11-18T07:46:26.780Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (133ms)
+[2026-11-18T07:46:26.804Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (23ms)
+[2026-11-18T07:46:27.358Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T07:46:27.360Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (552ms) - HTTP 403
+[2026-11-18T07:46:27.469Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (108ms)
+[2026-11-18T07:46:27.754Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (284ms)
+[2026-11-18T07:51:26.413Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T07:51:26.635Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (209ms)
+[2026-11-18T07:51:26.950Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (313ms)
+[2026-11-18T07:51:27.130Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (178ms)
+[2026-11-18T07:51:29.563Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T07:51:29.564Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (2431ms) - HTTP 403
+[2026-11-18T07:51:29.929Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (364ms)
+[2026-11-18T07:51:30.996Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (1064ms)
+[2026-11-18T07:56:26.381Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T07:56:26.750Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (355ms)
+[2026-11-18T07:56:27.138Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (386ms)
+[2026-11-18T07:56:27.317Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (178ms)
+[2026-11-18T07:56:29.159Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T07:56:29.160Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (1841ms) - HTTP 403
+[2026-11-18T07:56:29.418Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (258ms)
+[2026-11-18T07:56:30.107Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (687ms)
+[2026-11-18T08:01:26.364Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:01:26.533Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (155ms)
+[2026-11-18T08:01:26.765Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (230ms)
+[2026-11-18T08:01:26.851Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (85ms)
+[2026-11-18T08:01:27.960Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T08:01:27.962Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (1109ms) - HTTP 403
+[2026-11-18T08:01:28.157Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (194ms)
+[2026-11-18T08:01:29.821Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (1663ms)
+[2026-11-18T08:05:26.589Z] [INFO] Sincronizando proveedor Xtream [xtream-dead]: 127.0.0.1:9999...
+[2026-11-18T08:05:26.600Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:05:41.480Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T08:05:41.488Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T08:05:41.491Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:05:41.518Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:05:41.520Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:05:41.523Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:05:41.531Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:05:41.532Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:05:41.533Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:05:41.533Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:05:41.533Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:05:41.533Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-18T08:05:41.537Z] [INFO] =====================================================
+[2026-11-18T08:05:41.537Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-18T08:05:41.538Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-18T08:05:41.538Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-18T08:05:41.538Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-18T08:05:41.538Z] [INFO] =====================================================
+[2026-11-18T08:05:42.517Z] [INFO] Agenda deportiva actualizada: 10 eventos programados.
+[2026-11-18T08:05:42.654Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:05:42.834Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:05:42.858Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:05:48.450Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:05:51.535Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:05:51.817Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (279ms)
+[2026-11-18T08:05:52.300Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (482ms)
+[2026-11-18T08:05:52.706Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (404ms)
+[2026-11-18T08:05:53.598Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-18T08:05:53.599Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (892ms) - HTTP 429
+[2026-11-18T08:05:53.807Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (207ms)
+[2026-11-18T08:05:55.859Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (2051ms)
+[2026-11-18T08:06:13.537Z] [INFO] Recargando fuentes desde sources.yaml en caliente...
+[2026-11-18T08:06:13.549Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:06:13.554Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:06:13.556Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:06:13.557Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:06:13.567Z] [INFO] Cargando catálogo VOD inicial...
+[2026-11-18T08:06:13.570Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:06:13.570Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:06:13.570Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:06:13.570Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:06:14.456Z] [INFO] Agenda deportiva actualizada: 0 eventos programados.
+[2026-11-18T08:06:15.109Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:06:15.495Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:06:15.640Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:06:15.922Z] [INFO] Catálogo VOD cargado: 100 títulos.
+[2026-11-18T08:06:26.340Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:06:26.494Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (150ms)
+[2026-11-18T08:06:26.591Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (96ms)
+[2026-11-18T08:06:26.757Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (166ms)
+[2026-11-18T08:06:28.081Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-18T08:06:28.082Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (1322ms) - HTTP 429
+[2026-11-18T08:06:28.262Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (178ms)
+[2026-11-18T08:06:29.262Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (998ms)
+[2026-11-18T08:06:47.174Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T08:06:47.180Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T08:06:47.184Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:06:47.208Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:06:47.209Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:06:47.211Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:06:47.218Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:06:47.220Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:06:47.221Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:06:47.221Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:06:47.221Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:06:47.221Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-18T08:06:47.224Z] [INFO] =====================================================
+[2026-11-18T08:06:47.224Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-18T08:06:47.224Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-18T08:06:47.225Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-18T08:06:47.225Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-18T08:06:47.225Z] [INFO] =====================================================
+[2026-11-18T08:06:47.513Z] [INFO] Agenda deportiva actualizada: 0 eventos programados.
+[2026-11-18T08:06:47.756Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:06:47.869Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:06:47.932Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:06:49.027Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:06:57.223Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:06:57.519Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (295ms)
+[2026-11-18T08:06:57.747Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (226ms)
+[2026-11-18T08:06:57.803Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (54ms)
+[2026-11-18T08:06:58.863Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-18T08:06:58.863Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (1059ms) - HTTP 429
+[2026-11-18T08:06:59.004Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (140ms)
+[2026-11-18T08:07:00.212Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (1208ms)
+[2026-11-18T08:11:47.223Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:11:47.691Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (456ms)
+[2026-11-18T08:11:48.056Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (364ms)
+[2026-11-18T08:11:48.231Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (174ms)
+[2026-11-18T08:11:49.474Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T08:11:49.475Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (1242ms) - HTTP 403
+[2026-11-18T08:11:50.248Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (773ms)
+[2026-11-18T08:11:50.638Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (388ms)

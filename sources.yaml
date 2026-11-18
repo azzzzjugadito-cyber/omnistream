@@ -1,0 +1,142 @@
+# ==============================================================================
+# OmniStream OTT - Configuración Declarativa de Fuentes de Contenido
+# ==============================================================================
+# Este archivo es recargable en caliente desde la interfaz web (Ajustes) sin
+# reiniciar el servidor Node.js.
+#
+# Cada fuente declara:
+#   - id: Identificador único del adaptador
+#   - name: Nombre legible
+#   - type: Tipo de adaptador (m3u, tdtchannels, sports_events, vod_cinemeta, stremio_resolver, custom)
+#   - category: live | vod | events
+#   - url: URL o ruta local de la lista o endpoint
+#   - enabled: true | false
+#   - priority: Número entero (menor número = mayor prioridad en desempates)
+#   - headers: Cabeceras HTTP específicas a inyectar por el proxy (User-Agent, Referer, etc.)
+#   - epgUrl: URL de guía electrónica de programas (opcional)
+# ==============================================================================
+
+sources:
+  # ----------------------------------------------------------------------------
+  # 1. EMISIÓN EN DIRECTO: Canales Deportivos Globales (iptv-org)
+  # Verificado con curl: HTTP 200 audio/x-mpegurl
+  # ----------------------------------------------------------------------------
+  - id: "iptv-org-sports"
+    name: "IPTV-Org Deportes Internacional"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/categories/sports.m3u"
+    enabled: true
+    priority: 1
+    headers:
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+      Referer: "https://iptv-org.github.io/"
+
+  # ----------------------------------------------------------------------------
+  # 2. EMISIÓN EN DIRECTO: Canales Abiertos de España (TDTChannels)
+  # Incluye Teledeporte, Real Madrid TV, Esport3, Gol Play, TVE, autonómicas
+  # Verificado con curl: HTTP 200 application/octet-stream
+  # ----------------------------------------------------------------------------
+  - id: "tdtchannels-es"
+    name: "TDTChannels España (TDT Oficial y Deportes)"
+    type: "tdtchannels"
+    category: "live"
+    url: "https://www.tdtchannels.com/lists/tv.m3u8"
+    epgUrl: "https://www.tdtchannels.com/epg/TV.xml.gz"
+    enabled: true
+    priority: 1
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+      Referer: "https://www.tdtchannels.com/"
+
+  # ----------------------------------------------------------------------------
+  # 3. EMISIÓN EN DIRECTO: Canales Generales de España (iptv-org)
+  # Verificado con curl: HTTP 200
+  # ----------------------------------------------------------------------------
+  - id: "iptv-org-es"
+    name: "IPTV-Org Canales España"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/es.m3u"
+    enabled: true
+    priority: 2
+    headers:
+      User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+
+  # ----------------------------------------------------------------------------
+  # 4. EVENTOS DEPORTIVOS EN DIRECTO: TheSportsDB (Partidos y eventos de hoy)
+  # Fútbol (LaLiga, Premier, Champions), UFC, NBA, F1, MotoGP
+  # Verificado con curl: HTTP 200 JSON
+  # ----------------------------------------------------------------------------
+  - id: "sports-events-hub"
+    name: "Agenda Deportiva en Directo (LaLiga, NBA, UFC, F1)"
+    type: "sports_events"
+    category: "events"
+    url: "https://www.thesportsdb.com/api/v1/json/123"
+    enabled: true
+    priority: 1
+
+  # ----------------------------------------------------------------------------
+  # 5. CATÁLOGO BAJO DEMANDA: Cinemeta + TMDB (Metadatos, posters, sinopsis)
+  # Verificado con curl: HTTP 200 JSON
+  # ----------------------------------------------------------------------------
+  - id: "cinemeta-vod"
+    name: "Cinemeta / TMDB Catálogo VOD"
+    type: "vod_cinemeta"
+    category: "vod"
+    url: "https://v3-cinemeta.strem.io"
+    enabled: true
+    priority: 1
+
+  # ----------------------------------------------------------------------------
+  # 6. RESOLVEDOR DE STREAMS VOD: Stremio / Torrentio / HTTP Open VOD
+  # Resuelve streams HLS, MP4 y enlaces de reproducción bajo demanda
+  # Verificado con curl: HTTP 200 JSON
+  # ----------------------------------------------------------------------------
+  - id: "stremio-torrentio-resolver"
+    name: "Stremio / Torrentio Stream Resolver"
+    type: "stremio_resolver"
+    category: "vod"
+    url: "https://torrentio.strem.fun"
+    enabled: true
+    priority: 2
+
+  # ----------------------------------------------------------------------------
+  # 7. FUENTES MANUALES DE AGREGACIÓN DE TERCEROS (DaddyLive, StreamEast, etc.)
+  # Nota para el TFG: Estas fuentes operan con URLs dinámicas y dominios rotatorios.
+  # El usuario puede activar estas entradas manuales especificando su lista M3U
+  # privada, tokenizada o endpoint proxy con las cabeceras requeridas.
+  # ----------------------------------------------------------------------------
+  - id: "daddylive-manual"
+    name: "DaddyLive Sports (Entrada Manual / Proxy)"
+    type: "custom"
+    category: "live"
+    # Introducir URL m3u o enlace directo del reproductor:
+    url: ""
+    enabled: false
+    priority: 4
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+      Referer: "https://daddylive.sx/"
+
+  - id: "streameast-manual"
+    name: "StreamEast Live (Entrada Manual / Proxy)"
+    type: "custom"
+    category: "live"
+    url: ""
+    enabled: false
+    priority: 5
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+      Referer: "https://thestreameast.to/"
+
+  - id: "ppvst-manual"
+    name: "PPV.st Aggregator (Entrada Manual)"
+    type: "custom"
+    category: "live"
+    url: ""
+    enabled: false
+    priority: 6
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+      Referer: "https://ppv.st/"
