@@ -40,7 +40,11 @@ export function ItemDetailModal({ item, onClose, onPlayStream }) {
     try {
       const type = item.contentType === 'series' ? 'series' : 'movie';
       const res = await api.resolveVodStreams(item.id, item.title, season, episode, type);
-      setStreams(res.streams || []);
+      const fetchedStreams = res.streams || [];
+      setStreams(fetchedStreams);
+      if (fetchedStreams.some(s => s.isCastellano)) {
+        setAudioFilter('castellano');
+      }
     } catch (err) {
       setStreamError('Error al resolver enlaces de reproducción');
     } finally {
@@ -321,6 +325,22 @@ export function ItemDetailModal({ item, onClose, onPlayStream }) {
 
             {!loadingStreams && streams.length > 0 && (
               <div>
+                {/* Banner de ayuda para audio en Castellano */}
+                <div style={{
+                  background: 'rgba(34, 197, 94, 0.1)',
+                  border: '1px solid rgba(34, 197, 94, 0.3)',
+                  borderRadius: 8,
+                  padding: '9px 12px',
+                  marginBottom: 12,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  fontSize: '0.8rem',
+                  color: '#86efac'
+                }}>
+                  <span>🇪🇸 <strong>Audio en Castellano:</strong> Usa el Servidor 1. Si el reproductor muestra botones de idioma arriba a la izquierda, asegúrate de tener marcado <strong>CASTELLANO</strong>.</span>
+                </div>
+
                 {/* Filtro rápido de audio */}
                 <div style={{ display: 'flex', gap: 8, marginBottom: 14 }}>
                   <button 

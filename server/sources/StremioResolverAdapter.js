@@ -47,8 +47,20 @@ export class StremioResolverAdapter extends BaseAdapter {
     const isSeries = options.contentType === 'series' || options.isSeries || false;
     const streams = [];
 
-    // 1. Servidores Web HD Garantizados con soporte Castellano y Multiaudio (VidSrc, MultiEmbed)
+    // 1. Servidores Especializados en Español (Castellano y Latino)
     if (imdbId && imdbId.startsWith('tt')) {
+      const playLatinMovieCast = `https://playlatinsrc.co/movie/${imdbId}?lang=castellano`;
+      const playLatinSerialCast = `https://playlatinsrc.co/serial/${imdbId}?lang=castellano`;
+      const playLatinCastUrl = isSeries ? playLatinSerialCast : playLatinMovieCast;
+
+      const playLatinMovieLat = `https://playlatinsrc.co/movie/${imdbId}?lang=latino`;
+      const playLatinSerialLat = `https://playlatinsrc.co/serial/${imdbId}?lang=latino`;
+      const playLatinLatUrl = isSeries ? playLatinSerialLat : playLatinMovieLat;
+
+      const vidLinkUrl = isSeries
+        ? `https://vidlink.pro/tv/${imdbId}/${season}/${episode}?primaryColor=0ea5e9`
+        : `https://vidlink.pro/movie/${imdbId}?primaryColor=0ea5e9`;
+
       const vidSrcToUrl = isSeries
         ? `https://vidsrc.to/embed/tv/${imdbId}/${season}/${episode}`
         : `https://vidsrc.to/embed/movie/${imdbId}`;
@@ -61,17 +73,56 @@ export class StremioResolverAdapter extends BaseAdapter {
         ? `https://vidsrc.me/embed/tv?imdb=${imdbId}&season=${season}&episode=${episode}`
         : `https://vidsrc.me/embed/movie?imdb=${imdbId}`;
 
-      const vidSrcNetUrl = isSeries
-        ? `https://vidsrc.net/embed/tv/${imdbId}/${season}/${episode}`
-        : `https://vidsrc.net/embed/movie/${imdbId}`;
+      // Servidor 1: Castellano de España garantizado
+      streams.push({
+        id: 'embed_playlatin_castellano',
+        name: 'Servidor Español 🇪🇸 (Castellano España 1080p)',
+        title: `${title || 'Título'} [Castellano España 1080p]`,
+        quality: '1080p Ultra HD',
+        audio: 'Castellano (España)',
+        isCastellano: true,
+        embedUrl: playLatinCastUrl,
+        streamUrl: playLatinCastUrl,
+        isEmbed: true,
+        type: 'embed'
+      });
 
+      // Servidor 2: Audio Latino (para títulos donde no haya doblaje peninsular o prefieran latino)
+      streams.push({
+        id: 'embed_playlatin_latino',
+        name: 'Servidor Español 🇲🇽 (Latino HD)',
+        title: `${title || 'Título'} [Español Latino HD]`,
+        quality: '1080p Full HD',
+        audio: 'Español Latino',
+        isCastellano: true,
+        embedUrl: playLatinLatUrl,
+        streamUrl: playLatinLatUrl,
+        isEmbed: true,
+        type: 'embed'
+      });
+
+      // Servidor 3: VidLink con selector nativo de pista de audio y subtítulos
+      streams.push({
+        id: 'embed_vidlink',
+        name: 'Servidor VidLink (Multi-Audio con Selector)',
+        title: `${title || 'Título'} [1080p Multi-Audio]`,
+        quality: '1080p Full HD',
+        audio: 'Multi-Audio (Selector)',
+        isCastellano: true,
+        embedUrl: vidLinkUrl,
+        streamUrl: vidLinkUrl,
+        isEmbed: true,
+        type: 'embed'
+      });
+
+      // Servidores 4 y 5: Versión Original en Inglés con subtítulos
       streams.push({
         id: 'embed_vidsrc_to',
-        name: 'Servidor Principal Ultra HD (Castellano / Multi-Audio)',
-        title: `${title || 'Título'} [1080p Ultra HD]`,
-        quality: '1080p Ultra HD',
-        audio: 'Castellano / Multi-Audio',
-        isCastellano: true,
+        name: 'Servidor Internacional 1 (V.O. Inglés Subtitulado)',
+        title: `${title || 'Título'} [V.O. Inglés 1080p]`,
+        quality: '1080p HD',
+        audio: 'V.O. Inglés',
+        isCastellano: false,
         embedUrl: vidSrcToUrl,
         streamUrl: vidSrcToUrl,
         isEmbed: true,
@@ -80,11 +131,11 @@ export class StremioResolverAdapter extends BaseAdapter {
 
       streams.push({
         id: 'embed_multiembed',
-        name: 'Servidor Alternativo 1 (Castellano / Dual)',
-        title: `${title || 'Título'} [1080p Full HD]`,
+        name: 'Servidor Internacional 2 (V.O. Inglés)',
+        title: `${title || 'Título'} [V.O. Inglés Full HD]`,
         quality: '1080p Full HD',
-        audio: 'Castellano / Dual',
-        isCastellano: true,
+        audio: 'V.O. Inglés',
+        isCastellano: false,
         embedUrl: multiembedUrl,
         streamUrl: multiembedUrl,
         isEmbed: true,
@@ -93,40 +144,27 @@ export class StremioResolverAdapter extends BaseAdapter {
 
       streams.push({
         id: 'embed_vidsrc_me',
-        name: 'Servidor Alternativo 2 (Multi-Idioma / Subtítulos)',
-        title: `${title || 'Título'} [1080p HD]`,
-        quality: '1080p HD',
-        audio: 'Multi-Idioma / Subtítulos',
-        isCastellano: true,
+        name: 'Servidor Internacional 3 (V.O. Rápido)',
+        title: `${title || 'Título'} [HD Stream V.O.]`,
+        quality: 'HD Stream',
+        audio: 'V.O. Inglés',
+        isCastellano: false,
         embedUrl: vidSrcMeUrl,
         streamUrl: vidSrcMeUrl,
         isEmbed: true,
         type: 'embed'
       });
-
-      streams.push({
-        id: 'embed_vidsrc_net',
-        name: 'Servidor Alternativo 3 (Rápido)',
-        title: `${title || 'Título'} [HD Stream]`,
-        quality: 'HD Stream',
-        audio: 'Multi-Idioma',
-        isCastellano: false,
-        embedUrl: vidSrcNetUrl,
-        streamUrl: vidSrcNetUrl,
-        isEmbed: true,
-        type: 'embed'
-      });
     }
 
-    // 2. Incorporar las fuentes abiertas como respaldo garantizado
+    // 2. Incorporar las fuentes abiertas como respaldo de demostración
     OPEN_VOD_FALLBACKS.forEach((fallback, idx) => {
       streams.push({
         id: `open_vod_${idx}`,
         name: `Servidor Público Demo - ${fallback.title}`,
         title: `${title || 'Título'} [${fallback.quality}]`,
         quality: fallback.quality,
-        audio: 'Castellano / Dual',
-        isCastellano: true,
+        audio: 'V.O. Demo',
+        isCastellano: false,
         streamUrl: fallback.streamUrl,
         proxiedUrl: this.getProxiedUrl(fallback.streamUrl, {}),
         isEmbed: false,

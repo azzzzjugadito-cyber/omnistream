@@ -276,9 +276,27 @@ export function Player({ item, onClose, onShowToast }) {
             {item.category || item.competition || 'Emisión en Directo'} • {availableStreams[currentStreamIndex]?.name || 'Stream'}
           </div>
         </div>
-        <button className="player-close-btn" onClick={onClose} title="Cerrar reproductor">
-          <X size={22} />
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          {isEmbed && (
+            <div style={{
+              background: 'rgba(34, 197, 94, 0.15)',
+              border: '1px solid rgba(34, 197, 94, 0.4)',
+              color: '#4ade80',
+              padding: '4px 10px',
+              borderRadius: 6,
+              fontSize: '0.74rem',
+              fontWeight: 600,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6
+            }}>
+              <span>🇪🇸 Pulsa "CASTELLANO" en la barra superior si no suena en español</span>
+            </div>
+          )}
+          <button className="player-close-btn" onClick={onClose} title="Cerrar reproductor">
+            <X size={22} />
+          </button>
+        </div>
       </div>
 
       {/* Pantalla de vídeo */}
