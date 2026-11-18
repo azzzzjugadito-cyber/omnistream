@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { 
   Settings, Smartphone, Terminal, RefreshCw, CheckCircle2, AlertTriangle, 
-  Key, Server, Plus, Trash2, Shield, Activity, Radio 
+  Key, Server, Plus, Trash2, Shield, Activity, Radio, Globe 
 } from 'lucide-react';
 import { api } from '../services/api';
 
@@ -10,6 +10,9 @@ export function SettingsView({ onShowToast }) {
   const [logs, setLogs] = useState([]);
   const [isDebug, setIsDebug] = useState(false);
   const [loadingLogs, setLoadingLogs] = useState(false);
+
+  // Preferencia de idioma de comentarios
+  const [commentaryLang, setCommentaryLang] = useState(() => localStorage.getItem('omnistream_commentary_lang') || 'es');
 
   // Estado de proveedores Xtream
   const [sources, setSources] = useState([]);
@@ -180,6 +183,42 @@ export function SettingsView({ onShowToast }) {
           </p>
         </div>
       </div>
+
+      {/* 0. Preferencia de Idioma de Retransmisión y Comentarios */}
+      <section style={{ background: '#0f141f', border: '1px solid rgba(14, 165, 233, 0.2)', borderRadius: 16, padding: 24 }}>
+        <h3 style={{ fontSize: '1.2rem', fontWeight: 800, display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8, color: '#38bdf8' }}>
+          <Globe size={22} color="#0ea5e9" /> Idioma de Retransmisión de Partidos
+        </h3>
+        <p style={{ fontSize: '0.86rem', color: '#94a3b8', lineHeight: 1.6, marginBottom: 16 }}>
+          Prioriza automáticamente los canales de emisión que coinciden con tu idioma preferido (sin ocultar los demás canales internacionales).
+        </p>
+
+        <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          {[
+            { id: 'es', label: '🇪🇸 Español (Predeterminado)' },
+            { id: 'en', label: '🇬🇧 English' },
+            { id: 'fr', label: '🇫🇷 Français' },
+            { id: 'it', label: '🇮🇹 Italiano' },
+            { id: 'de', label: '🇩🇪 Deutsch' },
+            { id: 'pt', label: '🇵🇹 Português' },
+            { id: 'all', label: '🌐 Todas las señales (Sin preferencia)' }
+          ].map(item => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => {
+                setCommentaryLang(item.id);
+                localStorage.setItem('omnistream_commentary_lang', item.id);
+                if (onShowToast) onShowToast(`Comentarios priorizados en: ${item.label}`);
+              }}
+              className={`filter-pill ${commentaryLang === item.id ? 'active' : ''}`}
+              style={{ padding: '8px 16px', fontSize: '0.85rem' }}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </section>
 
       {/* 1. Gestor Multi-Proveedor Xtream Codes */}
       <section style={{ background: '#0f141f', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 16, padding: 24 }}>

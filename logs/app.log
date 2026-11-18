@@ -443,3 +443,919 @@
 [2026-11-18T08:26:10.290Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (824ms) - HTTP 429
 [2026-11-18T08:26:10.364Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (73ms)
 [2026-11-18T08:26:10.620Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (255ms)
+[2026-11-18T08:27:05.862Z] [INFO] Motor de clasificación de fútbol cargado: 66 definiciones (157 tvgIds, 291 nombres indexados).
+[2026-11-18T08:27:05.924Z] [INFO] Sincronizando proveedor Xtream [xtream-dead]: 127.0.0.1:9999...
+[2026-11-18T08:27:05.937Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:30:59.278Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:30:59.405Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (120ms)
+[2026-11-18T08:30:59.514Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (108ms)
+[2026-11-18T08:30:59.538Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (23ms)
+[2026-11-18T08:31:00.105Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T08:31:00.105Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (567ms) - HTTP 403
+[2026-11-18T08:31:00.192Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (86ms)
+[2026-11-18T08:31:00.458Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (264ms)
+[2026-11-18T08:35:59.263Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:35:59.440Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (167ms)
+[2026-11-18T08:36:00.548Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (1107ms)
+[2026-11-18T08:36:00.582Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (34ms)
+[2026-11-18T08:36:01.070Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T08:36:01.070Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (488ms) - HTTP 403
+[2026-11-18T08:36:01.139Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (69ms)
+[2026-11-18T08:36:01.413Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (273ms)
+[2026-11-18T08:38:11.700Z] [INFO] Recargando fuentes desde sources.yaml en caliente...
+[2026-11-18T08:38:11.703Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:38:11.715Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:38:11.718Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:38:11.718Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:38:11.724Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:38:11.725Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:38:11.725Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:38:11.725Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T08:38:11.726Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T08:38:11.727Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T08:38:11.727Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T08:38:11.727Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T08:38:11.727Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T08:38:11.727Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T08:38:11.727Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T08:38:11.727Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T08:38:11.727Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T08:38:11.727Z] [INFO] Fuente desactivada en config: xtream-test-verify-p4
+[2026-11-18T08:38:11.727Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:38:11.752Z] [INFO] Recargando fuentes desde sources.yaml en caliente...
+[2026-11-18T08:38:11.754Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:38:11.755Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:38:11.756Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:38:11.756Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:38:11.761Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T08:38:11.763Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T08:38:11.764Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T08:38:11.764Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T08:38:11.764Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T08:38:11.764Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T08:38:11.764Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T08:38:11.764Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T08:38:11.764Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T08:38:11.764Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T08:38:11.764Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:38:12.407Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:38:12.408Z] [INFO] Agenda deportiva actualizada: 10 eventos programados.
+[2026-11-18T08:38:12.497Z] [INFO] Agenda deportiva actualizada: 0 eventos programados.
+[2026-11-18T08:38:12.779Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:38:12.865Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:38:12.866Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T08:38:12.873Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:38:12.930Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:38:12.930Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T08:38:13.097Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:38:13.462Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T08:38:13.738Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T08:38:14.328Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:38:14.353Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:38:21.931Z] [INFO] Motor de clasificación de fútbol cargado: 66 definiciones (157 tvgIds, 291 nombres indexados).
+[2026-11-18T08:38:57.752Z] [INFO] Motor de clasificación de fútbol cargado: 66 definiciones (157 tvgIds, 291 nombres indexados).
+[2026-11-18T08:38:57.757Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:38:57.789Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:38:57.790Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:38:57.791Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:38:57.798Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:38:57.800Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:38:57.800Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:38:57.800Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:38:57.800Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T08:38:57.800Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T08:38:57.801Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T08:38:57.802Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T08:38:57.802Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:38:57.802Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T08:38:57.809Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T08:38:57.809Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:38:57.944Z] [INFO] Agenda deportiva actualizada: 0 eventos programados.
+[2026-11-18T08:38:58.006Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:38:58.006Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T08:38:58.013Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:38:58.015Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:38:58.084Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:38:58.136Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:38:58.243Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:38:58.391Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T08:38:59.162Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:40:57.512Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T08:40:57.538Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T08:40:57.546Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T08:40:57.550Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:40:57.581Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:40:57.589Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:40:57.591Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:40:57.600Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:40:57.603Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:40:57.603Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:40:57.603Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:40:57.603Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T08:40:57.604Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T08:40:57.604Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T08:40:57.604Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T08:40:57.604Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T08:40:57.604Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T08:40:57.604Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T08:40:57.604Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T08:40:57.604Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T08:40:57.604Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T08:40:57.605Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T08:40:57.605Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:40:57.606Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-18T08:40:57.613Z] [INFO] =====================================================
+[2026-11-18T08:40:57.614Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-18T08:40:57.614Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-18T08:40:57.614Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-18T08:40:57.614Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-18T08:40:57.614Z] [INFO] =====================================================
+[2026-11-18T08:40:57.897Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:40:57.934Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:40:57.934Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T08:40:57.936Z] [INFO] Agenda deportiva actualizada: 10 eventos programados.
+[2026-11-18T08:40:57.947Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:40:58.352Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T08:40:58.851Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:41:07.606Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:41:07.683Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (74ms)
+[2026-11-18T08:41:07.768Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (84ms)
+[2026-11-18T08:41:07.800Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (32ms)
+[2026-11-18T08:41:08.446Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-18T08:41:08.447Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (644ms) - HTTP 429
+[2026-11-18T08:41:08.520Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (71ms)
+[2026-11-18T08:41:08.776Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (256ms)
+[2026-11-18T08:42:37.872Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:42:39.006Z] [INFO] Agenda deportiva actualizada: 0 eventos programados.
+[2026-11-18T08:45:57.616Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:45:57.872Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (246ms)
+[2026-11-18T08:45:58.068Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (196ms)
+[2026-11-18T08:45:58.225Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (155ms)
+[2026-11-18T08:45:58.698Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T08:45:58.699Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (472ms) - HTTP 403
+[2026-11-18T08:45:58.794Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (95ms)
+[2026-11-18T08:45:59.040Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (244ms)
+[2026-11-18T08:46:08.786Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T08:46:08.809Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T08:46:08.816Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T08:46:08.820Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:46:08.846Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:46:08.847Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:46:08.848Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:46:08.853Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:46:08.855Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:46:08.855Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:46:08.855Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:46:08.856Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T08:46:08.856Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T08:46:08.856Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T08:46:08.856Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T08:46:08.856Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T08:46:08.856Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T08:46:08.857Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T08:46:08.857Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T08:46:08.857Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T08:46:08.857Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T08:46:08.857Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T08:46:08.857Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T08:46:08.857Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T08:46:08.858Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T08:46:08.858Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:46:08.859Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-18T08:46:08.865Z] [INFO] =====================================================
+[2026-11-18T08:46:08.865Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-18T08:46:08.865Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-18T08:46:08.865Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-18T08:46:08.865Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-18T08:46:08.865Z] [INFO] =====================================================
+[2026-11-18T08:46:09.069Z] [INFO] Agenda deportiva actualizada: 32 eventos programados en 22 países.
+[2026-11-18T08:46:09.119Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:46:09.120Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T08:46:09.124Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:46:09.128Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:46:09.673Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T08:46:10.155Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:46:18.861Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:46:18.972Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (109ms)
+[2026-11-18T08:46:19.052Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (79ms)
+[2026-11-18T08:46:19.076Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (24ms)
+[2026-11-18T08:46:19.374Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-18T08:46:19.375Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (297ms) - HTTP 429
+[2026-11-18T08:46:19.452Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (76ms)
+[2026-11-18T08:46:19.712Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (258ms)
+[2026-11-18T08:46:26.536Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T08:47:39.965Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T08:47:39.972Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:47:39.999Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:47:40.000Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:47:40.001Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:47:40.007Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:47:40.008Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T08:47:40.009Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T08:47:40.010Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T08:47:40.010Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:47:40.010Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:47:40.161Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T08:47:40.246Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T08:47:40.247Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T08:47:40.254Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T08:47:40.254Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:47:40.388Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:47:40.389Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T08:47:40.443Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:47:40.916Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:47:41.140Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T08:47:41.144Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:47:41.989Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:47:47.067Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T08:47:47.072Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:47:47.095Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:47:47.096Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:47:47.097Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:47:47.103Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:47:47.104Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:47:47.104Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:47:47.104Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T08:47:47.105Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T08:47:47.106Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T08:47:47.106Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:47:47.106Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:47:47.219Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T08:47:47.241Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T08:47:47.241Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T08:47:47.245Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T08:47:47.246Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:47:47.291Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:47:47.291Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T08:47:47.297Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:47:47.397Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:47:47.601Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T08:47:47.604Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:47:48.416Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:49:54.544Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T08:49:54.593Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T08:49:54.621Z] [INFO] Sincronizando proveedor Xtream [xtream-dead]: 127.0.0.1:9999...
+[2026-11-18T08:49:54.633Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:50:03.536Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T08:50:03.575Z] [INFO] Sincronizando proveedor Xtream [xtream-dead]: 127.0.0.1:9999...
+[2026-11-18T08:50:03.575Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T08:50:03.587Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:50:03.588Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:50:03.616Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T08:50:03.617Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T08:50:03.618Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:50:03.624Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T08:50:03.625Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T08:50:03.625Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T08:50:03.625Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T08:50:03.626Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T08:50:03.627Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T08:50:03.627Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T08:50:03.628Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T08:50:04.002Z] [INFO] Agenda deportiva actualizada: 32 eventos programados en 22 países.
+[2026-11-18T08:50:04.051Z] [INFO] Agenda deportiva actualizada: 28 eventos programados en 22 países.
+[2026-11-18T08:50:04.052Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T08:50:04.061Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T08:50:04.061Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T08:50:04.092Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T08:50:04.092Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T08:50:04.098Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T08:50:04.153Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:50:04.532Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T08:50:04.658Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T08:50:05.485Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T08:51:08.851Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:51:09.089Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (230ms)
+[2026-11-18T08:51:09.180Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (89ms)
+[2026-11-18T08:51:09.210Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (29ms)
+[2026-11-18T08:51:09.852Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-18T08:51:09.854Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (642ms) - HTTP 429
+[2026-11-18T08:51:09.932Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (77ms)
+[2026-11-18T08:51:10.197Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (264ms)
+[2026-11-18T08:56:08.844Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T08:56:08.966Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (118ms)
+[2026-11-18T08:56:09.073Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (103ms)
+[2026-11-18T08:56:09.100Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (26ms)
+[2026-11-18T08:56:09.679Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T08:56:09.680Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (579ms) - HTTP 403
+[2026-11-18T08:56:09.783Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (102ms)
+[2026-11-18T08:56:10.045Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (261ms)
+[2026-11-18T08:57:52.069Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:57:53.099Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:57:55.265Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:57:55.283Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:57:56.301Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:58:02.652Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:58:03.666Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:58:09.421Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T09:01:08.830Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T09:01:08.991Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (145ms)
+[2026-11-18T09:01:09.100Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (109ms)
+[2026-11-18T09:01:09.134Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (34ms)
+[2026-11-18T09:01:10.147Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T09:01:10.148Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (1013ms) - HTTP 403
+[2026-11-18T09:01:10.289Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (140ms)
+[2026-11-18T09:01:10.580Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (291ms)
+[2026-11-18T09:02:34.958Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:02:35.141Z] [INFO] Agenda deportiva actualizada: 32 eventos programados en 22 países.
+[2026-11-18T09:02:35.145Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:02:35.471Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:02:35.473Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:02:35.772Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:02:35.774Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:02:36.001Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:02:54.130Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T09:03:03.298Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T09:03:09.330Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T09:03:16.908Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T09:04:04.743Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T09:04:04.798Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T09:04:04.813Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:04:04.818Z] [INFO] Sincronizando proveedor Xtream [xtream-dead]: 127.0.0.1:9999...
+[2026-11-18T09:04:04.831Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T09:04:04.847Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:04:04.848Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:04:04.849Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:04:04.855Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T09:04:04.856Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T09:04:04.856Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T09:04:04.856Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T09:04:04.856Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T09:04:04.857Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T09:04:04.858Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T09:04:04.858Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T09:04:04.858Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:04:05.034Z] [INFO] Agenda deportiva actualizada: 32 eventos programados en 22 países.
+[2026-11-18T09:04:05.053Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:04:05.081Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:04:05.081Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T09:04:05.086Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:04:05.088Z] [INFO] Agenda deportiva actualizada: 32 eventos programados en 22 países.
+[2026-11-18T09:04:05.088Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T09:04:05.096Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T09:04:05.387Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T09:04:06.234Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T09:04:24.784Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T09:04:24.790Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:04:24.813Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:04:24.814Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:04:24.815Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:04:24.820Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T09:04:24.821Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T09:04:24.821Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T09:04:24.821Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T09:04:24.822Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T09:04:24.823Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T09:04:24.823Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T09:04:24.823Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T09:04:24.823Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T09:04:24.823Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T09:04:24.823Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T09:04:24.823Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T09:04:24.823Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T09:04:24.823Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T09:04:24.823Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T09:04:24.823Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T09:04:24.827Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T09:04:24.827Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:04:25.000Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:04:25.117Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:04:25.121Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:04:25.131Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:04:25.132Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T09:04:25.136Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:04:25.514Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T09:04:26.151Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T09:04:33.581Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T09:04:33.587Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:04:33.609Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:04:33.610Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:04:33.612Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:04:33.617Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T09:04:33.619Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T09:04:33.620Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T09:04:33.621Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T09:04:33.621Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T09:04:33.622Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:04:33.890Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:04:33.890Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T09:04:33.910Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T09:04:33.910Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:04:33.915Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:04:34.093Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:04:34.104Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:04:34.109Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:04:34.109Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T09:04:34.258Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:04:34.453Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T09:04:35.168Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T09:04:42.106Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 294 nombres indexados).
+[2026-11-18T09:06:08.870Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T09:06:09.285Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (404ms)
+[2026-11-18T09:06:09.391Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (105ms)
+[2026-11-18T09:06:09.424Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (33ms)
+[2026-11-18T09:06:09.735Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-18T09:06:09.736Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (311ms) - HTTP 429
+[2026-11-18T09:06:09.810Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (73ms)
+[2026-11-18T09:06:10.053Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (241ms)
+[2026-11-18T09:06:28.988Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:06:45.027Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:06:45.085Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:06:45.110Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:06:45.125Z] [INFO] Sincronizando proveedor Xtream [xtream-dead]: 127.0.0.1:9999...
+[2026-11-18T09:06:45.143Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T09:06:45.155Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:06:45.156Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:06:45.158Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:06:45.166Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T09:06:45.168Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T09:06:45.168Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T09:06:45.168Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T09:06:45.169Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T09:06:45.170Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T09:06:45.170Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T09:06:45.171Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:06:46.072Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:06:46.073Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T09:06:46.223Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:06:46.354Z] [INFO] Agenda deportiva actualizada: 32 eventos programados en 22 países.
+[2026-11-18T09:06:46.355Z] [INFO] Agenda deportiva actualizada: 32 eventos programados en 22 países.
+[2026-11-18T09:06:46.356Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T09:06:46.368Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T09:06:46.369Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:06:46.375Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:06:46.912Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T09:06:46.949Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:06:48.015Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T09:07:04.826Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:07:04.858Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:07:04.873Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:07:04.883Z] [INFO] Sincronizando proveedor Xtream [xtream-dead]: 127.0.0.1:9999...
+[2026-11-18T09:07:04.893Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T09:07:04.901Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:07:04.902Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:07:04.904Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:07:04.910Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T09:07:04.912Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T09:07:04.912Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T09:07:04.912Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T09:07:04.913Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T09:07:04.914Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T09:07:04.914Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T09:07:04.914Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:07:05.150Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:07:05.151Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T09:07:05.155Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T09:07:05.155Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:07:05.193Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:07:05.212Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:07:05.264Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:07:05.264Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T09:07:05.336Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:07:05.582Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:07:05.731Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T09:07:06.846Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T09:07:18.106Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:07:18.133Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:07:18.145Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:07:18.166Z] [INFO] Sincronizando proveedor Xtream [xtream-dead]: 127.0.0.1:9999...
+[2026-11-18T09:07:18.171Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:07:18.172Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:07:18.173Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:07:18.177Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T09:07:18.181Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T09:07:18.182Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T09:07:18.183Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T09:07:18.184Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T09:07:18.184Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T09:07:18.184Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:07:18.350Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:07:18.418Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:07:18.418Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T09:07:18.422Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T09:07:18.423Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:07:18.464Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:07:18.495Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:07:18.495Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T09:07:18.513Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:07:18.909Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T09:07:18.912Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:07:19.656Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T09:07:30.526Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:07:30.532Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:07:30.555Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:07:30.556Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:07:30.557Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:07:30.563Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T09:07:30.564Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T09:07:30.564Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T09:07:30.564Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T09:07:30.565Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T09:07:30.566Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T09:07:30.566Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T09:07:30.566Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:07:30.738Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:07:30.770Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:07:30.771Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T09:07:30.774Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T09:07:30.774Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:07:30.783Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:07:30.823Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:07:30.830Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:07:30.830Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T09:07:31.162Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:07:31.260Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T09:07:31.815Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T09:07:37.024Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:07:54.093Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:07:54.123Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T09:07:54.129Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T09:07:54.134Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:07:54.158Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:07:54.159Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:07:54.160Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:07:54.166Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T09:07:54.169Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T09:07:54.169Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T09:07:54.169Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T09:07:54.169Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T09:07:54.169Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T09:07:54.169Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T09:07:54.169Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T09:07:54.170Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T09:07:54.171Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T09:07:54.171Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T09:07:54.171Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T09:07:54.171Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T09:07:54.171Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T09:07:54.171Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T09:07:54.171Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T09:07:54.171Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T09:07:54.171Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-18T09:07:54.177Z] [INFO] =====================================================
+[2026-11-18T09:07:54.178Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-18T09:07:54.179Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-18T09:07:54.179Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-18T09:07:54.179Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-18T09:07:54.179Z] [INFO] =====================================================
+[2026-11-18T09:07:54.308Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:07:54.332Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:07:54.359Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:07:54.359Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T09:07:54.396Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:07:54.830Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T09:07:55.387Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T09:08:04.172Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T09:08:04.240Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (64ms)
+[2026-11-18T09:08:04.320Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (79ms)
+[2026-11-18T09:08:04.347Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (27ms)
+[2026-11-18T09:08:04.660Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 429
+[2026-11-18T09:08:04.661Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (312ms) - HTTP 429
+[2026-11-18T09:08:04.732Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (70ms)
+[2026-11-18T09:08:05.008Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (275ms)
+[2026-11-18T09:08:59.362Z] [INFO] Motor de clasificación de fútbol cargado: 171 definiciones (158 tvgIds, 313 nombres indexados).
+[2026-11-18T09:08:59.388Z] [INFO] Inicializando base de datos SQLite en: /Users/ignacioacostagallego/Documents/iptv futbol/data/app.db
+[2026-11-18T09:08:59.394Z] [INFO] Tablas de SQLite verificadas y listas.
+[2026-11-18T09:08:59.400Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/categories/sports.m3u
+[2026-11-18T09:08:59.431Z] [INFO] Cargando lista TDTChannels desde: https://www.tdtchannels.com/lists/tv.m3u8
+[2026-11-18T09:08:59.433Z] [INFO] Cargando lista M3U desde: https://iptv-org.github.io/iptv/countries/es.m3u
+[2026-11-18T09:08:59.434Z] [INFO] Consultando agenda de eventos deportivos en TheSportsDB...
+[2026-11-18T09:08:59.439Z] [INFO] Cargando catálogo ampliado de Cine y Series (con catálogo Netflix)...
+[2026-11-18T09:08:59.441Z] [INFO] Fuente desactivada en config: daddylive-manual
+[2026-11-18T09:08:59.441Z] [INFO] Fuente desactivada en config: streameast-manual
+[2026-11-18T09:08:59.441Z] [INFO] Fuente desactivada en config: ppvst-manual
+[2026-11-18T09:08:59.441Z] [INFO] Fuente desactivada en config: iptv-org-index
+[2026-11-18T09:08:59.441Z] [INFO] Fuente desactivada en config: iptv-org-country-es
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-uk
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-it
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-de
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-fr
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-pt
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-nl
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-tr
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-ru
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-pl
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-br
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-ar
+[2026-11-18T09:08:59.442Z] [INFO] Fuente desactivada en config: iptv-org-country-mx
+[2026-11-18T09:08:59.443Z] [INFO] Fuente desactivada en config: iptv-org-country-us
+[2026-11-18T09:08:59.443Z] [INFO] Fuente desactivada en config: iptv-org-country-sa
+[2026-11-18T09:08:59.443Z] [INFO] Fuente desactivada en config: iptv-org-country-eg
+[2026-11-18T09:08:59.443Z] [INFO] Fuente desactivada en config: iptv-org-country-ma
+[2026-11-18T09:08:59.443Z] [INFO] Fuente desactivada en config: iptv-org-country-za
+[2026-11-18T09:08:59.443Z] [INFO] Fuente desactivada en config: iptv-org-country-in
+[2026-11-18T09:08:59.443Z] [INFO] Fuente desactivada en config: iptv-org-country-au
+[2026-11-18T09:08:59.443Z] [INFO] Fuente desactivada en config: iptv-org-country-gr
+[2026-11-18T09:08:59.444Z] [INFO] Fuente desactivada en config: freetv-vod
+[2026-11-18T09:08:59.444Z] [INFO] Fuentes cargadas con éxito: 6 adaptadores activos.
+[2026-11-18T09:08:59.444Z] [INFO] Comprobador de salud programado cada 5 minutos.
+[2026-11-18T09:08:59.450Z] [INFO] =====================================================
+[2026-11-18T09:08:59.450Z] [INFO] 🚀 OmniStream OTT Aggregator Backend Listo
+[2026-11-18T09:08:59.450Z] [INFO] 📡 Local:    http://127.0.0.1:3001
+[2026-11-18T09:08:59.450Z] [INFO] 📱 Red LAN:  http://0.0.0.0:3001
+[2026-11-18T09:08:59.450Z] [INFO] ⚙️  Fuentes:  /Users/ignacioacostagallego/Documents/iptv futbol/sources.yaml
+[2026-11-18T09:08:59.450Z] [INFO] =====================================================
+[2026-11-18T09:08:59.625Z] [INFO] Agenda deportiva actualizada: 24 eventos programados en 22 países.
+[2026-11-18T09:08:59.717Z] [INFO] TDTChannels procesado: 440 canales consolidados.
+[2026-11-18T09:08:59.718Z] [INFO] Descargando EPG TDTChannels desde: https://www.tdtchannels.com/epg/TV.xml.gz
+[2026-11-18T09:08:59.734Z] [INFO] Fuente iptv-org-sports cargada con éxito: 533 canales.
+[2026-11-18T09:08:59.737Z] [INFO] Fuente iptv-org-es cargada con éxito: 343 canales.
+[2026-11-18T09:09:00.115Z] [INFO] EPG TDTChannels procesado: 174 canales con programación.
+[2026-11-18T09:09:00.811Z] [INFO] Catálogo VOD consolidado: 260 títulos totales (161 series, 45 de Netflix, 99 películas).
+[2026-11-18T09:09:09.447Z] [INFO] Iniciando ronda de comprobación de salud de fuentes en segundo plano...
+[2026-11-18T09:09:09.524Z] [INFO] Salud de fuente [iptv-org-sports]: ONLINE (75ms)
+[2026-11-18T09:09:09.603Z] [INFO] Salud de fuente [tdtchannels-es]: ONLINE (78ms)
+[2026-11-18T09:09:09.635Z] [INFO] Salud de fuente [iptv-org-es]: ONLINE (30ms)
+[2026-11-18T09:09:10.098Z] [WARN] Salud fallida para fuente sports-events-hub: Request failed with status code 403
+[2026-11-18T09:09:10.099Z] [INFO] Salud de fuente [sports-events-hub]: OFFLINE (463ms) - HTTP 403
+[2026-11-18T09:09:10.175Z] [INFO] Salud de fuente [cinemeta-vod]: ONLINE (75ms)
+[2026-11-18T09:09:10.454Z] [INFO] Salud de fuente [stremio-torrentio-resolver]: ONLINE (278ms)

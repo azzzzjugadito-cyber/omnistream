@@ -63,10 +63,15 @@ export class IptvOrgAdapter extends BaseAdapter {
     const t = title.toLowerCase();
     if (t.includes('.es') || t.includes('(es)') || t.includes('spain') || t.includes('españa')) return 'España';
     if (t.includes('.uk') || t.includes('england') || t.includes('britain')) return 'Reino Unido';
-    if (t.includes('.us') || t.includes('usa')) return 'Estados Unidos';
-    if (t.includes('.it') || t.includes('italy')) return 'Italia';
-    if (t.includes('.de') || t.includes('germany')) return 'Alemania';
-    if (t.includes('.fr') || t.includes('france')) return 'Francia';
+    if (t.includes('.us') || t.includes('usa') || t.includes('united states')) return 'Estados Unidos';
+    if (t.includes('.it') || t.includes('italy') || t.includes('italia')) return 'Italia';
+    if (t.includes('.de') || t.includes('germany') || t.includes('alemania')) return 'Alemania';
+    if (t.includes('.fr') || t.includes('france') || t.includes('francia')) return 'Francia';
+    if (t.includes('.pt') || t.includes('portugal')) return 'Portugal';
+    if (t.includes('.nl') || t.includes('netherlands') || t.includes('holanda') || t.includes('dutch')) return 'Países Bajos';
+    if (t.includes('.br') || t.includes('brazil') || t.includes('brasil')) return 'Brasil';
+    if (t.includes('.ar') || t.includes('argentina')) return 'Argentina';
+    if (t.includes('.mx') || t.includes('mexico') || t.includes('méxico')) return 'México';
     return 'Internacional';
   }
 

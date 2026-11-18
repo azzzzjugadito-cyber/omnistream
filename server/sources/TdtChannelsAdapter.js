@@ -142,4 +142,12 @@ export class TdtChannelsAdapter extends BaseAdapter {
 
     return items;
   }
+
+  getEpgPrograms(channelId) {
+    const ch = this.cachedItems.find(c => c.id === channelId);
+    if (ch && ch.tvgId && this.epgData.has(ch.tvgId)) {
+      return this.epgData.get(ch.tvgId) || [];
+    }
+    return [];
+  }
 }

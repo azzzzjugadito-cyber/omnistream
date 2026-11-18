@@ -40,8 +40,10 @@ router.get('/events', async (req, res) => {
     const filters = {
       sport: req.query.sport,
       competition: req.query.competition,
+      country: req.query.country,
       todayOnly: req.query.today === 'true',
-      query: req.query.q
+      query: req.query.q,
+      lang: req.query.lang || 'es'
     };
 
     const events = await sourceManager.getSportsEvents(filters);

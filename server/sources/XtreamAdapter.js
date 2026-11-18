@@ -304,4 +304,12 @@ export class XtreamAdapter extends BaseAdapter {
       };
     }
   }
+
+  getEpgPrograms(channelId) {
+    const ch = this.cachedItems.find(c => c.id === channelId);
+    if (ch && ch.epgChannelId && this.epgData.has(ch.epgChannelId)) {
+      return this.epgData.get(ch.epgChannelId) || [];
+    }
+    return [];
+  }
 }

@@ -11,6 +11,7 @@ import { StremioResolverAdapter } from './StremioResolverAdapter.js';
 import { CustomM3uAdapter } from './CustomM3uAdapter.js';
 import { XtreamAdapter } from './XtreamAdapter.js';
 import { footballClassifier } from '../footballClassifier.js';
+import { broadcastEngine } from '../broadcastEngine.js';
 
 class SourceManager {
   constructor() {
@@ -248,16 +249,46 @@ class SourceManager {
     return finalChannels;
   }
 
-  /**
-   * Obtiene la agenda de partidos y eventos deportivos.
-   */
-  async getSportsEvents(filters = {}) {
-    for (const adapter of this.adapters.values()) {
-      if (adapter.type === 'sports_events') {
-        return adapter.list(filters);
-      }
+  getEpgPrograms(sourceId, channelId) {
+    const adapter = this.adapters.get(sourceId);
+    if (!adapter) return [];
+    if (typeof adapter.getEpgPrograms === 'function') {
+      return adapter.getEpgPrograms(channelId);
     }
     return [];
+  }
+
+  /**
+   * Obtiene la agenda de partidos y eventos deportivos, calculando
+   * en memoria la entidad Broadcast (fixture → canal → streams[])
+   * y detectando el estado de emisión en directo según EPG.
+   */
+  async getSportsEvents(filters = {}) {
+    let rawEvents = [];
+    for (const adapter of this.adapters.values()) {
+      if (adapter.type === 'sports_events') {
+        rawEvents = await adapter.list(filters);
+        break;
+      }
+    }
+
+    if (rawEvents.length === 0) return [];
+
+    // 1. Obtener canales en directo para calcular los enlaces de emisión (broadcasts)
+    const liveChannels = await this.getLiveChannels({ onlySports: true });
+
+    // 2. Vincular broadcasts a cada fixture con deducción de idioma y verificación EPG
+    const prefLang = filters.lang || 'es';
+    const enhancedEvents = rawEvents.map(event => {
+      return broadcastEngine.enrichFixture(
+        event,
+        liveChannels,
+        prefLang,
+        (sourceId, chId) => this.getEpgPrograms(sourceId, chId)
+      );
+    });
+
+    return enhancedEvents;
   }
 
   /**

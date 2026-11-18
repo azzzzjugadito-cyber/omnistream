@@ -8,3 +8,18 @@
 [2026-11-18T08:18:12.902Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
 [2026-11-18T08:18:59.696Z] [ERROR] Error sincronizando Xtream [test-xtream-provider]: timeout of 7000ms exceeded
 [2026-11-18T08:25:50.319Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:27:05.937Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:49:54.633Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:50:03.588Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:57:52.070Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:57:53.099Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:57:55.265Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:57:55.283Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:57:56.301Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:58:02.653Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:58:03.666Z] [ERROR] Error en proxy a https://lb.iptvnetwork.net/ls28/10042/playlist.m3u8: getaddrinfo ENOTFOUND lb.iptvnetwork.net
+[2026-11-18T08:58:09.421Z] [ERROR] Error en pipe upstream: aborted
+[2026-11-18T09:04:04.831Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T09:06:45.143Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T09:07:04.893Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T09:07:18.177Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999

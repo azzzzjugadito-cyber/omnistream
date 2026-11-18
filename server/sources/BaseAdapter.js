@@ -124,4 +124,11 @@ export class BaseAdapter {
       }
     }
   }
+
+  /**
+   * Devuelve la lista de programas EPG para un canal dado si la fuente soporta EPG
+   */
+  getEpgPrograms(itemId) {
+    return [];
+  }
 }

@@ -25,14 +25,14 @@ export function normalizeChannelName(rawName = '') {
 
   // 2. Quitar etiquetas completas entre corchetes o paréntesis
   name = name.replace(/\[[^\]]*\]/g, ' ');
-  name = name.replace(/\((?:fhd|uhd|hd|sd|4k|8k|hevc|backup|raw|vip|es|uk|de|fr|it|pt|us|1080p|720p|\d+)\)/g, ' ');
+  name = name.replace(/\((?:fhd|uhd|hd|sd|4k|8k|hevc|backup|raw|vip|1080p|720p|576p|480p|360p|240p|50fps|60fps|\d+p|\d+fps)\)/gi, ' ');
 
   // 3. Quitar prefijos de país comunes
   name = name.replace(/^[a-z]{2,3}\s*[:|\-\/]\s*/g, ' ');
   name = name.replace(/^(?:es|esp|uk|gb|usa|us|de|fr|it|pt|nl|tr|gr|ru|pl|ar|mx|sa)\s*\|\s*/g, ' ');
 
   // 4. Quitar sufijos/tokens de calidad, códec o servidor
-  name = name.replace(/\b(fhd|uhd|hd|sd|4k|8k|1080p|720p|50fps|60fps|hevc|h264|h265|raw|backup|vip|multi|feed|directo|live|stream|ott)\b/g, ' ');
+  name = name.replace(/\b(fhd|uhd|hd|sd|4k|8k|1080p|720p|576p|480p|360p|240p|50fps|60fps|\d+fps|\d+p|hevc|h264|h265|raw|backup|vip|multi|feed|directo|live|stream|ott)\b/gi, ' ');
 
   // 5. Normalizar Plus y operadores
   name = name.replace(/plus\s*\+/gi, 'plus');
@@ -108,6 +108,8 @@ class FootballClassificationEngine {
 
     const tvgId = (channel.tvgId || channel.epgChannelId || '').toLowerCase().trim();
     const normalizedKey = normalizeChannelName(channel.title);
+    const channelCountryLower = (channel.country || '').toLowerCase();
+    const channelTitleLower = (channel.title || '').toLowerCase();
 
     // 1. Cruce por tvg-id
     if (tvgId && this.tvgMap.has(tvgId)) {
@@ -117,7 +119,8 @@ class FootballClassificationEngine {
         sport: 'football',
         footballTier: match.tier,
         competitions: match.competitions || [],
-        normalizedKey: normalizedKey || normalizeChannelName(match.names[0])
+        country: match.country || channel.country,
+        normalizedKey
       };
     }
 
@@ -129,19 +132,69 @@ class FootballClassificationEngine {
         sport: 'football',
         footballTier: match.tier,
         competitions: match.competitions || [],
+        country: match.country || channel.country,
         normalizedKey
       };
     }
 
-    // 3. Cruce por subcadena de nombre para variantes compuestas
-    for (const [key, match] of this.nameMap.entries()) {
-      if (normalizedKey && (normalizedKey.startsWith(key + ' ') || normalizedKey.endsWith(' ' + key) || normalizedKey === key)) {
+    // 3. Cruce rápido por prefijo y sufijo (tokens de palabras O(1))
+    if (normalizedKey) {
+      const words = normalizedKey.split(' ');
+      const candidates = [];
+
+      // Probar prefijos de mayor a menor especificidad (ej: "espn 2", luego "espn")
+      for (let i = words.length - 1; i >= 1; i--) {
+        const prefix = words.slice(0, i).join(' ');
+        if (this.nameMap.has(prefix)) {
+          const remainder = words.slice(i).join(' ');
+          if (!/^\d/.test(remainder)) {
+            candidates.push(this.nameMap.get(prefix));
+          }
+        }
+      }
+
+      // Probar sufijos (ej: "select" en "ziggo sport select")
+      for (let i = 1; i < words.length; i++) {
+        const suffix = words.slice(i).join(' ');
+        if (this.nameMap.has(suffix)) {
+          candidates.push(this.nameMap.get(suffix));
+        }
+      }
+
+      if (candidates.length > 0) {
+        // Priorizar concordancia de país si está disponible
+        for (const match of candidates) {
+          const matchCountry = (match.country || '').toLowerCase();
+          const isCountryMatch = (matchCountry && (
+            channelCountryLower.includes(matchCountry) ||
+            (matchCountry === 'nl' && (channelCountryLower.includes('bajos') || channelTitleLower.includes('netherlands') || channelTitleLower.includes('holanda'))) ||
+            (matchCountry === 'br' && (channelCountryLower.includes('brasil') || channelTitleLower.includes('brazil'))) ||
+            (matchCountry === 'usa' && (channelCountryLower.includes('estados unidos') || channelTitleLower.includes('united states') || channelTitleLower.includes('usa'))) ||
+            (matchCountry === 'es' && (channelCountryLower.includes('españa') || channelTitleLower.includes('spain'))) ||
+            (matchCountry === 'uk' && (channelCountryLower.includes('reino unido') || channelCountryLower.includes('uk') || channelTitleLower.includes('england')))
+          ));
+
+          if (isCountryMatch) {
+            return {
+              isFootball: true,
+              sport: 'football',
+              footballTier: match.tier,
+              competitions: match.competitions || [],
+              country: match.country || channel.country,
+              normalizedKey
+            };
+          }
+        }
+
+        // Si ninguno coincide en país, elegir el primer candidato
+        const best = candidates[0];
         return {
           isFootball: true,
           sport: 'football',
-          footballTier: match.tier,
-          competitions: match.competitions || [],
-          normalizedKey: key
+          footballTier: best.tier,
+          competitions: best.competitions || [],
+          country: best.country || channel.country,
+          normalizedKey
         };
       }
     }

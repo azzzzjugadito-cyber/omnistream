@@ -18,7 +18,8 @@
       "country": "ES",
       "competitions": [
         "LaLiga EA Sports",
-        "LaLiga Hypermotion"
+        "LaLiga Hypermotion",
+        "Copa del Rey"
       ],
       "tier": 1
     },
@@ -44,11 +45,22 @@
     {
       "names": [
         "dazn laliga",
-        "dazn la liga",
+        "dazn la liga"
+      ],
+      "tvgIds": [
+        "DAZNLaLiga.es"
+      ],
+      "country": "ES",
+      "competitions": [
+        "LaLiga EA Sports"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "dazn laliga 2"
       ],
       "tvgIds": [
-        "DAZNLaLiga.es",
         "DAZNLaLiga2.es"
       ],
       "country": "ES",
@@ -59,8 +71,19 @@
     },
     {
       "names": [
-        "dazn 1",
         "dazn1"
+      ],
+      "tvgIds": [],
+      "country": "ES",
+      "competitions": [
+        "Premier League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "dazn 1"
       ],
       "tvgIds": [
         "DAZN1.es",
@@ -76,8 +99,19 @@
     },
     {
       "names": [
-        "dazn 2",
         "dazn2"
+      ],
+      "tvgIds": [],
+      "country": "ES",
+      "competitions": [
+        "Premier League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "dazn 2"
       ],
       "tvgIds": [
         "DAZN2.es",
@@ -93,8 +127,18 @@
     },
     {
       "names": [
-        "dazn 3",
         "dazn3"
+      ],
+      "tvgIds": [],
+      "country": "ES",
+      "competitions": [
+        "Premier League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "dazn 3"
       ],
       "tvgIds": [
         "DAZN3.es"
@@ -107,8 +151,18 @@
     },
     {
       "names": [
-        "dazn 4",
         "dazn4"
+      ],
+      "tvgIds": [],
+      "country": "ES",
+      "competitions": [
+        "Premier League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "dazn 4"
       ],
       "tvgIds": [
         "DAZN4.es"
@@ -189,7 +243,18 @@
     },
     {
       "names": [
-        "esport3",
+        "esport3"
+      ],
+      "tvgIds": [],
+      "country": "ES",
+      "competitions": [
+        "Copa del Rey",
+        "Fútbol Catalán"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
         "esport 3"
       ],
       "tvgIds": [
@@ -204,11 +269,24 @@
     },
     {
       "names": [
+        "la1"
+      ],
+      "tvgIds": [],
+      "country": "ES",
+      "competitions": [
+        "Copa del Rey",
+        "Selección Española",
+        "Eurocopa",
+        "Mundial"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
         "la 1",
         "tve 1",
         "tve la 1",
-        "la 1 tve",
-        "la1"
+        "la 1 tve"
       ],
       "tvgIds": [
         "La1.es",
@@ -226,10 +304,21 @@
     },
     {
       "names": [
+        "la2"
+      ],
+      "tvgIds": [],
+      "country": "ES",
+      "competitions": [
+        "Copa del Rey",
+        "Fútbol"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
         "la 2",
         "tve 2",
-        "la 2 tve",
-        "la2"
+        "la 2 tve"
       ],
       "tvgIds": [
         "La2.es",
@@ -244,8 +333,18 @@
     },
     {
       "names": [
-        "antena 3",
         "antena3"
+      ],
+      "tvgIds": [],
+      "country": "ES",
+      "competitions": [
+        "Champions League"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "antena 3"
       ],
       "tvgIds": [
         "Antena3.es"
@@ -294,19 +393,24 @@
     },
     {
       "names": [
+        "tnt sports ultimate"
+      ],
+      "tvgIds": [],
+      "country": "UK",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "Europa League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "tnt sports 1",
-        "tnt sports 2",
-        "tnt sports 3",
-        "tnt sports 4",
-        "tnt sports ultimate",
-        "bt sport 1",
-        "bt sport 2"
+        "bt sport 1"
       ],
       "tvgIds": [
         "TNTSports1.uk",
-        "TNTSports2.uk",
-        "TNTSports3.uk",
-        "TNTSports4.uk",
         "BTSport1.uk"
       ],
       "country": "UK",
@@ -319,14 +423,71 @@
     },
     {
       "names": [
-        "bbc one",
-        "bbc two",
-        "itv 1",
-        "itv 4",
-        "channel 4"
+        "tnt sports 2",
+        "bt sport 2"
       ],
       "tvgIds": [
-        "BBCOne.uk",
+        "TNTSports2.uk"
+      ],
+      "country": "UK",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "Europa League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "tnt sports 3"
+      ],
+      "tvgIds": [
+        "TNTSports3.uk"
+      ],
+      "country": "UK",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "Europa League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "tnt sports 4"
+      ],
+      "tvgIds": [
+        "TNTSports4.uk"
+      ],
+      "country": "UK",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "Europa League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "bbc one",
+        "bbc two"
+      ],
+      "tvgIds": [
+        "BBCOne.uk"
+      ],
+      "country": "UK",
+      "competitions": [
+        "FA Cup",
+        "World Cup",
+        "Euro"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "itv 1"
+      ],
+      "tvgIds": [
         "ITV1.uk"
       ],
       "country": "UK",
@@ -339,12 +500,23 @@
     },
     {
       "names": [
-        "dazn italia",
-        "dazn 1 it",
-        "dazn 2 it"
+        "itv 4",
+        "channel 4"
+      ],
+      "tvgIds": [],
+      "country": "UK",
+      "competitions": [
+        "FA Cup",
+        "World Cup",
+        "Euro"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "dazn italia"
       ],
       "tvgIds": [
-        "DAZN1.it",
         "DAZNItalia.it"
       ],
       "country": "IT",
@@ -356,10 +528,35 @@
     },
     {
       "names": [
+        "dazn 1 it"
+      ],
+      "tvgIds": [
+        "DAZN1.it"
+      ],
+      "country": "IT",
+      "competitions": [
+        "Serie A",
+        "Serie B"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "dazn 2 it"
+      ],
+      "tvgIds": [],
+      "country": "IT",
+      "competitions": [
+        "Serie A",
+        "Serie B"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "sky sport calcio",
         "sky sport serie a",
-        "sky sport football",
-        "sky sport 24"
+        "sky sport football"
       ],
       "tvgIds": [
         "SkySportCalcio.it",
@@ -375,14 +572,21 @@
     },
     {
       "names": [
-        "rai 1",
-        "rai 2",
-        "rai sport",
-        "canale 5",
-        "italia 1"
+        "sky sport 24"
+      ],
+      "tvgIds": [],
+      "country": "IT",
+      "competitions": [
+        "Serie A",
+        "Champions League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "rai sport"
       ],
       "tvgIds": [
-        "Rai1.it",
         "RaiSport.it"
       ],
       "country": "IT",
@@ -394,10 +598,47 @@
     },
     {
       "names": [
+        "rai 1",
+        "italia 1"
+      ],
+      "tvgIds": [
+        "Rai1.it"
+      ],
+      "country": "IT",
+      "competitions": [
+        "Coppa Italia",
+        "Supercoppa Italiana"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "rai 2"
+      ],
+      "tvgIds": [],
+      "country": "IT",
+      "competitions": [
+        "Coppa Italia",
+        "Supercoppa Italiana"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "canale 5"
+      ],
+      "tvgIds": [],
+      "country": "IT",
+      "competitions": [
+        "Coppa Italia",
+        "Supercoppa Italiana"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
         "sky sport bundesliga",
-        "sky sport top event",
-        "sky bundesliga 1",
-        "sky bundesliga 2"
+        "sky sport top event"
       ],
       "tvgIds": [
         "SkySportBundesliga.de",
@@ -412,12 +653,59 @@
     },
     {
       "names": [
-        "dazn 1 de",
-        "dazn 2 de",
+        "sky bundesliga 1"
+      ],
+      "tvgIds": [],
+      "country": "DE",
+      "competitions": [
+        "Bundesliga",
+        "2. Bundesliga"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "sky bundesliga 2"
+      ],
+      "tvgIds": [],
+      "country": "DE",
+      "competitions": [
+        "Bundesliga",
+        "2. Bundesliga"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "dazn deutschland"
       ],
+      "tvgIds": [],
+      "country": "DE",
+      "competitions": [
+        "Bundesliga",
+        "Champions League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "dazn 1 de"
+      ],
       "tvgIds": [
-        "DAZN1.de",
+        "DAZN1.de"
+      ],
+      "country": "DE",
+      "competitions": [
+        "Bundesliga",
+        "Champions League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "dazn 2 de"
+      ],
+      "tvgIds": [
         "DAZN2.de"
       ],
       "country": "DE",
@@ -433,12 +721,24 @@
         "ard",
         "zdf",
         "sport1",
-        "sat 1",
         "rtl"
       ],
       "tvgIds": [
         "DasErste.de",
-        "ZDF.de",
+        "ZDF.de"
+      ],
+      "country": "DE",
+      "competitions": [
+        "DFB-Pokal",
+        "DFL-Supercup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "sat 1"
+      ],
+      "tvgIds": [
         "Sport1.de"
       ],
       "country": "DE",
@@ -469,14 +769,40 @@
     },
     {
       "names": [
-        "bein sports 1 fr",
-        "bein sports 2 fr",
-        "bein sports 3 fr",
         "bein sports france",
         "bein sports max"
       ],
+      "tvgIds": [],
+      "country": "FR",
+      "competitions": [
+        "Ligue 2",
+        "LaLiga",
+        "Serie A",
+        "Bundesliga"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "bein sports 1 fr"
+      ],
       "tvgIds": [
-        "beINSports1.fr",
+        "beINSports1.fr"
+      ],
+      "country": "FR",
+      "competitions": [
+        "Ligue 2",
+        "LaLiga",
+        "Serie A",
+        "Bundesliga"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "bein sports 2 fr"
+      ],
+      "tvgIds": [
         "beINSports2.fr"
       ],
       "country": "FR",
@@ -490,12 +816,49 @@
     },
     {
       "names": [
-        "rmc sport 1",
-        "rmc sport 2",
+        "bein sports 3 fr"
+      ],
+      "tvgIds": [],
+      "country": "FR",
+      "competitions": [
+        "Ligue 2",
+        "LaLiga",
+        "Serie A",
+        "Bundesliga"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "rmc sport live"
       ],
+      "tvgIds": [],
+      "country": "FR",
+      "competitions": [
+        "Champions League",
+        "Europa League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "rmc sport 1"
+      ],
       "tvgIds": [
-        "RMCSport1.fr",
+        "RMCSport1.fr"
+      ],
+      "country": "FR",
+      "competitions": [
+        "Champions League",
+        "Europa League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "rmc sport 2"
+      ],
+      "tvgIds": [
         "RMCSport2.fr"
       ],
       "country": "FR",
@@ -508,14 +871,10 @@
     {
       "names": [
         "tf1",
-        "france 2",
-        "france 3",
         "m6",
         "l equipe"
       ],
       "tvgIds": [
-        "TF1.fr",
-        "France2.fr",
         "LEquipe.fr"
       ],
       "country": "FR",
@@ -528,19 +887,121 @@
     },
     {
       "names": [
-        "sport tv 1",
-        "sport tv 2",
-        "sport tv 3",
-        "sport tv 4",
-        "sport tv 5",
-        "sport tv 6",
-        "sport tv plus"
+        "france 2"
       ],
       "tvgIds": [
-        "SportTV1.pt",
-        "SportTV2.pt",
+        "France2.fr"
+      ],
+      "country": "FR",
+      "competitions": [
+        "Coupe de France",
+        "Euro",
+        "Mundial"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "france 3"
+      ],
+      "tvgIds": [],
+      "country": "FR",
+      "competitions": [
+        "Coupe de France",
+        "Euro",
+        "Mundial"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "sport tv plus"
+      ],
+      "tvgIds": [],
+      "country": "PT",
+      "competitions": [
+        "Liga Portugal",
+        "Premier League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "sport tv 1"
+      ],
+      "tvgIds": [
+        "SportTV1.pt"
+      ],
+      "country": "PT",
+      "competitions": [
+        "Liga Portugal",
+        "Premier League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "sport tv 2"
+      ],
+      "tvgIds": [
+        "SportTV2.pt"
+      ],
+      "country": "PT",
+      "competitions": [
+        "Liga Portugal",
+        "Premier League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "sport tv 3"
+      ],
+      "tvgIds": [
         "SportTV3.pt"
       ],
+      "country": "PT",
+      "competitions": [
+        "Liga Portugal",
+        "Premier League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "sport tv 4"
+      ],
+      "tvgIds": [],
+      "country": "PT",
+      "competitions": [
+        "Liga Portugal",
+        "Premier League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "sport tv 5"
+      ],
+      "tvgIds": [],
+      "country": "PT",
+      "competitions": [
+        "Liga Portugal",
+        "Premier League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "sport tv 6"
+      ],
+      "tvgIds": [],
       "country": "PT",
       "competitions": [
         "Liga Portugal",
@@ -569,13 +1030,10 @@
     },
     {
       "names": [
-        "rtp 1",
-        "rtp 2",
         "sic",
         "tvi"
       ],
       "tvgIds": [
-        "RTP1.pt",
         "SIC.pt"
       ],
       "country": "PT",
@@ -587,17 +1045,99 @@
     },
     {
       "names": [
-        "espn nl",
-        "espn 1 nl",
-        "espn 2 nl",
-        "espn 3 nl",
-        "espn 4 nl"
+        "rtp 1"
       ],
       "tvgIds": [
-        "ESPN1.nl",
-        "ESPN2.nl",
+        "RTP1.pt"
+      ],
+      "country": "PT",
+      "competitions": [
+        "Taça de Portugal",
+        "Taça da Liga"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "rtp 2"
+      ],
+      "tvgIds": [],
+      "country": "PT",
+      "competitions": [
+        "Taça de Portugal",
+        "Taça da Liga"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "espn nl",
+        "espn netherlands",
+        "espn holanda"
+      ],
+      "tvgIds": [
         "ESPNNL.nl"
       ],
+      "country": "NL",
+      "competitions": [
+        "Eredivisie",
+        "KNVB Beker"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "espn 1 nl",
+        "espn 1 netherlands",
+        "espn 1 holanda"
+      ],
+      "tvgIds": [
+        "ESPN1.nl"
+      ],
+      "country": "NL",
+      "competitions": [
+        "Eredivisie",
+        "KNVB Beker"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "espn 2 nl",
+        "espn 2 netherlands",
+        "espn 2 holanda"
+      ],
+      "tvgIds": [
+        "ESPN2.nl"
+      ],
+      "country": "NL",
+      "competitions": [
+        "Eredivisie",
+        "KNVB Beker"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "espn 3 nl",
+        "espn 3 netherlands",
+        "espn 3 holanda"
+      ],
+      "tvgIds": [],
+      "country": "NL",
+      "competitions": [
+        "Eredivisie",
+        "KNVB Beker"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "espn 4 nl",
+        "espn 4 netherlands",
+        "espn 4 holanda"
+      ],
+      "tvgIds": [],
       "country": "NL",
       "competitions": [
         "Eredivisie",
@@ -625,13 +1165,47 @@
     },
     {
       "names": [
-        "npo 1",
-        "npo 2",
-        "npo 3",
+        "npo 1"
+      ],
+      "tvgIds": [
+        "NPO1.nl"
+      ],
+      "country": "NL",
+      "competitions": [
+        "KNVB Beker",
+        "World Cup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "npo 2"
+      ],
+      "tvgIds": [],
+      "country": "NL",
+      "competitions": [
+        "KNVB Beker",
+        "World Cup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "npo 3"
+      ],
+      "tvgIds": [],
+      "country": "NL",
+      "competitions": [
+        "KNVB Beker",
+        "World Cup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
         "rtl 7"
       ],
       "tvgIds": [
-        "NPO1.nl",
         "RTL7.nl"
       ],
       "country": "NL",
@@ -644,14 +1218,35 @@
     {
       "names": [
         "bein sports turkey",
-        "bein sports 1 tr",
-        "bein sports 2 tr",
         "bein sports haber"
       ],
       "tvgIds": [
-        "beINSports1.tr",
         "beINSportsHaber.tr"
       ],
+      "country": "TR",
+      "competitions": [
+        "Süper Lig"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "bein sports 1 tr"
+      ],
+      "tvgIds": [
+        "beINSports1.tr"
+      ],
+      "country": "TR",
+      "competitions": [
+        "Süper Lig"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "bein sports 2 tr"
+      ],
+      "tvgIds": [],
       "country": "TR",
       "competitions": [
         "Süper Lig"
@@ -663,7 +1258,6 @@
         "trt spor",
         "trt spor yildiz",
         "s sport",
-        "s sport 2",
         "tivibu spor"
       ],
       "tvgIds": [
@@ -680,11 +1274,22 @@
     },
     {
       "names": [
-        "trt 1",
+        "s sport 2"
+      ],
+      "tvgIds": [],
+      "country": "TR",
+      "competitions": [
+        "Süper Lig",
+        "LaLiga",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "atv"
       ],
       "tvgIds": [
-        "TRT1.tr",
         "ATV.tr"
       ],
       "country": "TR",
@@ -695,15 +1300,23 @@
     },
     {
       "names": [
-        "cosmote sport",
-        "cosmote sport 1",
-        "cosmote sport 2",
-        "cosmote sport 3",
-        "nova sports prime",
-        "nova sports 1"
+        "trt 1"
       ],
       "tvgIds": [
-        "CosmoteSport1.gr",
+        "TRT1.tr"
+      ],
+      "country": "TR",
+      "competitions": [
+        "Türkiye Kupası"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "cosmote sport",
+        "nova sports prime"
+      ],
+      "tvgIds": [
         "NovaSportsPrime.gr"
       ],
       "country": "GR",
@@ -715,12 +1328,49 @@
     },
     {
       "names": [
-        "ert 1",
+        "cosmote sport 1",
+        "nova sports 1"
+      ],
+      "tvgIds": [
+        "CosmoteSport1.gr"
+      ],
+      "country": "GR",
+      "competitions": [
+        "Super League Greece",
+        "Champions League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "cosmote sport 2"
+      ],
+      "tvgIds": [],
+      "country": "GR",
+      "competitions": [
+        "Super League Greece",
+        "Champions League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "cosmote sport 3"
+      ],
+      "tvgIds": [],
+      "country": "GR",
+      "competitions": [
+        "Super League Greece",
+        "Champions League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "mega tv",
         "skai"
       ],
       "tvgIds": [
-        "ERT1.gr",
         "MegaTV.gr"
       ],
       "country": "GR",
@@ -731,15 +1381,38 @@
     },
     {
       "names": [
+        "ert 1"
+      ],
+      "tvgIds": [
+        "ERT1.gr"
+      ],
+      "country": "GR",
+      "competitions": [
+        "Greek Football Cup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
         "match tv",
-        "match premier",
-        "match futbol 1",
-        "match futbol 2",
-        "match futbol 3"
+        "match premier"
       ],
       "tvgIds": [
         "MatchTV.ru",
-        "MatchPremier.ru",
+        "MatchPremier.ru"
+      ],
+      "country": "RU",
+      "competitions": [
+        "Russian Premier League",
+        "Russian Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "match futbol 1"
+      ],
+      "tvgIds": [
         "MatchFutbol1.ru"
       ],
       "country": "RU",
@@ -751,11 +1424,47 @@
     },
     {
       "names": [
-        "channel one",
+        "match futbol 2"
+      ],
+      "tvgIds": [],
+      "country": "RU",
+      "competitions": [
+        "Russian Premier League",
+        "Russian Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "match futbol 3"
+      ],
+      "tvgIds": [],
+      "country": "RU",
+      "competitions": [
+        "Russian Premier League",
+        "Russian Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "channel one"
+      ],
+      "tvgIds": [
+        "ChannelOne.ru"
+      ],
+      "country": "RU",
+      "competitions": [
+        "Russian Cup",
+        "World Cup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
         "rossiya 1"
       ],
       "tvgIds": [
-        "ChannelOne.ru",
         "Rossiya1.ru"
       ],
       "country": "RU",
@@ -769,14 +1478,10 @@
       "names": [
         "canal plus sport pl",
         "canal plus sport",
-        "canal plus sport 2",
-        "eleven sports 1 pl",
-        "eleven sports 2 pl",
         "polsat sport"
       ],
       "tvgIds": [
         "CanalPlusSport.pl",
-        "ElevenSports1.pl",
         "PolsatSport.pl"
       ],
       "country": "PL",
@@ -789,12 +1494,52 @@
     },
     {
       "names": [
-        "tvp sport",
-        "tvp 1",
-        "tvp 2"
+        "eleven sports 1 pl"
       ],
       "tvgIds": [
-        "TVPSport.pl",
+        "ElevenSports1.pl"
+      ],
+      "country": "PL",
+      "competitions": [
+        "Ekstraklasa",
+        "LaLiga",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "canal plus sport 2",
+        "eleven sports 2 pl"
+      ],
+      "tvgIds": [],
+      "country": "PL",
+      "competitions": [
+        "Ekstraklasa",
+        "LaLiga",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "tvp sport"
+      ],
+      "tvgIds": [
+        "TVPSport.pl"
+      ],
+      "country": "PL",
+      "competitions": [
+        "Puchar Polski",
+        "World Cup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "tvp 1"
+      ],
+      "tvgIds": [
         "TVP1.pl"
       ],
       "country": "PL",
@@ -806,17 +1551,38 @@
     },
     {
       "names": [
+        "tvp 2"
+      ],
+      "tvgIds": [],
+      "country": "PL",
+      "competitions": [
+        "Puchar Polski",
+        "World Cup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
         "bein sports mena",
-        "bein sports 1",
-        "bein sports 2",
-        "bein sports 3",
-        "bein sports 4",
-        "bein sports 1 premium",
         "bein sports english"
+      ],
+      "tvgIds": [],
+      "country": "MENA",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "LaLiga",
+        "Ligue 1"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "bein sports 1",
+        "bein sports 1 premium"
       ],
       "tvgIds": [
         "beINSports1.qa",
-        "beINSports2.qa",
         "beINSports1Premium.qa"
       ],
       "country": "MENA",
@@ -830,16 +1596,54 @@
     },
     {
       "names": [
+        "bein sports 2"
+      ],
+      "tvgIds": [
+        "beINSports2.qa"
+      ],
+      "country": "MENA",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "LaLiga",
+        "Ligue 1"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "bein sports 3"
+      ],
+      "tvgIds": [],
+      "country": "MENA",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "LaLiga",
+        "Ligue 1"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "bein sports 4"
+      ],
+      "tvgIds": [],
+      "country": "MENA",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "LaLiga",
+        "Ligue 1"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "ssc",
-        "ssc 1",
-        "ssc 2",
-        "ssc 3",
-        "ssc 4",
-        "ssc 5",
         "ssc news"
       ],
       "tvgIds": [
-        "SSC1.sa",
         "SSCNews.sa"
       ],
       "country": "SA",
@@ -852,16 +1656,105 @@
     },
     {
       "names": [
+        "ssc 1"
+      ],
+      "tvgIds": [
+        "SSC1.sa"
+      ],
+      "country": "SA",
+      "competitions": [
+        "Saudi Pro League",
+        "AFC Champions League",
+        "King Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "ssc 2"
+      ],
+      "tvgIds": [],
+      "country": "SA",
+      "competitions": [
+        "Saudi Pro League",
+        "AFC Champions League",
+        "King Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "ssc 3"
+      ],
+      "tvgIds": [],
+      "country": "SA",
+      "competitions": [
+        "Saudi Pro League",
+        "AFC Champions League",
+        "King Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "ssc 4"
+      ],
+      "tvgIds": [],
+      "country": "SA",
+      "competitions": [
+        "Saudi Pro League",
+        "AFC Champions League",
+        "King Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "ssc 5"
+      ],
+      "tvgIds": [],
+      "country": "SA",
+      "competitions": [
+        "Saudi Pro League",
+        "AFC Champions League",
+        "King Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "ad sports",
         "abu dhabi sports",
-        "alkass 1",
-        "alkass 2",
         "alkass extra"
+      ],
+      "tvgIds": [],
+      "country": "MENA",
+      "competitions": [
+        "Arab Club Champions Cup",
+        "Gulf Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "alkass 1"
       ],
       "tvgIds": [
         "ADSports1.ae",
         "Alkass1.qa"
       ],
+      "country": "MENA",
+      "competitions": [
+        "Arab Club Champions Cup",
+        "Gulf Cup"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "alkass 2"
+      ],
+      "tvgIds": [],
       "country": "MENA",
       "competitions": [
         "Arab Club Champions Cup",
@@ -889,15 +1782,11 @@
     {
       "names": [
         "espn",
-        "espn 2",
-        "espn 3",
-        "espn 4",
         "espn extra",
         "espn premium"
       ],
       "tvgIds": [
         "ESPN.ar",
-        "ESPN2.ar",
         "ESPNPremium.ar",
         "ESPN.mx"
       ],
@@ -913,9 +1802,54 @@
     },
     {
       "names": [
+        "espn 2"
+      ],
+      "tvgIds": [
+        "ESPN2.ar"
+      ],
+      "country": "LATAM",
+      "competitions": [
+        "Copa Libertadores",
+        "Champions League",
+        "LaLiga",
+        "Premier League",
+        "Liga Profesional"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "espn 3"
+      ],
+      "tvgIds": [],
+      "country": "LATAM",
+      "competitions": [
+        "Copa Libertadores",
+        "Champions League",
+        "LaLiga",
+        "Premier League",
+        "Liga Profesional"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "espn 4"
+      ],
+      "tvgIds": [],
+      "country": "LATAM",
+      "competitions": [
+        "Copa Libertadores",
+        "Champions League",
+        "LaLiga",
+        "Premier League",
+        "Liga Profesional"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "fox sports",
-        "fox sports 2",
-        "fox sports 3",
         "fox sports premium"
       ],
       "tvgIds": [
@@ -923,6 +1857,30 @@
         "FoxSportsPremium.ar",
         "FoxSports.mx"
       ],
+      "country": "LATAM",
+      "competitions": [
+        "Copa Libertadores",
+        "Liga MX"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "fox sports 2"
+      ],
+      "tvgIds": [],
+      "country": "LATAM",
+      "competitions": [
+        "Copa Libertadores",
+        "Liga MX"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "fox sports 3"
+      ],
+      "tvgIds": [],
       "country": "LATAM",
       "competitions": [
         "Copa Libertadores",
@@ -950,14 +1908,27 @@
     {
       "names": [
         "dsports",
-        "dsports 2",
         "dsports plus",
         "directv sports"
       ],
       "tvgIds": [
         "DSports.la",
-        "DSports2.la",
         "DirecTVSports.la"
+      ],
+      "country": "LATAM",
+      "competitions": [
+        "Copa Sudamericana",
+        "Copa América",
+        "LaLiga"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "dsports 2"
+      ],
+      "tvgIds": [
+        "DSports2.la"
       ],
       "country": "LATAM",
       "competitions": [
@@ -992,17 +1963,54 @@
     {
       "names": [
         "premiere",
-        "premiere 1",
-        "premiere 2",
         "sportv",
-        "sportv 2",
-        "sportv 3",
         "bandsports"
       ],
       "tvgIds": [
-        "Premiere1.br",
         "SporTV.br"
       ],
+      "country": "BR",
+      "competitions": [
+        "Brasileirão",
+        "Copa do Brasil",
+        "Campeonato Paulista"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "premiere 1"
+      ],
+      "tvgIds": [
+        "Premiere1.br"
+      ],
+      "country": "BR",
+      "competitions": [
+        "Brasileirão",
+        "Copa do Brasil",
+        "Campeonato Paulista"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "premiere 2",
+        "sportv 2"
+      ],
+      "tvgIds": [],
+      "country": "BR",
+      "competitions": [
+        "Brasileirão",
+        "Copa do Brasil",
+        "Campeonato Paulista"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "sportv 3"
+      ],
+      "tvgIds": [],
       "country": "BR",
       "competitions": [
         "Brasileirão",
@@ -1016,7 +2024,6 @@
         "globo",
         "tv publica",
         "telefe",
-        "canal 13",
         "tv azteca",
         "televisa",
         "caracol",
@@ -1038,7 +2045,23 @@
     },
     {
       "names": [
+        "canal 13"
+      ],
+      "tvgIds": [],
+      "country": "LATAM",
+      "competitions": [
+        "Brasileirão",
+        "Copa América",
+        "Mundial"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
         "espn usa",
+        "espn united states",
+        "espn 2 usa",
+        "espn 2 united states",
         "espn2",
         "espnu",
         "espn deportes"
@@ -1058,16 +2081,42 @@
     },
     {
       "names": [
-        "fox sports 1",
         "fs1",
-        "fox sports 2",
         "fs2",
         "fox deportes"
       ],
       "tvgIds": [
-        "FS1.us",
-        "FS2.us",
         "FoxDeportes.us"
+      ],
+      "country": "USA",
+      "competitions": [
+        "MLS",
+        "World Cup",
+        "Copa América"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "fox sports 1"
+      ],
+      "tvgIds": [
+        "FS1.us"
+      ],
+      "country": "USA",
+      "competitions": [
+        "MLS",
+        "World Cup",
+        "Copa América"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "fox sports 2"
+      ],
+      "tvgIds": [
+        "FS2.us"
       ],
       "country": "USA",
       "competitions": [
@@ -1125,11 +2174,7 @@
         "supersport football",
         "supersport premier league",
         "supersport laliga",
-        "supersport psl",
-        "supersport 1",
-        "supersport 2",
-        "supersport 3",
-        "supersport 4"
+        "supersport psl"
       ],
       "tvgIds": [
         "SuperSportFootball.za",
@@ -1148,14 +2193,69 @@
     },
     {
       "names": [
-        "canal plus sport afrique",
-        "canal plus sport 1",
-        "canal plus sport 2",
-        "canal plus sport 3",
-        "canal plus sport 4"
+        "supersport 1"
+      ],
+      "tvgIds": [],
+      "country": "ZA",
+      "competitions": [
+        "Premier League",
+        "LaLiga",
+        "Champions League",
+        "AFCON",
+        "PSL"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "supersport 2"
+      ],
+      "tvgIds": [],
+      "country": "ZA",
+      "competitions": [
+        "Premier League",
+        "LaLiga",
+        "Champions League",
+        "AFCON",
+        "PSL"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "supersport 3"
+      ],
+      "tvgIds": [],
+      "country": "ZA",
+      "competitions": [
+        "Premier League",
+        "LaLiga",
+        "Champions League",
+        "AFCON",
+        "PSL"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "supersport 4"
+      ],
+      "tvgIds": [],
+      "country": "ZA",
+      "competitions": [
+        "Premier League",
+        "LaLiga",
+        "Champions League",
+        "AFCON",
+        "PSL"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "canal plus sport afrique"
       ],
       "tvgIds": [
-        "CanalPlusSport1.ci",
         "CanalPlusAfrique.ci"
       ],
       "country": "AFRICA",
@@ -1168,15 +2268,80 @@
     },
     {
       "names": [
+        "canal plus sport 1"
+      ],
+      "tvgIds": [
+        "CanalPlusSport1.ci"
+      ],
+      "country": "AFRICA",
+      "competitions": [
+        "Ligue 1",
+        "Champions League",
+        "AFCON"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "canal plus sport 2"
+      ],
+      "tvgIds": [],
+      "country": "AFRICA",
+      "competitions": [
+        "Ligue 1",
+        "Champions League",
+        "AFCON"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "canal plus sport 3"
+      ],
+      "tvgIds": [],
+      "country": "AFRICA",
+      "competitions": [
+        "Ligue 1",
+        "Champions League",
+        "AFCON"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "canal plus sport 4"
+      ],
+      "tvgIds": [],
+      "country": "AFRICA",
+      "competitions": [
+        "Ligue 1",
+        "Champions League",
+        "AFCON"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "sabc sport",
-        "sabc 1",
-        "sabc 2",
         "crtv",
-        "rti 1",
         "ortm"
       ],
       "tvgIds": [
-        "SABCSport.za",
+        "SABCSport.za"
+      ],
+      "country": "AFRICA",
+      "competitions": [
+        "PSL",
+        "AFCON"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "sabc 1",
+        "rti 1"
+      ],
+      "tvgIds": [
         "SABC1.za"
       ],
       "country": "AFRICA",
@@ -1188,23 +2353,62 @@
     },
     {
       "names": [
+        "sabc 2"
+      ],
+      "tvgIds": [],
+      "country": "AFRICA",
+      "competitions": [
+        "PSL",
+        "AFCON"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "astro supersport",
+        "bein sports asia",
+        "spotv"
+      ],
+      "tvgIds": [
+        "beINSportsAsia.sg"
+      ],
+      "country": "ASIA",
+      "competitions": [
+        "Indian Super League",
+        "Premier League",
+        "Champions League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
         "star sports 1",
         "star sports select 1",
-        "star sports select 2",
         "sony sports ten 1",
-        "sony sports ten 2",
-        "astro supersport",
-        "astro supersport 1",
-        "bein sports asia",
-        "spotv",
-        "spotv 2"
+        "astro supersport 1"
       ],
       "tvgIds": [
         "StarSports1.in",
         "SonySportsTen1.in",
-        "AstroSuperSport1.my",
-        "beINSportsAsia.sg"
+        "AstroSuperSport1.my"
       ],
+      "country": "ASIA",
+      "competitions": [
+        "Indian Super League",
+        "Premier League",
+        "Champions League",
+        "Serie A"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "star sports select 2",
+        "sony sports ten 2",
+        "spotv 2"
+      ],
+      "tvgIds": [],
       "country": "ASIA",
       "competitions": [
         "Indian Super League",
@@ -1233,16 +2437,58 @@
     {
       "names": [
         "optus sport",
-        "optus sport 1",
-        "optus sport 2",
         "stan sport",
         "fox sports au",
-        "fox sports 501",
         "bein sports australia"
       ],
       "tvgIds": [
+        "StanSport.au"
+      ],
+      "country": "AU",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "LaLiga",
+        "A-League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "optus sport 1"
+      ],
+      "tvgIds": [
         "OptusSport1.au",
-        "StanSport.au",
+        "FoxSports501.au"
+      ],
+      "country": "AU",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "LaLiga",
+        "A-League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "optus sport 2"
+      ],
+      "tvgIds": [],
+      "country": "AU",
+      "competitions": [
+        "Premier League",
+        "Champions League",
+        "LaLiga",
+        "A-League"
+      ],
+      "tier": 1
+    },
+    {
+      "names": [
+        "fox sports 501"
+      ],
+      "tvgIds": [
         "FoxSports501.au"
       ],
       "country": "AU",
@@ -1258,12 +2504,23 @@
       "names": [
         "sbs",
         "sbs viceland",
-        "abc tv",
-        "channel 9",
-        "channel 10"
+        "abc tv"
       ],
       "tvgIds": [
-        "SBS.au",
+        "SBS.au"
+      ],
+      "country": "AU",
+      "competitions": [
+        "A-League",
+        "World Cup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "channel 9"
+      ],
+      "tvgIds": [
         "Channel9.au"
       ],
       "country": "AU",
@@ -1272,6 +2529,42 @@
         "World Cup"
       ],
       "tier": 2
+    },
+    {
+      "names": [
+        "channel 10"
+      ],
+      "tvgIds": [],
+      "country": "AU",
+      "competitions": [
+        "A-League",
+        "World Cup"
+      ],
+      "tier": 2
+    },
+    {
+      "names": [
+        "espn brasil",
+        "espn br",
+        "espn brazil",
+        "espn 2 brasil",
+        "espn 2 brazil",
+        "espn 3 brasil",
+        "espn 3 brazil",
+        "espn 4 brasil",
+        "espn 4 brazil"
+      ],
+      "tvgIds": [
+        "ESPNBrasil.br",
+        "ESPN.br"
+      ],
+      "country": "BR",
+      "competitions": [
+        "Brasileirão",
+        "Premier League",
+        "Champions League"
+      ],
+      "tier": 1
     }
   ]
 }
