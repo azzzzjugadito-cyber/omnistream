@@ -1,0 +1,8 @@
+node_modules/
+client/node_modules/
+logs/*.log
+data/*.db
+data/*.db-shm
+data/*.db-wal
+.DS_Store
+sources.yaml.bak

@@ -2,7 +2,7 @@ import express from 'express';
 import os from 'os';
 import fs from 'fs';
 import axios from 'axios';
-import { load as yamlLoad, dump as yamlDump } from 'js-yaml';
+import { parseDocument } from 'yaml';
 import { sourceManager } from '../sources/index.js';
 import { runHealthChecks } from '../health.js';
 import { logger } from '../logger.js';
@@ -157,14 +157,15 @@ router.post('/save-xtream', async (req, res) => {
     const cleanHost = host.replace(/^https?:\/\//i, '').replace(/\/+$/, '');
     const numPort = parseInt(port, 10) || (protocol === 'https' ? 443 : 80);
 
-    // Leer sources.yaml actual
-    let parsed = { sources: [] };
-    if (fs.existsSync(config.sourcesFile)) {
-      const content = fs.readFileSync(config.sourcesFile, 'utf8');
-      parsed = yamlLoad(content) || { sources: [] };
+    // Leer sources.yaml actual preservando comentarios y formato AST
+    const rawContent = fs.existsSync(config.sourcesFile) ? fs.readFileSync(config.sourcesFile, 'utf8') : 'sources:\n';
+    const doc = parseDocument(rawContent);
+    let sources = doc.get('sources');
+    if (!sources) {
+      doc.set('sources', []);
+      sources = doc.get('sources');
     }
 
-    const existingIndex = parsed.sources.findIndex(s => s.id === providerId);
     const newEntry = {
       id: providerId,
       name: name || `Proveedor Xtream (${cleanHost})`,
@@ -187,14 +188,27 @@ router.post('/save-xtream', async (req, res) => {
     if (passwordEnv) newEntry.passwordEnv = passwordEnv;
     else if (password) newEntry.password = password;
 
-    if (existingIndex >= 0) {
-      parsed.sources[existingIndex] = { ...parsed.sources[existingIndex], ...newEntry };
-    } else {
-      parsed.sources.push(newEntry);
+    let existingIndex = -1;
+    if (sources && sources.items) {
+      for (let i = 0; i < sources.items.length; i++) {
+        const item = sources.items[i];
+        if (item && item.get && item.get('id') === providerId) {
+          existingIndex = i;
+          break;
+        }
+      }
     }
 
-    // Escribir sources.yaml preservando el formato
-    fs.writeFileSync(config.sourcesFile, yamlDump(parsed, { lineWidth: -1 }), 'utf8');
+    if (existingIndex >= 0) {
+      for (const [k, v] of Object.entries(newEntry)) {
+        sources.items[existingIndex].set(k, v);
+      }
+    } else {
+      sources.add(newEntry);
+    }
+
+    // Escribir sources.yaml preservando el formato original y todos los comentarios
+    fs.writeFileSync(config.sourcesFile, doc.toString({ lineWidth: 0 }), 'utf8');
 
     // Recargar en caliente
     await sourceManager.reload();
@@ -210,7 +224,7 @@ router.post('/save-xtream', async (req, res) => {
   }
 });
 
-// Eliminar proveedor Xtream de sources.yaml
+// Eliminar proveedor Xtream de sources.yaml preservando comentarios
 router.delete('/xtream/:id', async (req, res) => {
   try {
     const providerId = req.params.id;
@@ -218,11 +232,24 @@ router.delete('/xtream/:id', async (req, res) => {
       return res.status(404).json({ error: 'sources.yaml no encontrado' });
     }
 
-    const content = fs.readFileSync(config.sourcesFile, 'utf8');
-    const parsed = yamlLoad(content) || { sources: [] };
+    const rawContent = fs.readFileSync(config.sourcesFile, 'utf8');
+    const doc = parseDocument(rawContent);
+    const sources = doc.get('sources');
 
-    parsed.sources = parsed.sources.filter(s => s.id !== providerId);
-    fs.writeFileSync(config.sourcesFile, yamlDump(parsed, { lineWidth: -1 }), 'utf8');
+    if (sources && sources.items) {
+      let existingIndex = -1;
+      for (let i = 0; i < sources.items.length; i++) {
+        const item = sources.items[i];
+        if (item && item.get && item.get('id') === providerId) {
+          existingIndex = i;
+          break;
+        }
+      }
+      if (existingIndex >= 0) {
+        sources.delete(existingIndex);
+        fs.writeFileSync(config.sourcesFile, doc.toString({ lineWidth: 0 }), 'utf8');
+      }
+    }
 
     await sourceManager.reload();
     res.json({ success: true, removed: providerId, sources: sourceManager.getSourcesList() });

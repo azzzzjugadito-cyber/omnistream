@@ -13,6 +13,8 @@ router.get('/channels', async (req, res) => {
     const filters = {
       sport: req.query.sport,
       country: req.query.country,
+      competition: req.query.competition,
+      isFootball: req.query.isFootball === 'true',
       query: req.query.q,
       limit: req.query.limit ? parseInt(req.query.limit, 10) : undefined,
       onlySports: req.query.onlySports === 'true'

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { BaseAdapter } from './BaseAdapter.js';
 import { parseM3u } from '../m3uParser.js';
+import { parseXmltv, getCurrentAndNextProgram } from '../epgParser.js';
 import { logger } from '../logger.js';
 
 export class TdtChannelsAdapter extends BaseAdapter {
@@ -8,6 +9,8 @@ export class TdtChannelsAdapter extends BaseAdapter {
     super(config);
     this.type = 'tdtchannels';
     this.epgUrl = config.epgUrl || 'https://www.tdtchannels.com/epg/TV.xml.gz';
+    this.epgData = new Map();
+    this.epgLastFetched = 0;
   }
 
   async init() {
@@ -44,8 +47,11 @@ export class TdtChannelsAdapter extends BaseAdapter {
             logo: ch.logo || 'https://www.tdtchannels.com/img/icon.png',
             streamUrl: ch.url,
             backupUrls: [],
+            tvgId: ch.tvgId || '',
             headers: { ...this.headers, ...ch.headers },
-            priority: this.priority
+            priority: this.priority,
+            currentProgram: null,
+            nextProgram: null
           });
         } else {
           // Si ya existe, guardamos este stream como enlace de respaldo
@@ -59,10 +65,44 @@ export class TdtChannelsAdapter extends BaseAdapter {
       this.cachedItems = Array.from(channelMap.values());
       this.lastFetched = Date.now();
       logger.info(`TDTChannels procesado: ${this.cachedItems.length} canales consolidados.`);
+
+      // Sincronizar EPG en segundo plano
+      this.refreshEpg().catch(e => logger.debug(`EPG TDTChannels aviso: ${e.message}`));
+
       return this.cachedItems;
     } catch (err) {
       logger.error(`Error cargando TDTChannels: ${err.message}`);
       return this.cachedItems;
+    }
+  }
+
+  async refreshEpg() {
+    if (!this.epgUrl || Date.now() - this.epgLastFetched < 60 * 60 * 1000) {
+      return;
+    }
+    try {
+      logger.info(`Descargando EPG TDTChannels desde: ${this.epgUrl}`);
+      const res = await axios.get(this.epgUrl, {
+        headers: this.headers,
+        timeout: 15000,
+        responseType: 'arraybuffer'
+      });
+      const parsedEpg = parseXmltv(res.data);
+      this.epgData = parsedEpg;
+      this.epgLastFetched = Date.now();
+      logger.info(`EPG TDTChannels procesado: ${this.epgData.size} canales con programación.`);
+
+      const now = new Date();
+      this.cachedItems.forEach(ch => {
+        if (ch.tvgId && this.epgData.has(ch.tvgId)) {
+          const progs = this.epgData.get(ch.tvgId);
+          const { current, next } = getCurrentAndNextProgram(progs, now);
+          ch.currentProgram = current ? current.title : null;
+          ch.nextProgram = next ? next.title : null;
+        }
+      });
+    } catch (err) {
+      logger.debug(`No se pudo cargar EPG de TDTChannels: ${err.message}`);
     }
   }
 

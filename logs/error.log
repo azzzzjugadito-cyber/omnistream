@@ -4,3 +4,7 @@
 [2026-11-18T07:41:33.874Z] [ERROR] Error en pipe upstream: aborted
 [2026-11-18T07:42:14.430Z] [ERROR] Error en pipe upstream: aborted
 [2026-11-18T08:05:26.600Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:17:45.443Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:18:12.902Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999
+[2026-11-18T08:18:59.696Z] [ERROR] Error sincronizando Xtream [test-xtream-provider]: timeout of 7000ms exceeded
+[2026-11-18T08:25:50.319Z] [ERROR] Error sincronizando Xtream [xtream-dead]: connect ECONNREFUSED 127.0.0.1:9999

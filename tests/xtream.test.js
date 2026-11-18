@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert';
+import { parseDocument } from 'yaml';
 import { parseXmltv, parseXmltvDate, getCurrentAndNextProgram } from '../server/epgParser.js';
 import { XtreamAdapter } from '../server/sources/XtreamAdapter.js';
 
@@ -83,4 +84,22 @@ test('XtreamAdapter degrada a lista vacía sin tumbar el arranque si el servidor
   const res = await adapter.init();
   assert.strictEqual(res, true);
   assert.deepStrictEqual(adapter.cachedItems, []);
+});
+
+test('Modificación de sources.yaml preserva comentarios y formato con parseDocument', () => {
+  const yamlContentWithComments = `# Cabecera de prueba
+# Configuración global
+sources:
+  # Entrada 1
+  - id: "source-1"
+    name: "Fuente 1"
+    enabled: true
+`;
+  const doc = parseDocument(yamlContentWithComments);
+  const sources = doc.get('sources');
+  sources.add({ id: 'source-2', name: 'Fuente 2', enabled: false });
+  const output = doc.toString({ lineWidth: 0 });
+  assert.ok(output.includes('# Cabecera de prueba'));
+  assert.ok(output.includes('# Entrada 1'));
+  assert.ok(output.includes('source-2'));
 });

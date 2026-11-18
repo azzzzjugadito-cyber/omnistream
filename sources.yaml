@@ -140,3 +140,262 @@ sources:
     headers:
       User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
       Referer: "https://ppv.st/"
+
+  # ----------------------------------------------------------------------------
+  # 8. CAPA PÚBLICA Y LISTAS POR PAÍS (Fallback Internacional Desactivable)
+  # Desactivadas por defecto (enabled: false) y prioridad 50+
+  # ----------------------------------------------------------------------------
+  - id: "iptv-org-index"
+    name: "IPTV-Org Índice Global Completo"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/index.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/all.xml"
+    enabled: false
+    priority: 50
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-es"
+    name: "IPTV-Org España (Fallback)"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/es.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/es.xml"
+    enabled: false
+    priority: 51
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-uk"
+    name: "IPTV-Org Reino Unido (UK)"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/uk.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/uk.xml"
+    enabled: false
+    priority: 52
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-it"
+    name: "IPTV-Org Italia"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/it.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/it.xml"
+    enabled: false
+    priority: 53
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-de"
+    name: "IPTV-Org Alemania"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/de.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/de.xml"
+    enabled: false
+    priority: 54
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-fr"
+    name: "IPTV-Org Francia"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/fr.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/fr.xml"
+    enabled: false
+    priority: 55
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-pt"
+    name: "IPTV-Org Portugal"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/pt.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/pt.xml"
+    enabled: false
+    priority: 56
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-nl"
+    name: "IPTV-Org Países Bajos"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/nl.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/nl.xml"
+    enabled: false
+    priority: 57
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-tr"
+    name: "IPTV-Org Turquía"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/tr.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/tr.xml"
+    enabled: false
+    priority: 58
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-ru"
+    name: "IPTV-Org Rusia"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/ru.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/ru.xml"
+    enabled: false
+    priority: 59
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-pl"
+    name: "IPTV-Org Polonia"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/pl.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/pl.xml"
+    enabled: false
+    priority: 60
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-br"
+    name: "IPTV-Org Brasil"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/br.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/br.xml"
+    enabled: false
+    priority: 61
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-ar"
+    name: "IPTV-Org Argentina"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/ar.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/ar.xml"
+    enabled: false
+    priority: 62
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-mx"
+    name: "IPTV-Org México"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/mx.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/mx.xml"
+    enabled: false
+    priority: 63
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-us"
+    name: "IPTV-Org Estados Unidos"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/us.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/us.xml"
+    enabled: false
+    priority: 64
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-sa"
+    name: "IPTV-Org Arabia Saudí"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/sa.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/sa.xml"
+    enabled: false
+    priority: 65
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-eg"
+    name: "IPTV-Org Egipto"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/eg.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/eg.xml"
+    enabled: false
+    priority: 66
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-ma"
+    name: "IPTV-Org Marruecos"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/ma.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/ma.xml"
+    enabled: false
+    priority: 67
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-za"
+    name: "IPTV-Org Sudáfrica"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/za.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/za.xml"
+    enabled: false
+    priority: 68
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-in"
+    name: "IPTV-Org India"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/in.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/in.xml"
+    enabled: false
+    priority: 69
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-au"
+    name: "IPTV-Org Australia"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/au.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/au.xml"
+    enabled: false
+    priority: 70
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  - id: "iptv-org-country-gr"
+    name: "IPTV-Org Grecia"
+    type: "m3u"
+    category: "live"
+    url: "https://iptv-org.github.io/iptv/countries/gr.m3u"
+    epgUrl: "https://iptv-org.github.io/epg/guides/gr.xml"
+    enabled: false
+    priority: 71
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+  # ----------------------------------------------------------------------------
+  # 9. VOD PÚBLICO EN ABIERTO: Free-TV IPTV
+  # ----------------------------------------------------------------------------
+  - id: "freetv-vod"
+    name: "Free-TV VOD (Catálogo Público)"
+    type: "custom"
+    category: "vod"
+    url: "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8"
+    enabled: false
+    priority: 80
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
