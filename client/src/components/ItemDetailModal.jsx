@@ -7,6 +7,7 @@ import { api } from '../services/api';
 export function ItemDetailModal({ item, onClose, onPlayStream }) {
   const [details, setDetails] = useState(item);
   const [streams, setStreams] = useState([]);
+  const [audioFilter, setAudioFilter] = useState('all'); // 'all' | 'castellano'
   const [loadingStreams, setLoadingStreams] = useState(true);
   const [streamError, setStreamError] = useState(null);
 
@@ -123,46 +124,117 @@ export function ItemDetailModal({ item, onClose, onPlayStream }) {
             )}
 
             {!loadingStreams && streams.length > 0 && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {streams.map((s, idx) => (
-                  <div 
-                    key={s.id || idx}
+              <div>
+                {/* Filtro rápido de audio */}
+                <div style={{ display: 'flex', gap: 8, marginBottom: 14 }}>
+                  <button 
+                    onClick={() => setAudioFilter('all')} 
                     style={{
-                      background: '#131b2c',
-                      padding: '12px 16px',
-                      borderRadius: 8,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      border: '1px solid rgba(255,255,255,0.06)'
+                      background: audioFilter === 'all' ? '#0ea5e9' : 'rgba(255,255,255,0.06)',
+                      color: 'white',
+                      border: 'none',
+                      padding: '5px 12px',
+                      borderRadius: 6,
+                      fontSize: '0.8rem',
+                      fontWeight: 600,
+                      cursor: 'pointer'
                     }}
                   >
-                    <div>
-                      <div style={{ fontSize: '0.92rem', fontWeight: 600 }}>{s.name}</div>
-                      <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>
-                        Calidad: <span style={{ color: '#38bdf8', fontWeight: 700 }}>{s.quality}</span> • Formato: {s.type.toUpperCase()}
-                      </div>
-                    </div>
+                    Todos ({streams.length})
+                  </button>
+                  <button 
+                    onClick={() => setAudioFilter('castellano')} 
+                    style={{
+                      background: audioFilter === 'castellano' ? '#22c55e' : 'rgba(255,255,255,0.06)',
+                      color: 'white',
+                      border: 'none',
+                      padding: '5px 12px',
+                      borderRadius: 6,
+                      fontSize: '0.8rem',
+                      fontWeight: 600,
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 5
+                    }}
+                  >
+                    🇪🇸 Castellano / Dual ({streams.filter(s => s.isCastellano).length})
+                  </button>
+                </div>
 
-                    <button 
-                      className="btn-primary" 
-                      style={{ padding: '8px 16px', fontSize: '0.85rem' }}
-                      onClick={() => {
-                        onPlayStream({
-                          id: details.id,
-                          title: `${details.title} [${s.quality}]`,
-                          poster: details.poster,
-                          streamUrl: s.streamUrl,
-                          proxiedUrl: s.proxiedUrl || `/api/proxy/stream?url=${encodeURIComponent(s.streamUrl)}`,
-                          category: 'Catálogo VOD'
-                        });
-                        onClose();
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {streams
+                    .filter(s => audioFilter === 'castellano' ? s.isCastellano : true)
+                    .map((s, idx) => (
+                    <div 
+                      key={s.id || idx}
+                      style={{
+                        background: '#131b2c',
+                        padding: '12px 16px',
+                        borderRadius: 8,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        border: s.isCastellano ? '1px solid rgba(34, 197, 94, 0.3)' : '1px solid rgba(255,255,255,0.06)'
                       }}
                     >
-                      <Play size={15} fill="white" /> Reproducir
-                    </button>
-                  </div>
-                ))}
+                      <div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                          <span style={{ fontSize: '0.92rem', fontWeight: 600 }}>{s.name}</span>
+                          {s.isCastellano ? (
+                            <span style={{ 
+                              background: 'rgba(34, 197, 94, 0.2)', 
+                              color: '#4ade80', 
+                              border: '1px solid rgba(34, 197, 94, 0.4)', 
+                              borderRadius: 4, 
+                              padding: '2px 8px', 
+                              fontSize: '0.74rem', 
+                              fontWeight: 700 
+                            }}>
+                              🇪🇸 {s.audio || 'Castellano'}
+                            </span>
+                          ) : s.audio ? (
+                            <span style={{ 
+                              background: 'rgba(255, 255, 255, 0.08)', 
+                              color: '#94a3b8', 
+                              borderRadius: 4, 
+                              padding: '2px 6px', 
+                              fontSize: '0.72rem' 
+                            }}>
+                              {s.audio}
+                            </span>
+                          ) : null}
+                        </div>
+                        <div style={{ fontSize: '0.78rem', color: '#94a3b8' }}>
+                          Calidad: <span style={{ color: '#38bdf8', fontWeight: 700 }}>{s.quality}</span> • Formato: {(s.type || 'stream').toUpperCase()}
+                        </div>
+                      </div>
+
+                      <button 
+                        className="btn-primary" 
+                        style={{ padding: '8px 16px', fontSize: '0.85rem' }}
+                        onClick={() => {
+                          onPlayStream({
+                            id: details.id,
+                            title: `${details.title} [${s.quality}]`,
+                            poster: details.poster,
+                            streamUrl: s.streamUrl,
+                            proxiedUrl: s.proxiedUrl || `/api/proxy/stream?url=${encodeURIComponent(s.streamUrl)}`,
+                            category: 'Catálogo VOD'
+                          });
+                          onClose();
+                        }}
+                      >
+                        <Play size={15} fill="white" /> Reproducir
+                      </button>
+                    </div>
+                  ))}
+                  {audioFilter === 'castellano' && streams.filter(s => s.isCastellano).length === 0 && (
+                    <div style={{ color: '#94a3b8', fontSize: '0.85rem', padding: '12px', textAlign: 'center' }}>
+                      No se detectaron pistas con etiqueta explícita de Castellano. Prueba con "Todos" para ver las pistas V.O. o Dual.
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>

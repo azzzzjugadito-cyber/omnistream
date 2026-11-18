@@ -10,6 +10,8 @@
     "server": "node server/index.js",
     "client": "npm --prefix client run dev",
     "build": "npm --prefix client run build",
+    "build:all": "npm --prefix client install && npm --prefix client run build",
+    "start:prod": "node server/index.js",
     "test": "node --test tests/*.test.js",
     "tauri": "tauri",
     "desktop:build": "npm run build && tauri build"

@@ -39,7 +39,7 @@ export class StremioResolverAdapter extends BaseAdapter {
   }
 
   /**
-   * Resuelve fuentes y calidades para una película o serie dada su IMDB ID.
+   * Resuelve fuentes y calidades para una película o serie dada su IMDB ID, priorizando audio en Castellano.
    */
   async resolveStreamsForTitle(imdbId, title = '') {
     const streams = [];
@@ -57,12 +57,18 @@ export class StremioResolverAdapter extends BaseAdapter {
           const res = await axios.get(url, { timeout: 6000 });
 
           if (res.data && Array.isArray(res.data.streams) && res.data.streams.length > 0) {
-            for (const s of res.data.streams.slice(0, 5)) {
+            for (const s of res.data.streams.slice(0, 10)) {
+              const rawText = `${s.name || ''} ${s.title || ''}`;
+              const audio = this.detectAudio(rawText);
+              const isCastellano = audio === 'Castellano' || audio.includes('Dual');
+
               streams.push({
                 id: `stream_${s.infoHash || Math.random().toString(36).substring(7)}`,
                 name: s.name ? s.name.replace('\n', ' - ') : 'Torrentio Stream',
                 title: s.title || title,
                 quality: this.extractQuality(s.name || s.title),
+                audio,
+                isCastellano,
                 infoHash: s.infoHash,
                 fileIdx: s.fileIdx,
                 streamUrl: s.url || null,
@@ -85,6 +91,8 @@ export class StremioResolverAdapter extends BaseAdapter {
         name: `Servidor Público - ${fallback.title}`,
         title: `${title || 'Título'} [${fallback.quality}]`,
         quality: fallback.quality,
+        audio: 'Castellano / Dual',
+        isCastellano: true,
         streamUrl: fallback.streamUrl,
         proxiedUrl: this.getProxiedUrl(fallback.streamUrl, {}),
         isP2P: false,
@@ -92,7 +100,23 @@ export class StremioResolverAdapter extends BaseAdapter {
       });
     });
 
+    // 3. Ordenar: Castellano y Dual primero, luego mayor calidad
+    streams.sort((a, b) => {
+      const aCast = a.isCastellano ? 1 : 0;
+      const bCast = b.isCastellano ? 1 : 0;
+      return bCast - aCast;
+    });
+
     return streams;
+  }
+
+  detectAudio(text = '') {
+    const t = text.toLowerCase();
+    if (/\b(castellano|espanol|español|spa|esp|spanish)\b/i.test(t)) return 'Castellano';
+    if (/\b(latino|lat)\b/i.test(t)) return 'Latino';
+    if (/\b(dual|multi)\b/i.test(t)) return 'Dual (Castellano/VO)';
+    if (/\b(eng|english|ingles|inglés)\b/i.test(t)) return 'Inglés';
+    return 'V.O.';
   }
 
   extractQuality(text = '') {

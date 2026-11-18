@@ -216,6 +216,25 @@ export class CinemetaVodAdapter extends BaseAdapter {
   }
 
   async list(filters = {}) {
+    // Si se especifica una búsqueda ('query' o 'q'), consultar en VIVO sobre todo el catálogo de IMDb
+    const q = (filters.query || filters.q || '').trim();
+    if (q) {
+      let results = await this.search(q);
+      if (filters.contentType) {
+        if (filters.contentType === 'netflix') {
+          results = results.filter(it => it.isNetflix || it.platform === 'Netflix');
+        } else {
+          results = results.filter(it => it.contentType === filters.contentType);
+        }
+      }
+      if (filters.genre && filters.genre !== 'Todos') {
+        results = results.filter(it => 
+          it.genres && it.genres.some(g => g.toLowerCase().includes(filters.genre.toLowerCase()))
+        );
+      }
+      return results;
+    }
+
     if (Date.now() - this.lastFetched > this.cacheTtlMs || this.cachedItems.length === 0) {
       await this.refreshCache();
     }
@@ -235,11 +254,6 @@ export class CinemetaVodAdapter extends BaseAdapter {
       items = items.filter(it => 
         it.genres && it.genres.some(g => g.toLowerCase().includes(filters.genre.toLowerCase()))
       );
-    }
-
-    if (filters.query) {
-      const q = filters.query.toLowerCase();
-      items = items.filter(it => it.title.toLowerCase().includes(q));
     }
 
     return items;

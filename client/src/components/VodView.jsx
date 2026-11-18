@@ -26,16 +26,20 @@ export function VodView({ onSelectItem, favorites, onToggleFavorite }) {
   const [filterQuery, setFilterQuery] = useState('');
 
   useEffect(() => {
-    loadCatalog();
-  }, [selectedType, selectedGenre]);
+    const timer = setTimeout(() => {
+      loadCatalog(filterQuery);
+    }, filterQuery ? 450 : 0);
+    return () => clearTimeout(timer);
+  }, [selectedType, selectedGenre, filterQuery]);
 
-  async function loadCatalog() {
+  async function loadCatalog(query = '') {
     setLoading(true);
     setError(null);
     try {
       const params = {};
       if (selectedType) params.type = selectedType;
       if (selectedGenre !== 'Todos') params.genre = selectedGenre;
+      if (query && query.trim()) params.q = query.trim();
 
       const res = await api.getVodCatalog(params);
       setItems(res.items || []);
@@ -46,15 +50,7 @@ export function VodView({ onSelectItem, favorites, onToggleFavorite }) {
     }
   }
 
-  const filteredItems = items.filter(it => {
-    if (!filterQuery) return true;
-    const q = filterQuery.toLowerCase();
-    return (
-      it.title.toLowerCase().includes(q) || 
-      (it.synopsis && it.synopsis.toLowerCase().includes(q)) ||
-      (it.genres && it.genres.some(g => g.toLowerCase().includes(q)))
-    );
-  });
+  const filteredItems = items;
 
   return (
     <div>

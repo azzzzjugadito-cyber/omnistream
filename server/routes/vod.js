@@ -13,7 +13,7 @@ router.get('/catalog', async (req, res) => {
     const filters = {
       contentType: req.query.type, // 'movie' | 'series'
       genre: req.query.genre,
-      query: req.query.q
+      query: req.query.q || req.query.query
     };
 
     const items = await sourceManager.getVodCatalog(filters);

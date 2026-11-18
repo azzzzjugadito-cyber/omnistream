@@ -6,3 +6,5 @@ data/*.db-shm
 data/*.db-wal
 .DS_Store
 sources.yaml.bak
+cloudflared
+cloudflared*.tgz
