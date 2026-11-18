@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { 
-  X, Star, Play, Film, User, RefreshCw, AlertCircle, ExternalLink 
+  X, Star, Play, Film, User, RefreshCw, AlertCircle, ExternalLink, Tv 
 } from 'lucide-react';
 import { api } from '../services/api';
 
@@ -11,14 +11,21 @@ export function ItemDetailModal({ item, onClose, onPlayStream }) {
   const [loadingStreams, setLoadingStreams] = useState(true);
   const [streamError, setStreamError] = useState(null);
 
+  // Control de temporadas y episodios para series
+  const [selectedSeason, setSelectedSeason] = useState(1);
+  const [selectedEpisode, setSelectedEpisode] = useState(1);
+
+  const isSeries = details.contentType === 'series' || item.contentType === 'series' || (details.videos && details.videos.length > 0);
+
   useEffect(() => {
     loadDeepDetails();
-    loadStreamOptions();
+    loadStreamOptions(1, 1);
   }, [item]);
 
   async function loadDeepDetails() {
     try {
-      const res = await api.getVodDetails(item.id);
+      const detectedType = item.contentType === 'series' ? 'series' : '';
+      const res = await api.getVodDetails(item.id, detectedType);
       if (res) {
         setDetails(prev => ({ ...prev, ...res }));
       }
@@ -27,11 +34,12 @@ export function ItemDetailModal({ item, onClose, onPlayStream }) {
     }
   }
 
-  async function loadStreamOptions() {
+  async function loadStreamOptions(season = 1, episode = 1) {
     setLoadingStreams(true);
     setStreamError(null);
     try {
-      const res = await api.resolveVodStreams(item.id, item.title);
+      const type = item.contentType === 'series' ? 'series' : 'movie';
+      const res = await api.resolveVodStreams(item.id, item.title, season, episode, type);
       setStreams(res.streams || []);
     } catch (err) {
       setStreamError('Error al resolver enlaces de reproducción');
@@ -39,6 +47,18 @@ export function ItemDetailModal({ item, onClose, onPlayStream }) {
       setLoadingStreams(false);
     }
   }
+
+  // Agrupar episodios por temporada
+  const seasonsMap = new Map();
+  if (isSeries && Array.isArray(details.videos) && details.videos.length > 0) {
+    details.videos.forEach(v => {
+      const s = v.season || 1;
+      if (!seasonsMap.has(s)) seasonsMap.set(s, []);
+      seasonsMap.get(s).push(v);
+    });
+  }
+  const seasons = Array.from(seasonsMap.keys()).sort((a, b) => a - b);
+  const currentSeasonEpisodes = seasonsMap.get(selectedSeason) || [];
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -106,10 +126,186 @@ export function ItemDetailModal({ item, onClose, onPlayStream }) {
             </p>
           </div>
 
+          {/* Panel distinguible de Temporadas y Episodios (Sólo para Series) */}
+          {isSeries && (
+            <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
+                <h4 style={{ fontSize: '1.05rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: 8, margin: 0 }}>
+                  <Tv size={18} color="#0ea5e9" /> Temporadas y Episodios
+                </h4>
+                <span style={{ fontSize: '0.8rem', color: '#38bdf8', fontWeight: 600 }}>
+                  Temporada {selectedSeason} • Episodio {selectedEpisode}
+                </span>
+              </div>
+
+              {/* Pestañas de Temporadas */}
+              <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 10 }}>
+                {seasons.length > 0 ? (
+                  seasons.map(s => (
+                    <button
+                      key={s}
+                      onClick={() => {
+                        setSelectedSeason(s);
+                        const firstEp = (seasonsMap.get(s) || [])[0]?.episode || 1;
+                        setSelectedEpisode(firstEp);
+                        loadStreamOptions(s, firstEp);
+                      }}
+                      style={{
+                        background: selectedSeason === s ? '#0ea5e9' : '#131b2c',
+                        color: selectedSeason === s ? '#ffffff' : '#94a3b8',
+                        border: selectedSeason === s ? '1px solid #0ea5e9' : '1px solid rgba(255,255,255,0.08)',
+                        padding: '6px 16px',
+                        borderRadius: 8,
+                        fontSize: '0.85rem',
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      Temporada {s}
+                    </button>
+                  ))
+                ) : (
+                  [1, 2, 3].map(s => (
+                    <button
+                      key={s}
+                      onClick={() => {
+                        setSelectedSeason(s);
+                        setSelectedEpisode(1);
+                        loadStreamOptions(s, 1);
+                      }}
+                      style={{
+                        background: selectedSeason === s ? '#0ea5e9' : '#131b2c',
+                        color: selectedSeason === s ? '#ffffff' : '#94a3b8',
+                        border: selectedSeason === s ? '1px solid #0ea5e9' : '1px solid rgba(255,255,255,0.08)',
+                        padding: '6px 16px',
+                        borderRadius: 8,
+                        fontSize: '0.85rem',
+                        fontWeight: 600,
+                        cursor: 'pointer'
+                      }}
+                    >
+                      Temporada {s}
+                    </button>
+                  ))
+                )}
+              </div>
+
+              {/* Selector / Grid de Episodios */}
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                gap: 10,
+                marginTop: 12,
+                maxHeight: 260,
+                overflowY: 'auto',
+                paddingRight: 4
+              }}>
+                {currentSeasonEpisodes.length > 0 ? (
+                  currentSeasonEpisodes.map((ep, idx) => {
+                    const epNum = ep.episode || ep.number || (idx + 1);
+                    const isSelected = selectedEpisode === epNum;
+                    return (
+                      <div
+                        key={ep.id || idx}
+                        onClick={() => {
+                          setSelectedEpisode(epNum);
+                          loadStreamOptions(selectedSeason, epNum);
+                        }}
+                        style={{
+                          background: isSelected ? 'rgba(14, 165, 233, 0.15)' : '#131b2c',
+                          border: isSelected ? '1px solid #0ea5e9' : '1px solid rgba(255,255,255,0.06)',
+                          borderRadius: 8,
+                          padding: '10px 12px',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          gap: 12,
+                          alignItems: 'center'
+                        }}
+                      >
+                        {ep.thumbnail ? (
+                          <img
+                            src={ep.thumbnail}
+                            alt={ep.name}
+                            style={{ width: 64, height: 40, objectFit: 'cover', borderRadius: 6, flexShrink: 0 }}
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div style={{
+                            width: 64,
+                            height: 40,
+                            background: 'rgba(255,255,255,0.05)',
+                            borderRadius: 6,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: '#64748b',
+                            fontSize: '0.75rem',
+                            fontWeight: 700,
+                            flexShrink: 0
+                          }}>
+                            E{epNum}
+                          </div>
+                        )}
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ fontSize: '0.82rem', fontWeight: 700, color: isSelected ? '#38bdf8' : '#e2e8f0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                            {epNum}. {ep.name || `Episodio ${epNum}`}
+                          </div>
+                          {ep.overview && (
+                            <div style={{ fontSize: '0.72rem', color: '#94a3b8', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', marginTop: 2 }}>
+                              {ep.overview}
+                            </div>
+                          )}
+                        </div>
+                        <div style={{
+                          width: 26,
+                          height: 26,
+                          borderRadius: '50%',
+                          background: isSelected ? '#0ea5e9' : 'rgba(255,255,255,0.06)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          flexShrink: 0
+                        }}>
+                          <Play size={11} fill="white" />
+                        </div>
+                      </div>
+                    );
+                  })
+                ) : (
+                  Array.from({ length: 12 }, (_, i) => i + 1).map(num => (
+                    <div
+                      key={num}
+                      onClick={() => {
+                        setSelectedEpisode(num);
+                        loadStreamOptions(selectedSeason, num);
+                      }}
+                      style={{
+                        background: selectedEpisode === num ? 'rgba(14, 165, 233, 0.15)' : '#131b2c',
+                        border: selectedEpisode === num ? '1px solid #0ea5e9' : '1px solid rgba(255,255,255,0.06)',
+                        borderRadius: 8,
+                        padding: '10px 14px',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between'
+                      }}
+                    >
+                      <span style={{ fontSize: '0.85rem', fontWeight: 600, color: selectedEpisode === num ? '#38bdf8' : '#e2e8f0' }}>
+                        Episodio {num}
+                      </span>
+                      <Play size={13} fill={selectedEpisode === num ? '#38bdf8' : '#94a3b8'} />
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+          )}
+
           {/* Enlaces de reproducción y calidades */}
           <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
             <h4 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
-              <Film size={18} color="#0ea5e9" /> Servidores y Opciones de Reproducción
+              <Film size={18} color="#0ea5e9" /> {isSeries ? `Servidores para Temporada ${selectedSeason} • Episodio ${selectedEpisode}` : 'Servidores y Opciones de Reproducción'}
             </h4>
 
             {loadingStreams && (
@@ -216,11 +412,17 @@ export function ItemDetailModal({ item, onClose, onPlayStream }) {
                         onClick={() => {
                           onPlayStream({
                             id: details.id,
-                            title: `${details.title} [${s.quality}]`,
+                            title: isSeries 
+                              ? `${details.title} - T${selectedSeason}:E${selectedEpisode} [${s.quality}]` 
+                              : `${details.title} [${s.quality}]`,
                             poster: details.poster,
                             streamUrl: s.streamUrl,
-                            proxiedUrl: s.proxiedUrl || `/api/proxy/stream?url=${encodeURIComponent(s.streamUrl)}`,
-                            category: 'Catálogo VOD'
+                            embedUrl: s.embedUrl,
+                            isEmbed: !!s.isEmbed,
+                            proxiedUrl: s.proxiedUrl,
+                            category: isSeries 
+                              ? `Serie • Temporada ${selectedSeason} Episodio ${selectedEpisode}` 
+                              : 'Cine Bajo Demanda'
                           });
                           onClose();
                         }}

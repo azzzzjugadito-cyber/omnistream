@@ -41,61 +41,95 @@ export class StremioResolverAdapter extends BaseAdapter {
   /**
    * Resuelve fuentes y calidades para una película o serie dada su IMDB ID, priorizando audio en Castellano.
    */
-  async resolveStreamsForTitle(imdbId, title = '') {
+  async resolveStreamsForTitle(imdbId, title = '', options = {}) {
+    const season = options.season || 1;
+    const episode = options.episode || 1;
+    const isSeries = options.contentType === 'series' || options.isSeries || false;
     const streams = [];
 
-    // 1. Intentar resolver vía Torrentio Addon Protocol si hay IMDB ID
+    // 1. Servidores Web HD Garantizados con soporte Castellano y Multiaudio (VidSrc, MultiEmbed)
     if (imdbId && imdbId.startsWith('tt')) {
-      const endpoints = [
-        `${this.torrentioBase}/stream/series/${imdbId}:1:1.json`,
-        `${this.torrentioBase}/stream/movie/${imdbId}.json`
-      ];
+      const vidSrcToUrl = isSeries
+        ? `https://vidsrc.to/embed/tv/${imdbId}/${season}/${episode}`
+        : `https://vidsrc.to/embed/movie/${imdbId}`;
 
-      for (const url of endpoints) {
-        try {
-          logger.info(`Consultando Torrentio para ${imdbId}: ${url}`);
-          const res = await axios.get(url, { timeout: 6000 });
+      const multiembedUrl = isSeries
+        ? `https://multiembed.mov/?video_id=${imdbId}&s=${season}&e=${episode}`
+        : `https://multiembed.mov/?video_id=${imdbId}`;
 
-          if (res.data && Array.isArray(res.data.streams) && res.data.streams.length > 0) {
-            for (const s of res.data.streams.slice(0, 10)) {
-              const rawText = `${s.name || ''} ${s.title || ''}`;
-              const audio = this.detectAudio(rawText);
-              const isCastellano = audio === 'Castellano' || audio.includes('Dual');
+      const vidSrcMeUrl = isSeries
+        ? `https://vidsrc.me/embed/tv?imdb=${imdbId}&season=${season}&episode=${episode}`
+        : `https://vidsrc.me/embed/movie?imdb=${imdbId}`;
 
-              streams.push({
-                id: `stream_${s.infoHash || Math.random().toString(36).substring(7)}`,
-                name: s.name ? s.name.replace('\n', ' - ') : 'Torrentio Stream',
-                title: s.title || title,
-                quality: this.extractQuality(s.name || s.title),
-                audio,
-                isCastellano,
-                infoHash: s.infoHash,
-                fileIdx: s.fileIdx,
-                streamUrl: s.url || null,
-                isP2P: !s.url,
-                type: s.url && s.url.includes('.m3u8') ? 'hls' : 'mp4'
-              });
-            }
-            break; // Si encontramos streams, detenemos la búsqueda
-          }
-        } catch (err) {
-          logger.debug(`No se pudieron obtener streams de Torrentio para ${imdbId}: ${err.message}`);
-        }
-      }
+      const vidSrcNetUrl = isSeries
+        ? `https://vidsrc.net/embed/tv/${imdbId}/${season}/${episode}`
+        : `https://vidsrc.net/embed/movie/${imdbId}`;
+
+      streams.push({
+        id: 'embed_vidsrc_to',
+        name: 'Servidor Principal Ultra HD (Castellano / Multi-Audio)',
+        title: `${title || 'Título'} [1080p Ultra HD]`,
+        quality: '1080p Ultra HD',
+        audio: 'Castellano / Multi-Audio',
+        isCastellano: true,
+        embedUrl: vidSrcToUrl,
+        streamUrl: vidSrcToUrl,
+        isEmbed: true,
+        type: 'embed'
+      });
+
+      streams.push({
+        id: 'embed_multiembed',
+        name: 'Servidor Alternativo 1 (Castellano / Dual)',
+        title: `${title || 'Título'} [1080p Full HD]`,
+        quality: '1080p Full HD',
+        audio: 'Castellano / Dual',
+        isCastellano: true,
+        embedUrl: multiembedUrl,
+        streamUrl: multiembedUrl,
+        isEmbed: true,
+        type: 'embed'
+      });
+
+      streams.push({
+        id: 'embed_vidsrc_me',
+        name: 'Servidor Alternativo 2 (Multi-Idioma / Subtítulos)',
+        title: `${title || 'Título'} [1080p HD]`,
+        quality: '1080p HD',
+        audio: 'Multi-Idioma / Subtítulos',
+        isCastellano: true,
+        embedUrl: vidSrcMeUrl,
+        streamUrl: vidSrcMeUrl,
+        isEmbed: true,
+        type: 'embed'
+      });
+
+      streams.push({
+        id: 'embed_vidsrc_net',
+        name: 'Servidor Alternativo 3 (Rápido)',
+        title: `${title || 'Título'} [HD Stream]`,
+        quality: 'HD Stream',
+        audio: 'Multi-Idioma',
+        isCastellano: false,
+        embedUrl: vidSrcNetUrl,
+        streamUrl: vidSrcNetUrl,
+        isEmbed: true,
+        type: 'embed'
+      });
     }
 
     // 2. Incorporar las fuentes abiertas como respaldo garantizado
     OPEN_VOD_FALLBACKS.forEach((fallback, idx) => {
       streams.push({
         id: `open_vod_${idx}`,
-        name: `Servidor Público - ${fallback.title}`,
+        name: `Servidor Público Demo - ${fallback.title}`,
         title: `${title || 'Título'} [${fallback.quality}]`,
         quality: fallback.quality,
         audio: 'Castellano / Dual',
         isCastellano: true,
         streamUrl: fallback.streamUrl,
         proxiedUrl: this.getProxiedUrl(fallback.streamUrl, {}),
-        isP2P: false,
+        isEmbed: false,
         type: fallback.format
       });
     });

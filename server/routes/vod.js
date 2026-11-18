@@ -29,11 +29,12 @@ router.get('/catalog', async (req, res) => {
 
 /**
  * GET /api/vod/details/:id
- * Obtiene ficha técnica completa (sinopsis, reparto, director, tráiler)
+ * Obtiene ficha técnica completa (sinopsis, reparto, director, tráiler, episodios)
  */
 router.get('/details/:id', async (req, res) => {
   try {
-    const item = await sourceManager.getVodDetails(req.params.id);
+    const isSeries = req.query.type === 'series' || req.query.isSeries === 'true';
+    const item = await sourceManager.getVodDetails(req.params.id, { isSeries });
     if (!item) {
       return res.status(404).json({ error: 'Título no encontrado' });
     }
@@ -46,16 +47,29 @@ router.get('/details/:id', async (req, res) => {
 
 /**
  * GET /api/vod/resolve/:id
- * Resuelve las opciones de stream para un título
+ * Resuelve las opciones de stream para una película o episodio de serie
  */
 router.get('/resolve/:id', async (req, res) => {
   try {
     const cleanId = req.params.id.replace('vod::', '');
     const title = req.query.title || '';
-    const streams = await sourceManager.resolveVodStreams(cleanId, title);
+    const season = parseInt(req.query.season || req.query.s || '1', 10);
+    const episode = parseInt(req.query.episode || req.query.e || '1', 10);
+    const contentType = req.query.type || (req.query.season ? 'series' : 'movie');
+    const isSeries = contentType === 'series';
+
+    const streams = await sourceManager.resolveVodStreams(cleanId, title, {
+      season,
+      episode,
+      contentType,
+      isSeries
+    });
     res.json({
       title,
       imdbId: cleanId,
+      season,
+      episode,
+      contentType,
       streams
     });
   } catch (err) {

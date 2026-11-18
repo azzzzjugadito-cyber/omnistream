@@ -31,14 +31,21 @@ export const api = {
     return res.json();
   },
 
-  async getVodDetails(id) {
-    const res = await fetch(`${API_BASE}/vod/details/${encodeURIComponent(id)}`);
+  async getVodDetails(id, type = '') {
+    const query = type ? `?type=${encodeURIComponent(type)}` : '';
+    const res = await fetch(`${API_BASE}/vod/details/${encodeURIComponent(id)}${query}`);
     if (!res.ok) throw new Error('Error al cargar detalles de la película o serie');
     return res.json();
   },
 
-  async resolveVodStreams(id, title = '') {
-    const res = await fetch(`${API_BASE}/vod/resolve/${encodeURIComponent(id)}?title=${encodeURIComponent(title)}`);
+  async resolveVodStreams(id, title = '', season = 1, episode = 1, contentType = 'movie') {
+    const params = new URLSearchParams({
+      title,
+      season: String(season || 1),
+      episode: String(episode || 1),
+      type: contentType || 'movie'
+    });
+    const res = await fetch(`${API_BASE}/vod/resolve/${encodeURIComponent(id)}?${params}`);
     if (!res.ok) throw new Error('Error al resolver streams VOD');
     return res.json();
   },

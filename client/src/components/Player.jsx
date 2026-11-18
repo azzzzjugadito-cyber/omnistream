@@ -37,8 +37,16 @@ export function Player({ item, onClose, onShowToast }) {
     if (!item) return;
 
     const streams = [];
+    if (item.embedUrl) {
+      streams.push({ 
+        url: item.embedUrl, 
+        embedUrl: item.embedUrl, 
+        isEmbed: true, 
+        name: 'Servidor Web HD (Embed)' 
+      });
+    }
     if (item.proxiedUrl) streams.push({ url: item.proxiedUrl, name: 'Proxy Seguro (Principal)' });
-    if (item.streamUrl) streams.push({ url: item.streamUrl, name: 'Stream Directo' });
+    if (item.streamUrl && !item.embedUrl) streams.push({ url: item.streamUrl, name: 'Stream Directo' });
     if (Array.isArray(item.backupUrls)) {
       item.backupUrls.forEach((bUrl, idx) => {
         streams.push({ 
@@ -54,8 +62,15 @@ export function Player({ item, onClose, onShowToast }) {
 
   // Cargar stream actual
   useEffect(() => {
-    if (!availableStreams.length || !videoRef.current) return;
-    loadStream(availableStreams[currentStreamIndex].url);
+    if (!availableStreams.length) return;
+    const current = availableStreams[currentStreamIndex];
+    if (current?.isEmbed || current?.embedUrl) {
+      setLoading(false);
+      setError(null);
+      return;
+    }
+    if (!videoRef.current) return;
+    loadStream(current.url);
 
     return () => {
       destroyPlayer();
@@ -248,6 +263,9 @@ export function Player({ item, onClose, onShowToast }) {
     return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
   }
 
+  const currentStream = availableStreams[currentStreamIndex];
+  const isEmbed = currentStream?.isEmbed || item.isEmbed || !!currentStream?.embedUrl || !!item.embedUrl;
+
   return (
     <div className="player-modal-backdrop" ref={containerRef}>
       {/* Cabecera del reproductor */}
@@ -264,25 +282,41 @@ export function Player({ item, onClose, onShowToast }) {
       </div>
 
       {/* Pantalla de vídeo */}
-      <div className="video-container">
-        <video
-          ref={videoRef}
-          className="video-element"
-          playsInline
-          x-webkit-airplay="allow"
-          onTimeUpdate={() => {
-            if (videoRef.current) {
-              setCurrentTime(videoRef.current.currentTime);
-              setDuration(videoRef.current.duration || 0);
-            }
-          }}
-          onPlay={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
-          onError={() => handleStreamFailure('Error de decodificación o conexión con el stream')}
-        />
+      <div className="video-container" style={{ position: 'relative', width: '100%', height: '100%' }}>
+        {isEmbed ? (
+          <iframe
+            src={currentStream?.embedUrl || item.embedUrl}
+            title={item.title}
+            style={{
+              width: '100%',
+              height: '100%',
+              border: 'none',
+              backgroundColor: '#000'
+            }}
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowFullScreen
+            onLoad={() => setLoading(false)}
+          />
+        ) : (
+          <video
+            ref={videoRef}
+            className="video-element"
+            playsInline
+            x-webkit-airplay="allow"
+            onTimeUpdate={() => {
+              if (videoRef.current) {
+                setCurrentTime(videoRef.current.currentTime);
+                setDuration(videoRef.current.duration || 0);
+              }
+            }}
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
+            onError={() => handleStreamFailure('Error de decodificación o conexión con el stream')}
+          />
+        )}
 
         {/* Spinner de carga */}
-        {loading && (
+        {loading && !isEmbed && (
           <div style={{ position: 'absolute', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
             <RefreshCw size={44} className="animate-spin" style={{ animation: 'spin 1s linear infinite', color: '#0ea5e9' }} />
             <div style={{ fontSize: '0.9rem', color: '#94a3b8' }}>Conectando con la fuente...</div>
@@ -290,7 +324,7 @@ export function Player({ item, onClose, onShowToast }) {
         )}
 
         {/* Tarjeta visible ante error (Cero pantallas en blanco) */}
-        {error && (
+        {error && !isEmbed && (
           <div className="error-state-card" style={{ zIndex: 20 }}>
             <AlertCircle size={48} color="#ef4444" />
             <h3 style={{ fontSize: '1.2rem', fontWeight: 700 }}>Fallo de Reproducción</h3>
@@ -313,8 +347,9 @@ export function Player({ item, onClose, onShowToast }) {
         )}
       </div>
 
-      {/* Barra de Controles */}
-      <div className="player-controls-bottom">
+      {/* Barra de Controles (sólo para reproductor nativo) */}
+      {!isEmbed && (
+        <div className="player-controls-bottom">
         <div className="player-control-group">
           <button className="player-btn" onClick={togglePlay} title={isPlaying ? 'Pausar' : 'Reproducir'}>
             {isPlaying ? <Pause size={22} /> : <Play size={22} />}
@@ -382,6 +417,7 @@ export function Player({ item, onClose, onShowToast }) {
           </button>
         </div>
       </div>
+      )}
     </div>
   );
 }

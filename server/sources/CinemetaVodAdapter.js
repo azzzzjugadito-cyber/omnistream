@@ -181,6 +181,7 @@ export class CinemetaVodAdapter extends BaseAdapter {
       cast: Array.isArray(item.cast) ? item.cast : [],
       director: Array.isArray(item.director) ? item.director.join(', ') : (item.director || ''),
       trailer: item.trailer ? `https://www.youtube.com/watch?v=${item.trailer}` : null,
+      videos: Array.isArray(item.videos) ? item.videos : [],
       isNetflix: isNetflix || !!item.isNetflix,
       platform: isNetflix || item.isNetflix ? 'Netflix' : '',
       priority: this.priority
@@ -307,14 +308,16 @@ export class CinemetaVodAdapter extends BaseAdapter {
     return localMatches;
   }
 
-  async getDetails(id) {
+  async getDetails(id, options = {}) {
     const cleanId = id.replace('vod::', '');
     
     // Si ya está en caché
     const cached = this.cachedItems.find(it => it.id === id || it.imdbId === cleanId);
-    const isSeries = cached ? cached.contentType === 'series' : false;
+    let isSeries = options.isSeries !== undefined 
+      ? options.isSeries 
+      : (cached ? cached.contentType === 'series' : false);
 
-    // Intentar obtener detalles profundos (cast, director, trailer) desde Cinemeta
+    // Intentar obtener detalles profundos (cast, director, trailer, episodios) desde Cinemeta
     if (cleanId.startsWith('tt')) {
       const endpoints = isSeries 
         ? [`${this.cinemetaBase}/meta/series/${cleanId}.json`, `${this.cinemetaBase}/meta/movie/${cleanId}.json`]

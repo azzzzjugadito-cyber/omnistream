@@ -362,12 +362,12 @@ class SourceManager {
   }
 
   /**
-   * Obtiene detalles de un elemento VOD (cast, tráiler, sinopsis).
+   * Obtiene detalles de un elemento VOD (cast, tráiler, sinopsis, episodios).
    */
-  async getVodDetails(id) {
+  async getVodDetails(id, options = {}) {
     for (const adapter of this.adapters.values()) {
       if (adapter.category === 'vod' && adapter.type === 'vod_cinemeta') {
-        return adapter.getDetails(id);
+        return adapter.getDetails(id, options);
       }
     }
     return null;
@@ -376,10 +376,10 @@ class SourceManager {
   /**
    * Resuelve opciones de reproducción para un título VOD.
    */
-  async resolveVodStreams(imdbId, title) {
+  async resolveVodStreams(imdbId, title, options = {}) {
     for (const adapter of this.adapters.values()) {
       if (adapter.type === 'stremio_resolver') {
-        return adapter.resolveStreamsForTitle(imdbId, title);
+        return adapter.resolveStreamsForTitle(imdbId, title, options);
       }
     }
     return [];
